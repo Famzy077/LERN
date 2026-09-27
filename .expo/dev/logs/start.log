@@ -1,0 +1,814 @@
+{"_e":"root:init","_t":1790455131037,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790455131039,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790455131043,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790455131534,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790455132483,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790455132984,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790455141307,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790455180543,"id":"1","platform":"android","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455180544,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455180572,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:failed","_t":1790455180583,"id":"1","message":"Cannot read properties of undefined (reading 'transformFile')","importStack":null,"filename":null,"targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790455196030,"id":"5","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455196031,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455196038,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:failed","_t":1790455196043,"id":"5","message":"Cannot read properties of undefined (reading 'transformFile')","importStack":null,"filename":null,"targetModuleName":null,"originModulePath":null}
+{"_e":"metro:server_log","_t":1790455308866,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"root:init","_t":1790455397356,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790455397358,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790455397362,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790455397779,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790455398671,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790455399121,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790455407065,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790455454925,"id":"1","platform":"android","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455454926,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455454962,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455456216,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1790455456318,"id":"1","progress":0.010000000000000002,"total":13,"current":1}
+{"_e":"metro:bundling:progress","_t":1790455456368,"id":"1","progress":0.02366863905325444,"total":13,"current":2}
+{"_e":"metro:bundling:progress","_t":1790455456468,"id":"1","progress":0.02366863905325444,"total":15,"current":2}
+{"_e":"metro:bundling:progress","_t":1790455456473,"id":"1","progress":0.04000000000000001,"total":15,"current":3}
+{"_e":"metro:bundling:progress","_t":1790455456574,"id":"1","progress":0.1111111111111111,"total":18,"current":6}
+{"_e":"metro:bundling:progress","_t":1790455456686,"id":"1","progress":0.19753086419753085,"total":18,"current":8}
+{"_e":"metro:bundling:progress","_t":1790455457740,"id":"1","progress":0.25,"total":18,"current":9}
+{"_e":"metro:bundling:progress","_t":1790455457844,"id":"1","progress":0.29752066115702475,"total":22,"current":12}
+{"_e":"metro:bundling:progress","_t":1790455457943,"id":"1","progress":0.3194706994328922,"total":23,"current":13}
+{"_e":"metro:bundling:progress","_t":1790455458191,"id":"1","progress":0.37051039697542537,"total":23,"current":14}
+{"_e":"metro:bundling:progress","_t":1790455458297,"id":"1","progress":0.5184,"total":25,"current":18}
+{"_e":"metro:bundling:progress","_t":1790455458400,"id":"1","progress":0.5184,"total":28,"current":19}
+{"_e":"metro:bundling:progress","_t":1790455458500,"id":"1","progress":0.5184,"total":36,"current":20}
+{"_e":"metro:bundling:progress","_t":1790455458606,"id":"1","progress":0.5184,"total":61,"current":24}
+{"_e":"metro:bundling:progress","_t":1790455458715,"id":"1","progress":0.5184,"total":84,"current":27}
+{"_e":"metro:bundling:progress","_t":1790455458874,"id":"1","progress":0.5184,"total":85,"current":27}
+{"_e":"metro:bundling:progress","_t":1790455459031,"id":"1","progress":0.5184,"total":214,"current":31}
+{"_e":"metro:bundling:progress","_t":1790455459126,"id":"1","progress":0.5184,"total":220,"current":37}
+{"_e":"metro:bundling:progress","_t":1790455459226,"id":"1","progress":0.5184,"total":222,"current":41}
+{"_e":"metro:bundling:progress","_t":1790455459326,"id":"1","progress":0.5184,"total":223,"current":52}
+{"_e":"metro:bundling:progress","_t":1790455459429,"id":"1","progress":0.5184,"total":246,"current":58}
+{"_e":"metro:bundling:progress","_t":1790455459529,"id":"1","progress":0.5184,"total":262,"current":64}
+{"_e":"metro:bundling:progress","_t":1790455459630,"id":"1","progress":0.5184,"total":269,"current":73}
+{"_e":"metro:bundling:progress","_t":1790455459733,"id":"1","progress":0.5184,"total":304,"current":77}
+{"_e":"metro:bundling:progress","_t":1790455459834,"id":"1","progress":0.5184,"total":308,"current":84}
+{"_e":"metro:bundling:progress","_t":1790455459972,"id":"1","progress":0.5184,"total":332,"current":85}
+{"_e":"metro:bundling:progress","_t":1790455460075,"id":"1","progress":0.5184,"total":335,"current":91}
+{"_e":"metro:bundling:progress","_t":1790455460176,"id":"1","progress":0.5184,"total":340,"current":93}
+{"_e":"metro:bundling:progress","_t":1790455460287,"id":"1","progress":0.5184,"total":343,"current":97}
+{"_e":"metro:bundling:progress","_t":1790455460386,"id":"1","progress":0.5184,"total":360,"current":103}
+{"_e":"metro:bundling:progress","_t":1790455460486,"id":"1","progress":0.5184,"total":363,"current":104}
+{"_e":"metro:bundling:progress","_t":1790455460586,"id":"1","progress":0.5184,"total":367,"current":107}
+{"_e":"metro:bundling:progress","_t":1790455460748,"id":"1","progress":0.5184,"total":367,"current":108}
+{"_e":"metro:bundling:progress","_t":1790455460848,"id":"1","progress":0.5184,"total":371,"current":111}
+{"_e":"metro:bundling:progress","_t":1790455460958,"id":"1","progress":0.5184,"total":384,"current":118}
+{"_e":"metro:bundling:progress","_t":1790455461059,"id":"1","progress":0.5184,"total":390,"current":125}
+{"_e":"metro:bundling:progress","_t":1790455461159,"id":"1","progress":0.5184,"total":396,"current":129}
+{"_e":"metro:bundling:progress","_t":1790455461259,"id":"1","progress":0.5184,"total":410,"current":142}
+{"_e":"metro:bundling:progress","_t":1790455461359,"id":"1","progress":0.5184,"total":415,"current":148}
+{"_e":"metro:bundling:progress","_t":1790455461459,"id":"1","progress":0.5184,"total":420,"current":153}
+{"_e":"metro:bundling:progress","_t":1790455461560,"id":"1","progress":0.5184,"total":435,"current":163}
+{"_e":"metro:bundling:progress","_t":1790455461664,"id":"1","progress":0.5184,"total":441,"current":177}
+{"_e":"metro:bundling:progress","_t":1790455461764,"id":"1","progress":0.5184,"total":447,"current":190}
+{"_e":"metro:bundling:progress","_t":1790455461865,"id":"1","progress":0.5184,"total":452,"current":198}
+{"_e":"metro:bundling:progress","_t":1790455461966,"id":"1","progress":0.5184,"total":466,"current":204}
+{"_e":"metro:bundling:progress","_t":1790455462067,"id":"1","progress":0.5184,"total":478,"current":208}
+{"_e":"metro:bundling:progress","_t":1790455462171,"id":"1","progress":0.5184,"total":478,"current":212}
+{"_e":"metro:bundling:progress","_t":1790455462272,"id":"1","progress":0.5184,"total":485,"current":217}
+{"_e":"metro:bundling:progress","_t":1790455462376,"id":"1","progress":0.5184,"total":486,"current":221}
+{"_e":"metro:bundling:progress","_t":1790455462480,"id":"1","progress":0.5184,"total":486,"current":226}
+{"_e":"metro:bundling:progress","_t":1790455462609,"id":"1","progress":0.5184,"total":487,"current":232}
+{"_e":"metro:bundling:progress","_t":1790455462709,"id":"1","progress":0.5184,"total":495,"current":236}
+{"_e":"metro:bundling:progress","_t":1790455462808,"id":"1","progress":0.5184,"total":496,"current":240}
+{"_e":"metro:bundling:progress","_t":1790455462913,"id":"1","progress":0.5184,"total":503,"current":246}
+{"_e":"metro:bundling:progress","_t":1790455463013,"id":"1","progress":0.5184,"total":509,"current":247}
+{"_e":"metro:bundling:progress","_t":1790455463113,"id":"1","progress":0.5184,"total":520,"current":250}
+{"_e":"metro:bundling:progress","_t":1790455463219,"id":"1","progress":0.5184,"total":528,"current":254}
+{"_e":"metro:bundling:progress","_t":1790455463320,"id":"1","progress":0.5184,"total":536,"current":264}
+{"_e":"metro:bundling:progress","_t":1790455463425,"id":"1","progress":0.5184,"total":536,"current":270}
+{"_e":"metro:bundling:progress","_t":1790455463525,"id":"1","progress":0.5184,"total":540,"current":275}
+{"_e":"metro:bundling:progress","_t":1790455463627,"id":"1","progress":0.5184,"total":556,"current":284}
+{"_e":"metro:bundling:progress","_t":1790455463727,"id":"1","progress":0.5184,"total":557,"current":289}
+{"_e":"metro:bundling:progress","_t":1790455463828,"id":"1","progress":0.5184,"total":565,"current":297}
+{"_e":"metro:bundling:progress","_t":1790455463928,"id":"1","progress":0.5184,"total":573,"current":308}
+{"_e":"metro:bundling:progress","_t":1790455464029,"id":"1","progress":0.5184,"total":582,"current":321}
+{"_e":"metro:bundling:progress","_t":1790455464140,"id":"1","progress":0.5184,"total":584,"current":332}
+{"_e":"metro:bundling:progress","_t":1790455464246,"id":"1","progress":0.5184,"total":601,"current":344}
+{"_e":"metro:bundling:progress","_t":1790455464345,"id":"1","progress":0.5184,"total":612,"current":354}
+{"_e":"metro:bundling:progress","_t":1790455464447,"id":"1","progress":0.5184,"total":625,"current":364}
+{"_e":"metro:bundling:progress","_t":1790455464551,"id":"1","progress":0.5184,"total":635,"current":375}
+{"_e":"metro:bundling:progress","_t":1790455464651,"id":"1","progress":0.5184,"total":636,"current":383}
+{"_e":"metro:bundling:progress","_t":1790455464751,"id":"1","progress":0.5184,"total":646,"current":386}
+{"_e":"metro:bundling:progress","_t":1790455464853,"id":"1","progress":0.5184,"total":656,"current":395}
+{"_e":"metro:bundling:progress","_t":1790455464953,"id":"1","progress":0.5184,"total":686,"current":409}
+{"_e":"metro:bundling:progress","_t":1790455465054,"id":"1","progress":0.5184,"total":698,"current":424}
+{"_e":"metro:bundling:progress","_t":1790455465154,"id":"1","progress":0.5184,"total":712,"current":434}
+{"_e":"metro:bundling:progress","_t":1790455465255,"id":"1","progress":0.5184,"total":726,"current":444}
+{"_e":"metro:bundling:progress","_t":1790455465356,"id":"1","progress":0.5184,"total":731,"current":452}
+{"_e":"metro:bundling:progress","_t":1790455465456,"id":"1","progress":0.5184,"total":732,"current":457}
+{"_e":"metro:bundling:progress","_t":1790455465558,"id":"1","progress":0.5184,"total":740,"current":466}
+{"_e":"metro:bundling:progress","_t":1790455465660,"id":"1","progress":0.5184,"total":743,"current":474}
+{"_e":"metro:bundling:progress","_t":1790455465759,"id":"1","progress":0.5184,"total":743,"current":476}
+{"_e":"metro:bundling:progress","_t":1790455465859,"id":"1","progress":0.5184,"total":746,"current":478}
+{"_e":"metro:bundling:progress","_t":1790455465959,"id":"1","progress":0.5184,"total":747,"current":483}
+{"_e":"metro:bundling:progress","_t":1790455466064,"id":"1","progress":0.5184,"total":778,"current":486}
+{"_e":"metro:bundling:progress","_t":1790455466174,"id":"1","progress":0.5184,"total":825,"current":493}
+{"_e":"metro:bundling:progress","_t":1790455466274,"id":"1","progress":0.5184,"total":840,"current":501}
+{"_e":"metro:bundling:progress","_t":1790455466376,"id":"1","progress":0.5184,"total":851,"current":505}
+{"_e":"metro:bundling:progress","_t":1790455466477,"id":"1","progress":0.5184,"total":859,"current":508}
+{"_e":"metro:bundling:progress","_t":1790455466577,"id":"1","progress":0.5184,"total":862,"current":515}
+{"_e":"metro:bundling:progress","_t":1790455466678,"id":"1","progress":0.5184,"total":867,"current":523}
+{"_e":"metro:bundling:progress","_t":1790455466779,"id":"1","progress":0.5184,"total":871,"current":533}
+{"_e":"metro:bundling:progress","_t":1790455466880,"id":"1","progress":0.5184,"total":872,"current":544}
+{"_e":"metro:bundling:progress","_t":1790455467015,"id":"1","progress":0.5184,"total":874,"current":554}
+{"_e":"metro:bundling:progress","_t":1790455467112,"id":"1","progress":0.5184,"total":875,"current":567}
+{"_e":"metro:bundling:progress","_t":1790455467212,"id":"1","progress":0.5184,"total":876,"current":580}
+{"_e":"metro:bundling:progress","_t":1790455467312,"id":"1","progress":0.5184,"total":876,"current":586}
+{"_e":"metro:bundling:progress","_t":1790455467412,"id":"1","progress":0.5184,"total":878,"current":592}
+{"_e":"metro:bundling:progress","_t":1790455467512,"id":"1","progress":0.5184,"total":888,"current":600}
+{"_e":"metro:bundling:progress","_t":1790455467613,"id":"1","progress":0.5184,"total":888,"current":604}
+{"_e":"metro:bundling:progress","_t":1790455467714,"id":"1","progress":0.5184,"total":889,"current":608}
+{"_e":"metro:bundling:progress","_t":1790455467815,"id":"1","progress":0.5184,"total":890,"current":616}
+{"_e":"metro:bundling:progress","_t":1790455467931,"id":"1","progress":0.5184,"total":901,"current":624}
+{"_e":"metro:bundling:progress","_t":1790455468032,"id":"1","progress":0.5184,"total":903,"current":631}
+{"_e":"metro:bundling:progress","_t":1790455468133,"id":"1","progress":0.5184,"total":904,"current":637}
+{"_e":"metro:bundling:progress","_t":1790455468248,"id":"1","progress":0.5184,"total":910,"current":647}
+{"_e":"metro:bundling:progress","_t":1790455468354,"id":"1","progress":0.5216930286135668,"total":911,"current":658}
+{"_e":"metro:bundling:progress","_t":1790455468484,"id":"1","progress":0.5231795937934601,"total":918,"current":664}
+{"_e":"metro:bundling:progress","_t":1790455468589,"id":"1","progress":0.5231795937934601,"total":929,"current":669}
+{"_e":"metro:bundling:progress","_t":1790455468696,"id":"1","progress":0.5299213781940108,"total":930,"current":677}
+{"_e":"metro:bundling:progress","_t":1790455468793,"id":"1","progress":0.540936524453694,"total":930,"current":684}
+{"_e":"metro:bundling:progress","_t":1790455468893,"id":"1","progress":0.5568930574215114,"total":934,"current":697}
+{"_e":"metro:bundling:progress","_t":1790455468993,"id":"1","progress":0.560093585646227,"total":934,"current":699}
+{"_e":"metro:bundling:progress","_t":1790455469093,"id":"1","progress":0.5717624181417826,"total":935,"current":707}
+{"_e":"metro:bundling:progress","_t":1790455469194,"id":"1","progress":0.5806537588456996,"total":937,"current":714}
+{"_e":"metro:bundling:progress","_t":1790455469295,"id":"1","progress":0.5948675871435039,"total":940,"current":725}
+{"_e":"metro:bundling:progress","_t":1790455469394,"id":"1","progress":0.6137774351900687,"total":942,"current":738}
+{"_e":"metro:bundling:progress","_t":1790455469494,"id":"1","progress":0.6194890566647514,"total":944,"current":743}
+{"_e":"metro:bundling:progress","_t":1790455469595,"id":"1","progress":0.6346162173926079,"total":949,"current":756}
+{"_e":"metro:bundling:progress","_t":1790455469699,"id":"1","progress":0.647416319468964,"total":952,"current":766}
+{"_e":"metro:bundling:progress","_t":1790455469799,"id":"1","progress":0.6596235007580854,"total":953,"current":774}
+{"_e":"metro:bundling:progress","_t":1790455469900,"id":"1","progress":0.6596235007580854,"total":971,"current":782}
+{"_e":"metro:bundling:progress","_t":1790455469999,"id":"1","progress":0.6596235007580854,"total":977,"current":788}
+{"_e":"metro:bundling:progress","_t":1790455470101,"id":"1","progress":0.6596235007580854,"total":978,"current":790}
+{"_e":"metro:bundling:progress","_t":1790455470137,"id":"1","progress":0.6596235007580854,"total":978,"current":791}
+{"_e":"metro:bundling:progress","_t":1790455470237,"id":"1","progress":0.6596235007580854,"total":997,"current":793}
+{"_e":"metro:bundling:progress","_t":1790455470341,"id":"1","progress":0.6596235007580854,"total":1002,"current":795}
+{"_e":"metro:bundling:progress","_t":1790455470942,"id":"1","progress":0.6596235007580854,"total":1002,"current":796}
+{"_e":"metro:bundling:progress","_t":1790455471088,"id":"1","progress":0.6596235007580854,"total":1003,"current":796}
+{"_e":"metro:bundling:progress","_t":1790455471264,"id":"1","progress":0.6596235007580854,"total":2859,"current":797}
+{"_e":"metro:bundling:progress","_t":1790455471442,"id":"1","progress":0.6596235007580854,"total":2860,"current":801}
+{"_e":"metro:bundling:progress","_t":1790455471541,"id":"1","progress":0.6596235007580854,"total":2882,"current":816}
+{"_e":"metro:bundling:progress","_t":1790455471651,"id":"1","progress":0.6596235007580854,"total":2893,"current":825}
+{"_e":"metro:bundling:progress","_t":1790455471756,"id":"1","progress":0.6596235007580854,"total":2906,"current":835}
+{"_e":"metro:bundling:progress","_t":1790455471858,"id":"1","progress":0.6596235007580854,"total":2907,"current":843}
+{"_e":"metro:bundling:progress","_t":1790455471963,"id":"1","progress":0.6596235007580854,"total":2909,"current":849}
+{"_e":"metro:bundling:progress","_t":1790455472067,"id":"1","progress":0.6596235007580854,"total":2918,"current":861}
+{"_e":"metro:bundling:progress","_t":1790455472168,"id":"1","progress":0.6596235007580854,"total":2923,"current":877}
+{"_e":"metro:bundling:progress","_t":1790455472269,"id":"1","progress":0.6596235007580854,"total":2928,"current":885}
+{"_e":"metro:bundling:progress","_t":1790455472374,"id":"1","progress":0.6596235007580854,"total":2928,"current":892}
+{"_e":"metro:bundling:progress","_t":1790455472476,"id":"1","progress":0.6596235007580854,"total":2936,"current":909}
+{"_e":"metro:bundling:progress","_t":1790455472576,"id":"1","progress":0.6596235007580854,"total":2948,"current":920}
+{"_e":"metro:bundling:progress","_t":1790455472677,"id":"1","progress":0.6596235007580854,"total":2949,"current":928}
+{"_e":"metro:bundling:progress","_t":1790455472778,"id":"1","progress":0.6596235007580854,"total":2952,"current":936}
+{"_e":"metro:bundling:progress","_t":1790455472878,"id":"1","progress":0.6596235007580854,"total":2958,"current":945}
+{"_e":"metro:bundling:progress","_t":1790455472979,"id":"1","progress":0.6596235007580854,"total":2965,"current":956}
+{"_e":"metro:bundling:progress","_t":1790455473080,"id":"1","progress":0.6596235007580854,"total":2968,"current":958}
+{"_e":"metro:bundling:progress","_t":1790455473180,"id":"1","progress":0.6596235007580854,"total":2968,"current":960}
+{"_e":"metro:bundling:progress","_t":1790455473342,"id":"1","progress":0.6596235007580854,"total":2968,"current":961}
+{"_e":"metro:bundling:progress","_t":1790455473442,"id":"1","progress":0.6596235007580854,"total":2968,"current":971}
+{"_e":"metro:bundling:progress","_t":1790455473542,"id":"1","progress":0.6596235007580854,"total":2990,"current":978}
+{"_e":"metro:bundling:progress","_t":1790455473642,"id":"1","progress":0.6596235007580854,"total":2990,"current":980}
+{"_e":"metro:bundling:progress","_t":1790455473743,"id":"1","progress":0.6596235007580854,"total":2991,"current":983}
+{"_e":"metro:bundling:progress","_t":1790455473843,"id":"1","progress":0.6596235007580854,"total":2991,"current":985}
+{"_e":"metro:bundling:progress","_t":1790455473969,"id":"1","progress":0.6596235007580854,"total":2991,"current":987}
+{"_e":"metro:bundling:progress","_t":1790455474070,"id":"1","progress":0.6596235007580854,"total":2991,"current":990}
+{"_e":"metro:bundling:progress","_t":1790455474195,"id":"1","progress":0.6596235007580854,"total":2997,"current":996}
+{"_e":"metro:bundling:progress","_t":1790455474295,"id":"1","progress":0.6596235007580854,"total":3015,"current":1004}
+{"_e":"metro:bundling:progress","_t":1790455474397,"id":"1","progress":0.6596235007580854,"total":3018,"current":1015}
+{"_e":"metro:bundling:progress","_t":1790455474497,"id":"1","progress":0.6596235007580854,"total":3018,"current":1034}
+{"_e":"metro:bundling:progress","_t":1790455474597,"id":"1","progress":0.6596235007580854,"total":3018,"current":1051}
+{"_e":"metro:bundling:progress","_t":1790455474698,"id":"1","progress":0.6596235007580854,"total":3018,"current":1067}
+{"_e":"metro:bundling:progress","_t":1790455474798,"id":"1","progress":0.6596235007580854,"total":3018,"current":1084}
+{"_e":"metro:bundling:progress","_t":1790455474898,"id":"1","progress":0.6596235007580854,"total":3018,"current":1105}
+{"_e":"metro:bundling:progress","_t":1790455474998,"id":"1","progress":0.6596235007580854,"total":3018,"current":1124}
+{"_e":"metro:bundling:progress","_t":1790455475099,"id":"1","progress":0.6596235007580854,"total":3018,"current":1145}
+{"_e":"metro:bundling:progress","_t":1790455475199,"id":"1","progress":0.6596235007580854,"total":3018,"current":1167}
+{"_e":"metro:bundling:progress","_t":1790455475299,"id":"1","progress":0.6596235007580854,"total":3018,"current":1192}
+{"_e":"metro:bundling:progress","_t":1790455475401,"id":"1","progress":0.6596235007580854,"total":3018,"current":1210}
+{"_e":"metro:bundling:progress","_t":1790455475504,"id":"1","progress":0.6596235007580854,"total":3018,"current":1235}
+{"_e":"metro:bundling:progress","_t":1790455475605,"id":"1","progress":0.6596235007580854,"total":3018,"current":1258}
+{"_e":"metro:bundling:progress","_t":1790455475706,"id":"1","progress":0.6596235007580854,"total":3018,"current":1281}
+{"_e":"metro:bundling:progress","_t":1790455475808,"id":"1","progress":0.6596235007580854,"total":3018,"current":1302}
+{"_e":"metro:bundling:progress","_t":1790455475908,"id":"1","progress":0.6596235007580854,"total":3018,"current":1315}
+{"_e":"metro:bundling:progress","_t":1790455476009,"id":"1","progress":0.6596235007580854,"total":3018,"current":1334}
+{"_e":"metro:bundling:progress","_t":1790455476109,"id":"1","progress":0.6596235007580854,"total":3018,"current":1358}
+{"_e":"metro:bundling:progress","_t":1790455476210,"id":"1","progress":0.6596235007580854,"total":3018,"current":1379}
+{"_e":"metro:bundling:progress","_t":1790455476312,"id":"1","progress":0.6596235007580854,"total":3018,"current":1404}
+{"_e":"metro:bundling:progress","_t":1790455476412,"id":"1","progress":0.6596235007580854,"total":3018,"current":1426}
+{"_e":"metro:bundling:progress","_t":1790455476513,"id":"1","progress":0.6596235007580854,"total":3018,"current":1449}
+{"_e":"metro:bundling:progress","_t":1790455476613,"id":"1","progress":0.6596235007580854,"total":3018,"current":1472}
+{"_e":"metro:bundling:progress","_t":1790455476713,"id":"1","progress":0.6596235007580854,"total":3018,"current":1494}
+{"_e":"metro:bundling:progress","_t":1790455476813,"id":"1","progress":0.6596235007580854,"total":3018,"current":1514}
+{"_e":"metro:bundling:progress","_t":1790455476913,"id":"1","progress":0.6596235007580854,"total":3018,"current":1537}
+{"_e":"metro:bundling:progress","_t":1790455477017,"id":"1","progress":0.6596235007580854,"total":3018,"current":1562}
+{"_e":"metro:bundling:progress","_t":1790455477117,"id":"1","progress":0.6596235007580854,"total":3018,"current":1582}
+{"_e":"metro:bundling:progress","_t":1790455477218,"id":"1","progress":0.6596235007580854,"total":3018,"current":1601}
+{"_e":"metro:bundling:progress","_t":1790455477319,"id":"1","progress":0.6596235007580854,"total":3018,"current":1622}
+{"_e":"metro:bundling:progress","_t":1790455477419,"id":"1","progress":0.6596235007580854,"total":3018,"current":1642}
+{"_e":"metro:bundling:progress","_t":1790455477523,"id":"1","progress":0.6596235007580854,"total":3018,"current":1666}
+{"_e":"metro:bundling:progress","_t":1790455477622,"id":"1","progress":0.6596235007580854,"total":3018,"current":1687}
+{"_e":"metro:bundling:progress","_t":1790455477722,"id":"1","progress":0.6596235007580854,"total":3018,"current":1713}
+{"_e":"metro:bundling:progress","_t":1790455477876,"id":"1","progress":0.6596235007580854,"total":3018,"current":1715}
+{"_e":"metro:bundling:progress","_t":1790455477976,"id":"1","progress":0.6596235007580854,"total":3020,"current":1748}
+{"_e":"metro:bundling:progress","_t":1790455478076,"id":"1","progress":0.6596235007580854,"total":3020,"current":1774}
+{"_e":"metro:bundling:progress","_t":1790455478176,"id":"1","progress":0.6596235007580854,"total":3020,"current":1801}
+{"_e":"metro:bundling:progress","_t":1790455478277,"id":"1","progress":0.6596235007580854,"total":3020,"current":1824}
+{"_e":"metro:bundling:progress","_t":1790455478379,"id":"1","progress":0.6596235007580854,"total":3020,"current":1857}
+{"_e":"metro:bundling:progress","_t":1790455478480,"id":"1","progress":0.6596235007580854,"total":3020,"current":1884}
+{"_e":"metro:bundling:progress","_t":1790455478588,"id":"1","progress":0.6596235007580854,"total":3020,"current":1910}
+{"_e":"metro:bundling:progress","_t":1790455478688,"id":"1","progress":0.6596235007580854,"total":3020,"current":1934}
+{"_e":"metro:bundling:progress","_t":1790455478792,"id":"1","progress":0.6596235007580854,"total":3020,"current":1965}
+{"_e":"metro:bundling:progress","_t":1790455478892,"id":"1","progress":0.6596235007580854,"total":3020,"current":1990}
+{"_e":"metro:bundling:progress","_t":1790455478993,"id":"1","progress":0.6596235007580854,"total":3020,"current":2018}
+{"_e":"metro:bundling:progress","_t":1790455479092,"id":"1","progress":0.6596235007580854,"total":3020,"current":2037}
+{"_e":"metro:bundling:progress","_t":1790455479193,"id":"1","progress":0.6596235007580854,"total":3020,"current":2058}
+{"_e":"metro:bundling:progress","_t":1790455479293,"id":"1","progress":0.6596235007580854,"total":3020,"current":2084}
+{"_e":"metro:bundling:progress","_t":1790455479408,"id":"1","progress":0.6596235007580854,"total":3020,"current":2100}
+{"_e":"metro:bundling:progress","_t":1790455479509,"id":"1","progress":0.6596235007580854,"total":3020,"current":2134}
+{"_e":"metro:bundling:progress","_t":1790455479609,"id":"1","progress":0.6596235007580854,"total":3020,"current":2163}
+{"_e":"metro:bundling:progress","_t":1790455479710,"id":"1","progress":0.6596235007580854,"total":3020,"current":2195}
+{"_e":"metro:bundling:progress","_t":1790455479810,"id":"1","progress":0.6596235007580854,"total":3020,"current":2225}
+{"_e":"metro:bundling:progress","_t":1790455479912,"id":"1","progress":0.6596235007580854,"total":3020,"current":2247}
+{"_e":"metro:bundling:progress","_t":1790455480014,"id":"1","progress":0.6596235007580854,"total":3020,"current":2276}
+{"_e":"metro:bundling:progress","_t":1790455480115,"id":"1","progress":0.6596235007580854,"total":3020,"current":2308}
+{"_e":"metro:bundling:progress","_t":1790455480215,"id":"1","progress":0.6596235007580854,"total":3020,"current":2338}
+{"_e":"metro:bundling:progress","_t":1790455480315,"id":"1","progress":0.6596235007580854,"total":3020,"current":2366}
+{"_e":"metro:bundling:progress","_t":1790455480416,"id":"1","progress":0.6596235007580854,"total":3020,"current":2398}
+{"_e":"metro:bundling:progress","_t":1790455480515,"id":"1","progress":0.6596235007580854,"total":3020,"current":2429}
+{"_e":"metro:bundling:progress","_t":1790455480618,"id":"1","progress":0.6635235296697514,"total":3020,"current":2460}
+{"_e":"metro:bundling:progress","_t":1790455480718,"id":"1","progress":0.6776233498530767,"total":3020,"current":2486}
+{"_e":"metro:bundling:progress","_t":1790455480818,"id":"1","progress":0.6935249550458313,"total":3020,"current":2515}
+{"_e":"metro:bundling:progress","_t":1790455480919,"id":"1","progress":0.7090532213499408,"total":3020,"current":2543}
+{"_e":"metro:bundling:progress","_t":1790455481020,"id":"1","progress":0.7224999999999999,"total":3020,"current":2567}
+{"_e":"metro:bundling:progress","_t":1790455481119,"id":"1","progress":0.7360730888996095,"total":3020,"current":2591}
+{"_e":"metro:bundling:progress","_t":1790455481219,"id":"1","progress":0.7526424279636857,"total":3020,"current":2620}
+{"_e":"metro:bundling:progress","_t":1790455481319,"id":"1","progress":0.7676544888382089,"total":3020,"current":2646}
+{"_e":"metro:bundling:progress","_t":1790455481420,"id":"1","progress":0.7851602999868428,"total":3020,"current":2676}
+{"_e":"metro:bundling:progress","_t":1790455481520,"id":"1","progress":0.8028634709003991,"total":3020,"current":2706}
+{"_e":"metro:bundling:progress","_t":1790455481621,"id":"1","progress":0.8207640015788782,"total":3020,"current":2736}
+{"_e":"metro:bundling:progress","_t":1790455481722,"id":"1","progress":0.8352265251524056,"total":3020,"current":2760}
+{"_e":"metro:bundling:progress","_t":1790455481822,"id":"1","progress":0.8528705977807992,"total":3020,"current":2789}
+{"_e":"metro:bundling:progress","_t":1790455481923,"id":"1","progress":0.8725539450024122,"total":3020,"current":2821}
+{"_e":"metro:bundling:progress","_t":1790455482025,"id":"1","progress":0.8905859392131925,"total":3020,"current":2850}
+{"_e":"metro:bundling:progress","_t":1790455482126,"id":"1","progress":0.895202291806295,"total":3027,"current":2864}
+{"_e":"metro:bundling:progress","_t":1790455482226,"id":"1","progress":0.895202291806295,"total":3047,"current":2874}
+{"_e":"metro:bundling:progress","_t":1790455482326,"id":"1","progress":0.895202291806295,"total":3061,"current":2883}
+{"_e":"metro:bundling:progress","_t":1790455482429,"id":"1","progress":0.895202291806295,"total":3064,"current":2896}
+{"_e":"metro:bundling:progress","_t":1790455482534,"id":"1","progress":0.8977670627159614,"total":3067,"current":2906}
+{"_e":"metro:bundling:progress","_t":1790455482642,"id":"1","progress":0.9052570714980452,"total":3069,"current":2920}
+{"_e":"metro:bundling:progress","_t":1790455482743,"id":"1","progress":0.9052570714980452,"total":3082,"current":2928}
+{"_e":"metro:bundling:progress","_t":1790455482843,"id":"1","progress":0.9052570714980452,"total":3089,"current":2935}
+{"_e":"metro:bundling:progress","_t":1790455482942,"id":"1","progress":0.9052570714980452,"total":3095,"current":2941}
+{"_e":"metro:bundling:progress","_t":1790455483043,"id":"1","progress":0.9073515639945136,"total":3098,"current":2951}
+{"_e":"metro:bundling:progress","_t":1790455483164,"id":"1","progress":0.9098982020030572,"total":3101,"current":2958}
+{"_e":"metro:bundling:progress","_t":1790455483264,"id":"1","progress":0.9107664312817277,"total":3110,"current":2968}
+{"_e":"metro:bundling:progress","_t":1790455483368,"id":"1","progress":0.91333192258716,"total":3114,"current":2976}
+{"_e":"metro:bundling:progress","_t":1790455483468,"id":"1","progress":0.91333192258716,"total":3129,"current":2978}
+{"_e":"metro:bundling:progress","_t":1790455483570,"id":"1","progress":0.91333192258716,"total":3132,"current":2981}
+{"_e":"metro:bundling:progress","_t":1790455483670,"id":"1","progress":0.91333192258716,"total":3133,"current":2986}
+{"_e":"metro:bundling:progress","_t":1790455483771,"id":"1","progress":0.91333192258716,"total":3134,"current":2988}
+{"_e":"metro:bundling:progress","_t":1790455483880,"id":"1","progress":0.91333192258716,"total":3144,"current":2992}
+{"_e":"metro:bundling:progress","_t":1790455483977,"id":"1","progress":0.91333192258716,"total":3145,"current":2995}
+{"_e":"metro:bundling:progress","_t":1790455484133,"id":"1","progress":0.91333192258716,"total":3145,"current":2996}
+{"_e":"metro:bundling:progress","_t":1790455484233,"id":"1","progress":0.91333192258716,"total":3145,"current":2997}
+{"_e":"metro:bundling:progress","_t":1790455484298,"id":"1","progress":0.91333192258716,"total":3145,"current":2998}
+{"_e":"metro:bundling:progress","_t":1790455484404,"id":"1","progress":0.91333192258716,"total":3145,"current":2999}
+{"_e":"metro:bundling:progress","_t":1790455484509,"id":"1","progress":0.91333192258716,"total":3145,"current":3001}
+{"_e":"metro:bundling:progress","_t":1790455484610,"id":"1","progress":0.91333192258716,"total":3145,"current":3003}
+{"_e":"metro:bundling:progress","_t":1790455484710,"id":"1","progress":0.91333192258716,"total":3145,"current":3005}
+{"_e":"metro:bundling:progress","_t":1790455484810,"id":"1","progress":0.9135591104056456,"total":3145,"current":3006}
+{"_e":"metro:bundling:progress","_t":1790455484922,"id":"1","progress":0.9159920230714208,"total":3145,"current":3010}
+{"_e":"metro:bundling:progress","_t":1790455485022,"id":"1","progress":0.9197473911632086,"total":3149,"current":3020}
+{"_e":"metro:bundling:progress","_t":1790455485125,"id":"1","progress":0.9199961400024711,"total":3159,"current":3030}
+{"_e":"metro:bundling:progress","_t":1790455485225,"id":"1","progress":0.9242753565133793,"total":3160,"current":3038}
+{"_e":"metro:bundling:progress","_t":1790455485325,"id":"1","progress":0.9268017568057845,"total":3164,"current":3046}
+{"_e":"metro:bundling:progress","_t":1790455485429,"id":"1","progress":0.9304781513842406,"total":3165,"current":3053}
+{"_e":"metro:bundling:progress","_t":1790455485532,"id":"1","progress":0.9304781513842406,"total":3178,"current":3065}
+{"_e":"metro:bundling:progress","_t":1790455485633,"id":"1","progress":0.9326630468920677,"total":3182,"current":3073}
+{"_e":"metro:bundling:progress","_t":1790455485733,"id":"1","progress":0.9326630468920677,"total":3212,"current":3077}
+{"_e":"metro:bundling:progress","_t":1790455485834,"id":"1","progress":0.9326630468920677,"total":3259,"current":3079}
+{"_e":"metro:bundling:progress","_t":1790455485936,"id":"1","progress":0.9326630468920677,"total":3265,"current":3087}
+{"_e":"metro:bundling:progress","_t":1790455486036,"id":"1","progress":0.9326630468920677,"total":3269,"current":3093}
+{"_e":"metro:bundling:progress","_t":1790455486154,"id":"1","progress":0.9326630468920677,"total":3274,"current":3106}
+{"_e":"metro:bundling:progress","_t":1790455486254,"id":"1","progress":0.9326630468920677,"total":3278,"current":3117}
+{"_e":"metro:bundling:progress","_t":1790455486354,"id":"1","progress":0.9326630468920677,"total":3278,"current":3124}
+{"_e":"metro:bundling:progress","_t":1790455486455,"id":"1","progress":0.9326630468920677,"total":3282,"current":3134}
+{"_e":"metro:bundling:progress","_t":1790455486556,"id":"1","progress":0.9326630468920677,"total":3284,"current":3140}
+{"_e":"metro:bundling:progress","_t":1790455486656,"id":"1","progress":0.9326630468920677,"total":3292,"current":3148}
+{"_e":"metro:bundling:progress","_t":1790455486756,"id":"1","progress":0.9326630468920677,"total":3293,"current":3151}
+{"_e":"metro:bundling:progress","_t":1790455486898,"id":"1","progress":0.9326630468920677,"total":3293,"current":3153}
+{"_e":"metro:bundling:progress","_t":1790455487012,"id":"1","progress":0.9326630468920677,"total":3298,"current":3157}
+{"_e":"metro:bundling:progress","_t":1790455487119,"id":"1","progress":0.9326630468920677,"total":3318,"current":3163}
+{"_e":"metro:bundling:progress","_t":1790455487226,"id":"1","progress":0.9326630468920677,"total":3324,"current":3169}
+{"_e":"metro:bundling:progress","_t":1790455487372,"id":"1","progress":0.9326630468920677,"total":3326,"current":3175}
+{"_e":"metro:bundling:progress","_t":1790455487473,"id":"1","progress":0.9326630468920677,"total":3332,"current":3188}
+{"_e":"metro:bundling:progress","_t":1790455487572,"id":"1","progress":0.9326630468920677,"total":3332,"current":3194}
+{"_e":"metro:bundling:progress","_t":1790455487672,"id":"1","progress":0.9326630468920677,"total":3332,"current":3203}
+{"_e":"metro:bundling:progress","_t":1790455487772,"id":"1","progress":0.9326630468920677,"total":3335,"current":3219}
+{"_e":"metro:bundling:progress","_t":1790455487872,"id":"1","progress":0.9358144630116372,"total":3341,"current":3232}
+{"_e":"metro:bundling:progress","_t":1790455487981,"id":"1","progress":0.9451837649329439,"total":3346,"current":3253}
+{"_e":"metro:bundling:progress","_t":1790455488081,"id":"1","progress":0.9545179077107433,"total":3347,"current":3270}
+{"_e":"metro:bundling:progress","_t":1790455488189,"id":"1","progress":0.9545983499025893,"total":3353,"current":3276}
+{"_e":"metro:bundling:progress","_t":1790455488289,"id":"1","progress":0.9545983499025893,"total":3383,"current":3282}
+{"_e":"metro:bundling:progress","_t":1790455488390,"id":"1","progress":0.9545983499025893,"total":3385,"current":3286}
+{"_e":"metro:bundling:progress","_t":1790455488491,"id":"1","progress":0.9545983499025893,"total":3391,"current":3295}
+{"_e":"metro:bundling:progress","_t":1790455488592,"id":"1","progress":0.9545983499025893,"total":3410,"current":3314}
+{"_e":"metro:bundling:progress","_t":1790455488693,"id":"1","progress":0.9545983499025893,"total":3419,"current":3328}
+{"_e":"metro:bundling:progress","_t":1790455488792,"id":"1","progress":0.9545983499025893,"total":3427,"current":3335}
+{"_e":"metro:bundling:progress","_t":1790455488892,"id":"1","progress":0.9545983499025893,"total":3444,"current":3354}
+{"_e":"metro:bundling:progress","_t":1790455488992,"id":"1","progress":0.9545983499025893,"total":3455,"current":3367}
+{"_e":"metro:bundling:progress","_t":1790455489095,"id":"1","progress":0.9548178543633177,"total":3457,"current":3378}
+{"_e":"metro:bundling:progress","_t":1790455489195,"id":"1","progress":0.9560619207808507,"total":3466,"current":3389}
+{"_e":"metro:bundling:progress","_t":1790455489295,"id":"1","progress":0.9560619207808507,"total":3487,"current":3405}
+{"_e":"metro:bundling:progress","_t":1790455489395,"id":"1","progress":0.9563854183478124,"total":3492,"current":3415}
+{"_e":"metro:bundling:progress","_t":1790455489495,"id":"1","progress":0.9597946034434908,"total":3496,"current":3425}
+{"_e":"metro:bundling:progress","_t":1790455489597,"id":"1","progress":0.963742411329712,"total":3498,"current":3434}
+{"_e":"metro:bundling:progress","_t":1790455489696,"id":"1","progress":0.9659888963749931,"total":3498,"current":3438}
+{"_e":"metro:bundling:progress","_t":1790455489797,"id":"1","progress":0.9659888963749931,"total":3503,"current":3442}
+{"_e":"metro:bundling:progress","_t":1790455489905,"id":"1","progress":0.9660562351317966,"total":3505,"current":3445}
+{"_e":"metro:bundling:progress","_t":1790455490005,"id":"1","progress":0.9660562351317966,"total":3515,"current":3454}
+{"_e":"metro:bundling:progress","_t":1790455490105,"id":"1","progress":0.9660562351317966,"total":3524,"current":3462}
+{"_e":"metro:bundling:progress","_t":1790455490205,"id":"1","progress":0.9668515917790849,"total":3530,"current":3471}
+{"_e":"metro:bundling:progress","_t":1790455490306,"id":"1","progress":0.9686030308065274,"total":3539,"current":3483}
+{"_e":"metro:bundling:progress","_t":1790455490406,"id":"1","progress":0.9725618579263726,"total":3547,"current":3498}
+{"_e":"metro:bundling:progress","_t":1790455490507,"id":"1","progress":0.979263558817695,"total":3550,"current":3513}
+{"_e":"metro:bundling:progress","_t":1790455490607,"id":"1","progress":0.9815155923766733,"total":3554,"current":3521}
+{"_e":"metro:bundling:progress","_t":1790455490706,"id":"1","progress":0.9876579022455696,"total":3554,"current":3532}
+{"_e":"metro:bundling:progress","_t":1790455490806,"id":"1","progress":0.9949459578293156,"total":3557,"current":3548}
+{"_e":"metro:bundling:progress","_t":1790455490906,"id":"1","progress":0.999,"total":3559,"current":3558}
+{"_e":"metro:bundling:progress","_t":1790455492566,"id":"1","progress":0.999,"total":3559,"current":3559}
+{"_e":"metro:bundling:progress","_t":1790455492694,"id":"1","progress":0.999,"total":3569,"current":3569}
+{"_e":"metro:bundling:done","_t":1790455493391,"id":"1","total":3569,"ms":38466.025363}
+{"_e":"metro:bundling:started","_t":1790455520317,"id":"2","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455520318,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455520349,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455520449,"id":"2","progress":0.0625,"total":16,"current":4}
+{"_e":"metro:bundling:progress","_t":1790455520549,"id":"2","progress":0.1322314049586777,"total":33,"current":12}
+{"_e":"metro:bundling:progress","_t":1790455520670,"id":"2","progress":0.1322314049586777,"total":51,"current":18}
+{"_e":"metro:bundling:progress","_t":1790455520777,"id":"2","progress":0.1489689135118498,"total":57,"current":22}
+{"_e":"metro:bundling:progress","_t":1790455520880,"id":"2","progress":0.1489689135118498,"total":186,"current":25}
+{"_e":"metro:bundling:progress","_t":1790455520981,"id":"2","progress":0.1489689135118498,"total":206,"current":31}
+{"_e":"metro:bundling:progress","_t":1790455521122,"id":"2","progress":0.1489689135118498,"total":234,"current":36}
+{"_e":"metro:bundling:progress","_t":1790455521226,"id":"2","progress":0.1489689135118498,"total":245,"current":42}
+{"_e":"metro:bundling:progress","_t":1790455521327,"id":"2","progress":0.1489689135118498,"total":249,"current":46}
+{"_e":"metro:bundling:progress","_t":1790455521429,"id":"2","progress":0.1489689135118498,"total":260,"current":52}
+{"_e":"metro:bundling:progress","_t":1790455521529,"id":"2","progress":0.1489689135118498,"total":281,"current":55}
+{"_e":"metro:bundling:progress","_t":1790455521629,"id":"2","progress":0.1489689135118498,"total":310,"current":59}
+{"_e":"metro:bundling:progress","_t":1790455521729,"id":"2","progress":0.1489689135118498,"total":313,"current":66}
+{"_e":"metro:bundling:progress","_t":1790455521830,"id":"2","progress":0.1489689135118498,"total":323,"current":71}
+{"_e":"metro:bundling:progress","_t":1790455521931,"id":"2","progress":0.1489689135118498,"total":327,"current":75}
+{"_e":"metro:bundling:progress","_t":1790455522030,"id":"2","progress":0.1489689135118498,"total":328,"current":76}
+{"_e":"metro:bundling:progress","_t":1790455522141,"id":"2","progress":0.1489689135118498,"total":331,"current":81}
+{"_e":"metro:bundling:progress","_t":1790455522242,"id":"2","progress":0.1489689135118498,"total":351,"current":89}
+{"_e":"metro:bundling:progress","_t":1790455522344,"id":"2","progress":0.1489689135118498,"total":354,"current":96}
+{"_e":"metro:bundling:progress","_t":1790455522444,"id":"2","progress":0.1489689135118498,"total":360,"current":100}
+{"_e":"metro:bundling:progress","_t":1790455522543,"id":"2","progress":0.1489689135118498,"total":362,"current":105}
+{"_e":"metro:bundling:progress","_t":1790455522647,"id":"2","progress":0.1489689135118498,"total":372,"current":112}
+{"_e":"metro:bundling:progress","_t":1790455522752,"id":"2","progress":0.1489689135118498,"total":375,"current":118}
+{"_e":"metro:bundling:progress","_t":1790455522861,"id":"2","progress":0.1489689135118498,"total":376,"current":119}
+{"_e":"metro:bundling:progress","_t":1790455522961,"id":"2","progress":0.1489689135118498,"total":423,"current":128}
+{"_e":"metro:bundling:progress","_t":1790455523064,"id":"2","progress":0.1489689135118498,"total":429,"current":131}
+{"_e":"metro:bundling:progress","_t":1790455523163,"id":"2","progress":0.1489689135118498,"total":434,"current":138}
+{"_e":"metro:bundling:progress","_t":1790455523265,"id":"2","progress":0.1489689135118498,"total":437,"current":144}
+{"_e":"metro:bundling:progress","_t":1790455523365,"id":"2","progress":0.1489689135118498,"total":446,"current":148}
+{"_e":"metro:bundling:progress","_t":1790455523468,"id":"2","progress":0.1489689135118498,"total":451,"current":154}
+{"_e":"metro:bundling:progress","_t":1790455523573,"id":"2","progress":0.1489689135118498,"total":457,"current":162}
+{"_e":"metro:bundling:progress","_t":1790455523673,"id":"2","progress":0.1489689135118498,"total":460,"current":172}
+{"_e":"metro:bundling:progress","_t":1790455523813,"id":"2","progress":0.1489689135118498,"total":462,"current":178}
+{"_e":"metro:bundling:progress","_t":1790455523914,"id":"2","progress":0.16204036196495258,"total":472,"current":190}
+{"_e":"metro:bundling:progress","_t":1790455524031,"id":"2","progress":0.1730280347433091,"total":476,"current":198}
+{"_e":"metro:bundling:progress","_t":1790455524133,"id":"2","progress":0.1730280347433091,"total":507,"current":204}
+{"_e":"metro:bundling:progress","_t":1790455524236,"id":"2","progress":0.17401745646333722,"total":513,"current":214}
+{"_e":"metro:bundling:progress","_t":1790455524335,"id":"2","progress":0.18486653847900802,"total":514,"current":221}
+{"_e":"metro:bundling:progress","_t":1790455524443,"id":"2","progress":0.19868096869178536,"total":516,"current":230}
+{"_e":"metro:bundling:progress","_t":1790455524544,"id":"2","progress":0.2069289458851095,"total":521,"current":237}
+{"_e":"metro:bundling:progress","_t":1790455524649,"id":"2","progress":0.2215579561250853,"total":529,"current":249}
+{"_e":"metro:bundling:progress","_t":1790455524750,"id":"2","progress":0.2352973936288706,"total":536,"current":260}
+{"_e":"metro:bundling:progress","_t":1790455524849,"id":"2","progress":0.2392099173553719,"total":550,"current":269}
+{"_e":"metro:bundling:progress","_t":1790455524949,"id":"2","progress":0.2463899390884268,"total":552,"current":274}
+{"_e":"metro:bundling:progress","_t":1790455525053,"id":"2","progress":0.25089525443146937,"total":559,"current":280}
+{"_e":"metro:bundling:progress","_t":1790455525156,"id":"2","progress":0.25089525443146937,"total":581,"current":288}
+{"_e":"metro:bundling:progress","_t":1790455525480,"id":"2","progress":0.25089525443146937,"total":583,"current":290}
+{"_e":"metro:bundling:progress","_t":1790455525580,"id":"2","progress":0.25089525443146937,"total":756,"current":290}
+{"_e":"metro:bundling:progress","_t":1790455525743,"id":"2","progress":0.25089525443146937,"total":2440,"current":291}
+{"_e":"metro:bundling:progress","_t":1790455525924,"id":"2","progress":0.25089525443146937,"total":2441,"current":295}
+{"_e":"metro:bundling:progress","_t":1790455526026,"id":"2","progress":0.25089525443146937,"total":2462,"current":312}
+{"_e":"metro:bundling:progress","_t":1790455526128,"id":"2","progress":0.25089525443146937,"total":2483,"current":322}
+{"_e":"metro:bundling:progress","_t":1790455526228,"id":"2","progress":0.25089525443146937,"total":2485,"current":330}
+{"_e":"metro:bundling:progress","_t":1790455526328,"id":"2","progress":0.25089525443146937,"total":2491,"current":340}
+{"_e":"metro:bundling:progress","_t":1790455526430,"id":"2","progress":0.25089525443146937,"total":2493,"current":345}
+{"_e":"metro:bundling:progress","_t":1790455526533,"id":"2","progress":0.25089525443146937,"total":2541,"current":354}
+{"_e":"metro:bundling:progress","_t":1790455526637,"id":"2","progress":0.25089525443146937,"total":2547,"current":367}
+{"_e":"metro:bundling:progress","_t":1790455526747,"id":"2","progress":0.25089525443146937,"total":2551,"current":377}
+{"_e":"metro:bundling:progress","_t":1790455526849,"id":"2","progress":0.25089525443146937,"total":2554,"current":384}
+{"_e":"metro:bundling:progress","_t":1790455526954,"id":"2","progress":0.25089525443146937,"total":2565,"current":392}
+{"_e":"metro:bundling:progress","_t":1790455527054,"id":"2","progress":0.25089525443146937,"total":2571,"current":402}
+{"_e":"metro:bundling:progress","_t":1790455527155,"id":"2","progress":0.25089525443146937,"total":2608,"current":406}
+{"_e":"metro:bundling:progress","_t":1790455527264,"id":"2","progress":0.25089525443146937,"total":2614,"current":411}
+{"_e":"metro:bundling:progress","_t":1790455527364,"id":"2","progress":0.25089525443146937,"total":2621,"current":420}
+{"_e":"metro:bundling:progress","_t":1790455527472,"id":"2","progress":0.25089525443146937,"total":2641,"current":429}
+{"_e":"metro:bundling:progress","_t":1790455527576,"id":"2","progress":0.25089525443146937,"total":2654,"current":443}
+{"_e":"metro:bundling:progress","_t":1790455527675,"id":"2","progress":0.25089525443146937,"total":2659,"current":448}
+{"_e":"metro:bundling:progress","_t":1790455527776,"id":"2","progress":0.25089525443146937,"total":2666,"current":454}
+{"_e":"metro:bundling:progress","_t":1790455527878,"id":"2","progress":0.25089525443146937,"total":2676,"current":463}
+{"_e":"metro:bundling:progress","_t":1790455527979,"id":"2","progress":0.25089525443146937,"total":2686,"current":473}
+{"_e":"metro:bundling:progress","_t":1790455528079,"id":"2","progress":0.25089525443146937,"total":2690,"current":479}
+{"_e":"metro:bundling:progress","_t":1790455528179,"id":"2","progress":0.25089525443146937,"total":2692,"current":486}
+{"_e":"metro:bundling:progress","_t":1790455528280,"id":"2","progress":0.25089525443146937,"total":2695,"current":490}
+{"_e":"metro:bundling:progress","_t":1790455528381,"id":"2","progress":0.25089525443146937,"total":2709,"current":502}
+{"_e":"metro:bundling:progress","_t":1790455528481,"id":"2","progress":0.25089525443146937,"total":2725,"current":510}
+{"_e":"metro:bundling:progress","_t":1790455528584,"id":"2","progress":0.25089525443146937,"total":2726,"current":522}
+{"_e":"metro:bundling:progress","_t":1790455528688,"id":"2","progress":0.25089525443146937,"total":2733,"current":532}
+{"_e":"metro:bundling:progress","_t":1790455528798,"id":"2","progress":0.25089525443146937,"total":2753,"current":543}
+{"_e":"metro:bundling:progress","_t":1790455528898,"id":"2","progress":0.25089525443146937,"total":2773,"current":560}
+{"_e":"metro:bundling:progress","_t":1790455528999,"id":"2","progress":0.25089525443146937,"total":2775,"current":580}
+{"_e":"metro:bundling:progress","_t":1790455529099,"id":"2","progress":0.25089525443146937,"total":2775,"current":593}
+{"_e":"metro:bundling:progress","_t":1790455529199,"id":"2","progress":0.25089525443146937,"total":2775,"current":609}
+{"_e":"metro:bundling:progress","_t":1790455529300,"id":"2","progress":0.25089525443146937,"total":2777,"current":628}
+{"_e":"metro:bundling:progress","_t":1790455529400,"id":"2","progress":0.25089525443146937,"total":2779,"current":648}
+{"_e":"metro:bundling:progress","_t":1790455529504,"id":"2","progress":0.25089525443146937,"total":2785,"current":666}
+{"_e":"metro:bundling:progress","_t":1790455529605,"id":"2","progress":0.25089525443146937,"total":2805,"current":686}
+{"_e":"metro:bundling:progress","_t":1790455529707,"id":"2","progress":0.25089525443146937,"total":2806,"current":707}
+{"_e":"metro:bundling:progress","_t":1790455529809,"id":"2","progress":0.25089525443146937,"total":2807,"current":724}
+{"_e":"metro:bundling:progress","_t":1790455529910,"id":"2","progress":0.25089525443146937,"total":2807,"current":741}
+{"_e":"metro:bundling:progress","_t":1790455530011,"id":"2","progress":0.25089525443146937,"total":2807,"current":759}
+{"_e":"metro:bundling:progress","_t":1790455530111,"id":"2","progress":0.25089525443146937,"total":2807,"current":775}
+{"_e":"metro:bundling:progress","_t":1790455530212,"id":"2","progress":0.25089525443146937,"total":2807,"current":791}
+{"_e":"metro:bundling:progress","_t":1790455530313,"id":"2","progress":0.25089525443146937,"total":2811,"current":812}
+{"_e":"metro:bundling:progress","_t":1790455530413,"id":"2","progress":0.25089525443146937,"total":2812,"current":838}
+{"_e":"metro:bundling:progress","_t":1790455530517,"id":"2","progress":0.25089525443146937,"total":2812,"current":859}
+{"_e":"metro:bundling:progress","_t":1790455530618,"id":"2","progress":0.25089525443146937,"total":2813,"current":892}
+{"_e":"metro:bundling:progress","_t":1790455530719,"id":"2","progress":0.25089525443146937,"total":2813,"current":923}
+{"_e":"metro:bundling:progress","_t":1790455530821,"id":"2","progress":0.25089525443146937,"total":2813,"current":948}
+{"_e":"metro:bundling:progress","_t":1790455530922,"id":"2","progress":0.25089525443146937,"total":2813,"current":977}
+{"_e":"metro:bundling:progress","_t":1790455531024,"id":"2","progress":0.25089525443146937,"total":2813,"current":1007}
+{"_e":"metro:bundling:progress","_t":1790455531123,"id":"2","progress":0.25089525443146937,"total":2813,"current":1035}
+{"_e":"metro:bundling:progress","_t":1790455531223,"id":"2","progress":0.25089525443146937,"total":2813,"current":1063}
+{"_e":"metro:bundling:progress","_t":1790455531323,"id":"2","progress":0.25089525443146937,"total":2813,"current":1093}
+{"_e":"metro:bundling:progress","_t":1790455531423,"id":"2","progress":0.25089525443146937,"total":2813,"current":1117}
+{"_e":"metro:bundling:progress","_t":1790455531523,"id":"2","progress":0.25089525443146937,"total":2813,"current":1146}
+{"_e":"metro:bundling:progress","_t":1790455531623,"id":"2","progress":0.25089525443146937,"total":2813,"current":1169}
+{"_e":"metro:bundling:progress","_t":1790455531723,"id":"2","progress":0.25089525443146937,"total":2813,"current":1197}
+{"_e":"metro:bundling:progress","_t":1790455531823,"id":"2","progress":0.25089525443146937,"total":2813,"current":1227}
+{"_e":"metro:bundling:progress","_t":1790455531923,"id":"2","progress":0.25089525443146937,"total":2813,"current":1257}
+{"_e":"metro:bundling:progress","_t":1790455532028,"id":"2","progress":0.25089525443146937,"total":2813,"current":1281}
+{"_e":"metro:bundling:progress","_t":1790455532129,"id":"2","progress":0.25089525443146937,"total":2813,"current":1305}
+{"_e":"metro:bundling:progress","_t":1790455532229,"id":"2","progress":0.25089525443146937,"total":2813,"current":1324}
+{"_e":"metro:bundling:progress","_t":1790455532328,"id":"2","progress":0.25089525443146937,"total":2813,"current":1346}
+{"_e":"metro:bundling:progress","_t":1790455532428,"id":"2","progress":0.25089525443146937,"total":2813,"current":1352}
+{"_e":"metro:bundling:progress","_t":1790455532528,"id":"2","progress":0.25089525443146937,"total":2813,"current":1383}
+{"_e":"metro:bundling:progress","_t":1790455532630,"id":"2","progress":0.2519590308012075,"total":2813,"current":1412}
+{"_e":"metro:bundling:progress","_t":1790455532730,"id":"2","progress":0.26205081809368896,"total":2813,"current":1440}
+{"_e":"metro:bundling:progress","_t":1790455532830,"id":"2","progress":0.2727119239314598,"total":2813,"current":1469}
+{"_e":"metro:bundling:progress","_t":1790455532930,"id":"2","progress":0.2832070996360532,"total":2813,"current":1497}
+{"_e":"metro:bundling:progress","_t":1790455533030,"id":"2","progress":0.29467182292765204,"total":2813,"current":1527}
+{"_e":"metro:bundling:progress","_t":1790455533130,"id":"2","progress":0.30479191817887824,"total":2813,"current":1553}
+{"_e":"metro:bundling:progress","_t":1790455533230,"id":"2","progress":0.3178827062256911,"total":2813,"current":1586}
+{"_e":"metro:bundling:progress","_t":1790455533331,"id":"2","progress":0.3283905194118667,"total":2813,"current":1612}
+{"_e":"metro:bundling:progress","_t":1790455533433,"id":"2","progress":0.3407272289326548,"total":2813,"current":1642}
+{"_e":"metro:bundling:progress","_t":1790455533533,"id":"2","progress":0.35371413688085984,"total":2813,"current":1673}
+{"_e":"metro:bundling:progress","_t":1790455533633,"id":"2","progress":0.3665133782275654,"total":2813,"current":1703}
+{"_e":"metro:bundling:progress","_t":1790455533734,"id":"2","progress":0.3777900557932175,"total":2813,"current":1729}
+{"_e":"metro:bundling:progress","_t":1790455533835,"id":"2","progress":0.3885178635202503,"total":2814,"current":1754}
+{"_e":"metro:bundling:progress","_t":1790455533935,"id":"2","progress":0.39853816663736774,"total":2818,"current":1779}
+{"_e":"metro:bundling:progress","_t":1790455534042,"id":"2","progress":0.41059919018158036,"total":2820,"current":1807}
+{"_e":"metro:bundling:progress","_t":1790455534143,"id":"2","progress":0.42250000000000004,"total":2820,"current":1833}
+{"_e":"metro:bundling:progress","_t":1790455534244,"id":"2","progress":0.43597454856395557,"total":2820,"current":1862}
+{"_e":"metro:bundling:progress","_t":1790455534345,"id":"2","progress":0.4477532456929863,"total":2826,"current":1891}
+{"_e":"metro:bundling:progress","_t":1790455534448,"id":"2","progress":0.46015051320540384,"total":2826,"current":1917}
+{"_e":"metro:bundling:progress","_t":1790455534547,"id":"2","progress":0.4679661031943004,"total":2833,"current":1938}
+{"_e":"metro:bundling:progress","_t":1790455534647,"id":"2","progress":0.4806066966537913,"total":2833,"current":1964}
+{"_e":"metro:bundling:progress","_t":1790455534747,"id":"2","progress":0.4874829442570162,"total":2833,"current":1978}
+{"_e":"metro:bundling:progress","_t":1790455534847,"id":"2","progress":0.49371070238795106,"total":2835,"current":1992}
+{"_e":"metro:bundling:progress","_t":1790455534947,"id":"2","progress":0.5064702806175855,"total":2837,"current":2019}
+{"_e":"metro:bundling:progress","_t":1790455535047,"id":"2","progress":0.519090536466793,"total":2837,"current":2044}
+{"_e":"metro:bundling:progress","_t":1790455535147,"id":"2","progress":0.5292050188454672,"total":2840,"current":2066}
+{"_e":"metro:bundling:progress","_t":1790455535248,"id":"2","progress":0.5441659640944256,"total":2840,"current":2095}
+{"_e":"metro:bundling:progress","_t":1790455535347,"id":"2","progress":0.5577565215235072,"total":2840,"current":2121}
+{"_e":"metro:bundling:progress","_t":1790455535447,"id":"2","progress":0.566203258282087,"total":2840,"current":2137}
+{"_e":"metro:bundling:progress","_t":1790455535547,"id":"2","progress":0.5741797262447926,"total":2840,"current":2152}
+{"_e":"metro:bundling:progress","_t":1790455535647,"id":"2","progress":0.5882636225897723,"total":2841,"current":2179}
+{"_e":"metro:bundling:progress","_t":1790455535749,"id":"2","progress":0.5993054761332833,"total":2847,"current":2204}
+{"_e":"metro:bundling:progress","_t":1790455535849,"id":"2","progress":0.6102315133017964,"total":2847,"current":2224}
+{"_e":"metro:bundling:progress","_t":1790455535950,"id":"2","progress":0.6240278559663059,"total":2847,"current":2249}
+{"_e":"metro:bundling:progress","_t":1790455536054,"id":"2","progress":0.6329507945999855,"total":2852,"current":2269}
+{"_e":"metro:bundling:progress","_t":1790455536155,"id":"2","progress":0.6419088545918418,"total":2852,"current":2285}
+{"_e":"metro:bundling:progress","_t":1790455536264,"id":"2","progress":0.6531949479610284,"total":2852,"current":2305}
+{"_e":"metro:bundling:progress","_t":1790455536370,"id":"2","progress":0.6634365244536942,"total":2852,"current":2323}
+{"_e":"metro:bundling:progress","_t":1790455536471,"id":"2","progress":0.6703085013051544,"total":2852,"current":2335}
+{"_e":"metro:bundling:progress","_t":1790455536570,"id":"2","progress":0.6795262152098182,"total":2852,"current":2351}
+{"_e":"metro:bundling:progress","_t":1790455536671,"id":"2","progress":0.6928869580953992,"total":2852,"current":2374}
+{"_e":"metro:bundling:progress","_t":1790455536775,"id":"2","progress":0.7009739356411293,"total":2857,"current":2392}
+{"_e":"metro:bundling:progress","_t":1790455536875,"id":"2","progress":0.709978650288645,"total":2859,"current":2409}
+{"_e":"metro:bundling:progress","_t":1790455536977,"id":"2","progress":0.7164307752285056,"total":2865,"current":2425}
+{"_e":"metro:bundling:progress","_t":1790455537077,"id":"2","progress":0.7256076824196597,"total":2875,"current":2449}
+{"_e":"metro:bundling:progress","_t":1790455537177,"id":"2","progress":0.736651641686496,"total":2879,"current":2471}
+{"_e":"metro:bundling:progress","_t":1790455537278,"id":"2","progress":0.7457042100694444,"total":2880,"current":2487}
+{"_e":"metro:bundling:progress","_t":1790455537378,"id":"2","progress":0.7579025524432923,"total":2882,"current":2509}
+{"_e":"metro:bundling:progress","_t":1790455537479,"id":"2","progress":0.7678254522736078,"total":2885,"current":2528}
+{"_e":"metro:bundling:progress","_t":1790455537579,"id":"2","progress":0.774058645176609,"total":2887,"current":2540}
+{"_e":"metro:bundling:progress","_t":1790455537680,"id":"2","progress":0.7804509300862263,"total":2891,"current":2554}
+{"_e":"metro:bundling:progress","_t":1790455537780,"id":"2","progress":0.7856961449971003,"total":2896,"current":2567}
+{"_e":"metro:bundling:progress","_t":1790455537883,"id":"2","progress":0.7856961449971003,"total":2917,"current":2574}
+{"_e":"metro:bundling:progress","_t":1790455537983,"id":"2","progress":0.7856961449971003,"total":2927,"current":2589}
+{"_e":"metro:bundling:progress","_t":1790455538084,"id":"2","progress":0.7899887211537925,"total":2932,"current":2606}
+{"_e":"metro:bundling:progress","_t":1790455538186,"id":"2","progress":0.7940277882686481,"total":2938,"current":2618}
+{"_e":"metro:bundling:progress","_t":1790455538286,"id":"2","progress":0.7943576036204478,"total":2943,"current":2623}
+{"_e":"metro:bundling:progress","_t":1790455538386,"id":"2","progress":0.7944103174591343,"total":2953,"current":2632}
+{"_e":"metro:bundling:progress","_t":1790455538486,"id":"2","progress":0.7999804169136024,"total":2955,"current":2643}
+{"_e":"metro:bundling:progress","_t":1790455538586,"id":"2","progress":0.8006175476113966,"total":2965,"current":2653}
+{"_e":"metro:bundling:progress","_t":1790455538687,"id":"2","progress":0.8066644864623531,"total":2965,"current":2663}
+{"_e":"metro:bundling:progress","_t":1790455538787,"id":"2","progress":0.8095762411088744,"total":2973,"current":2675}
+{"_e":"metro:bundling:progress","_t":1790455538887,"id":"2","progress":0.8133311489301603,"total":2975,"current":2683}
+{"_e":"metro:bundling:progress","_t":1790455538988,"id":"2","progress":0.8172645376334399,"total":2980,"current":2694}
+{"_e":"metro:bundling:progress","_t":1790455539129,"id":"2","progress":0.8233994770187708,"total":2981,"current":2705}
+{"_e":"metro:bundling:progress","_t":1790455539229,"id":"2","progress":0.8276071947034684,"total":2991,"current":2721}
+{"_e":"metro:bundling:progress","_t":1790455539329,"id":"2","progress":0.8295304440949574,"total":3004,"current":2736}
+{"_e":"metro:bundling:progress","_t":1790455539429,"id":"2","progress":0.8345988710955183,"total":3008,"current":2748}
+{"_e":"metro:bundling:progress","_t":1790455539529,"id":"2","progress":0.8366296875358239,"total":3012,"current":2755}
+{"_e":"metro:bundling:progress","_t":1790455539629,"id":"2","progress":0.8404804130402661,"total":3016,"current":2765}
+{"_e":"metro:bundling:progress","_t":1790455539729,"id":"2","progress":0.8404804130402661,"total":3021,"current":2769}
+{"_e":"metro:bundling:progress","_t":1790455539830,"id":"2","progress":0.8404804130402661,"total":3034,"current":2779}
+{"_e":"metro:bundling:progress","_t":1790455539929,"id":"2","progress":0.8404804130402661,"total":3039,"current":2786}
+{"_e":"metro:bundling:progress","_t":1790455540030,"id":"2","progress":0.8416855306440444,"total":3040,"current":2789}
+{"_e":"metro:bundling:progress","_t":1790455540130,"id":"2","progress":0.8434972299168975,"total":3040,"current":2792}
+{"_e":"metro:bundling:progress","_t":1790455540242,"id":"2","progress":0.8453108769044322,"total":3040,"current":2795}
+{"_e":"metro:bundling:progress","_t":1790455540341,"id":"2","progress":0.8496925813801067,"total":3043,"current":2805}
+{"_e":"metro:bundling:progress","_t":1790455540449,"id":"2","progress":0.852304057351574,"total":3047,"current":2813}
+{"_e":"metro:bundling:progress","_t":1790455540551,"id":"2","progress":0.8584192723941002,"total":3048,"current":2824}
+{"_e":"metro:bundling:progress","_t":1790455540670,"id":"2","progress":0.8596798911750902,"total":3049,"current":2827}
+{"_e":"metro:bundling:progress","_t":1790455540771,"id":"2","progress":0.8622014199555873,"total":3051,"current":2833}
+{"_e":"metro:bundling:progress","_t":1790455540870,"id":"2","progress":0.8635484655378047,"total":3054,"current":2838}
+{"_e":"metro:bundling:progress","_t":1790455540971,"id":"2","progress":0.8655024601270657,"total":3057,"current":2844}
+{"_e":"metro:bundling:progress","_t":1790455541072,"id":"2","progress":0.8693232167745444,"total":3061,"current":2854}
+{"_e":"metro:bundling:progress","_t":1790455541172,"id":"2","progress":0.8754258531283909,"total":3061,"current":2864}
+{"_e":"metro:bundling:progress","_t":1790455541272,"id":"2","progress":0.8754258531283909,"total":3070,"current":2870}
+{"_e":"metro:bundling:progress","_t":1790455541389,"id":"2","progress":0.8754258531283909,"total":3083,"current":2879}
+{"_e":"metro:bundling:progress","_t":1790455541492,"id":"2","progress":0.8754258531283909,"total":3086,"current":2885}
+{"_e":"metro:bundling:progress","_t":1790455541591,"id":"2","progress":0.8765564876781768,"total":3090,"current":2893}
+{"_e":"metro:bundling:progress","_t":1790455541694,"id":"2","progress":0.8803461168665169,"total":3094,"current":2903}
+{"_e":"metro:bundling:progress","_t":1790455541795,"id":"2","progress":0.8835636015365167,"total":3099,"current":2913}
+{"_e":"metro:bundling:progress","_t":1790455541895,"id":"2","progress":0.8879204198867559,"total":3102,"current":2923}
+{"_e":"metro:bundling:progress","_t":1790455541996,"id":"2","progress":0.8879204198867559,"total":3112,"current":2931}
+{"_e":"metro:bundling:progress","_t":1790455542097,"id":"2","progress":0.8890141733996219,"total":3116,"current":2938}
+{"_e":"metro:bundling:progress","_t":1790455542201,"id":"2","progress":0.895141743547882,"total":3118,"current":2950}
+{"_e":"metro:bundling:progress","_t":1790455542316,"id":"2","progress":0.895141743547882,"total":3195,"current":2961}
+{"_e":"metro:bundling:progress","_t":1790455542415,"id":"2","progress":0.895141743547882,"total":3204,"current":2972}
+{"_e":"metro:bundling:progress","_t":1790455542516,"id":"2","progress":0.895141743547882,"total":3211,"current":2985}
+{"_e":"metro:bundling:progress","_t":1790455542616,"id":"2","progress":0.895141743547882,"total":3216,"current":2997}
+{"_e":"metro:bundling:progress","_t":1790455542719,"id":"2","progress":0.895141743547882,"total":3222,"current":3009}
+{"_e":"metro:bundling:progress","_t":1790455542819,"id":"2","progress":0.895141743547882,"total":3222,"current":3015}
+{"_e":"metro:bundling:progress","_t":1790455542920,"id":"2","progress":0.895141743547882,"total":3223,"current":3024}
+{"_e":"metro:bundling:progress","_t":1790455543021,"id":"2","progress":0.895141743547882,"total":3228,"current":3035}
+{"_e":"metro:bundling:progress","_t":1790455543121,"id":"2","progress":0.895141743547882,"total":3234,"current":3051}
+{"_e":"metro:bundling:progress","_t":1790455543222,"id":"2","progress":0.8976302726634028,"total":3234,"current":3064}
+{"_e":"metro:bundling:progress","_t":1790455543323,"id":"2","progress":0.9023237562861205,"total":3234,"current":3072}
+{"_e":"metro:bundling:progress","_t":1790455543428,"id":"2","progress":0.905851900551079,"total":3234,"current":3078}
+{"_e":"metro:bundling:progress","_t":1790455543530,"id":"2","progress":0.9089895631992937,"total":3241,"current":3090}
+{"_e":"metro:bundling:progress","_t":1790455543633,"id":"2","progress":0.9089895631992937,"total":3249,"current":3096}
+{"_e":"metro:bundling:progress","_t":1790455543733,"id":"2","progress":0.9128907199369516,"total":3255,"current":3110}
+{"_e":"metro:bundling:progress","_t":1790455543834,"id":"2","progress":0.9154183712940683,"total":3262,"current":3121}
+{"_e":"metro:bundling:progress","_t":1790455543935,"id":"2","progress":0.9179140967117061,"total":3268,"current":3131}
+{"_e":"metro:bundling:progress","_t":1790455544036,"id":"2","progress":0.9192805820553074,"total":3276,"current":3141}
+{"_e":"metro:bundling:progress","_t":1790455544136,"id":"2","progress":0.921202357857687,"total":3283,"current":3151}
+{"_e":"metro:bundling:progress","_t":1790455544236,"id":"2","progress":0.9260185397375241,"total":3289,"current":3165}
+{"_e":"metro:bundling:progress","_t":1790455544337,"id":"2","progress":0.9285099915166368,"total":3296,"current":3176}
+{"_e":"metro:bundling:progress","_t":1790455544438,"id":"2","progress":0.9285099915166368,"total":3322,"current":3186}
+{"_e":"metro:bundling:progress","_t":1790455544538,"id":"2","progress":0.9285099915166368,"total":3333,"current":3196}
+{"_e":"metro:bundling:progress","_t":1790455544639,"id":"2","progress":0.9285099915166368,"total":3335,"current":3210}
+{"_e":"metro:bundling:progress","_t":1790455544739,"id":"2","progress":0.9334407862545463,"total":3338,"current":3225}
+{"_e":"metro:bundling:progress","_t":1790455544839,"id":"2","progress":0.9369172852434392,"total":3338,"current":3231}
+{"_e":"metro:bundling:progress","_t":1790455544939,"id":"2","progress":0.9374973299812858,"total":3338,"current":3232}
+{"_e":"metro:bundling:progress","_t":1790455544977,"id":"2","progress":0.9380775542161884,"total":3338,"current":3233}
+{"_e":"metro:bundling:progress","_t":1790455545079,"id":"2","progress":0.9415799071497593,"total":3339,"current":3240}
+{"_e":"metro:bundling:progress","_t":1790455545179,"id":"2","progress":0.9451190817698043,"total":3342,"current":3249}
+{"_e":"metro:bundling:progress","_t":1790455545279,"id":"2","progress":0.9463463524798235,"total":3346,"current":3255}
+{"_e":"metro:bundling:progress","_t":1790455545473,"id":"2","progress":0.9487190437847461,"total":3349,"current":3262}
+{"_e":"metro:bundling:progress","_t":1790455545575,"id":"2","progress":0.9552735260770975,"total":3360,"current":3284}
+{"_e":"metro:bundling:progress","_t":1790455545677,"id":"2","progress":0.9588521833844079,"total":3367,"current":3297}
+{"_e":"metro:bundling:progress","_t":1790455545777,"id":"2","progress":0.9588521833844079,"total":3397,"current":3307}
+{"_e":"metro:bundling:progress","_t":1790455545880,"id":"2","progress":0.9588521833844079,"total":3413,"current":3321}
+{"_e":"metro:bundling:progress","_t":1790455545995,"id":"2","progress":0.9588521833844079,"total":3426,"current":3329}
+{"_e":"metro:bundling:progress","_t":1790455546096,"id":"2","progress":0.9588521833844079,"total":3454,"current":3347}
+{"_e":"metro:bundling:progress","_t":1790455546196,"id":"2","progress":0.9588521833844079,"total":3460,"current":3357}
+{"_e":"metro:bundling:progress","_t":1790455546299,"id":"2","progress":0.9588521833844079,"total":3461,"current":3362}
+{"_e":"metro:bundling:progress","_t":1790455546400,"id":"2","progress":0.9588521833844079,"total":3470,"current":3371}
+{"_e":"metro:bundling:progress","_t":1790455546502,"id":"2","progress":0.9588521833844079,"total":3475,"current":3378}
+{"_e":"metro:bundling:progress","_t":1790455546606,"id":"2","progress":0.9588521833844079,"total":3481,"current":3386}
+{"_e":"metro:bundling:progress","_t":1790455546706,"id":"2","progress":0.9588521833844079,"total":3485,"current":3399}
+{"_e":"metro:bundling:progress","_t":1790455546807,"id":"2","progress":0.9588521833844079,"total":3487,"current":3413}
+{"_e":"metro:bundling:progress","_t":1790455546908,"id":"2","progress":0.9630871162785616,"total":3489,"current":3424}
+{"_e":"metro:bundling:progress","_t":1790455547009,"id":"2","progress":0.9654172304558776,"total":3497,"current":3436}
+{"_e":"metro:bundling:progress","_t":1790455547109,"id":"2","progress":0.9682649940225998,"total":3501,"current":3445}
+{"_e":"metro:bundling:progress","_t":1790455547214,"id":"2","progress":0.9722038857629203,"total":3501,"current":3452}
+{"_e":"metro:bundling:progress","_t":1790455547315,"id":"2","progress":0.9728212042453216,"total":3508,"current":3460}
+{"_e":"metro:bundling:progress","_t":1790455547415,"id":"2","progress":0.9734812208422691,"total":3521,"current":3474}
+{"_e":"metro:bundling:progress","_t":1790455547515,"id":"2","progress":0.9734812208422691,"total":3534,"current":3486}
+{"_e":"metro:bundling:progress","_t":1790455547619,"id":"2","progress":0.973607790855705,"total":3538,"current":3491}
+{"_e":"metro:bundling:progress","_t":1790455547720,"id":"2","progress":0.9758469804953019,"total":3539,"current":3496}
+{"_e":"metro:bundling:progress","_t":1790455547819,"id":"2","progress":0.9775414235434368,"total":3542,"current":3502}
+{"_e":"metro:bundling:progress","_t":1790455547919,"id":"2","progress":0.9814688838448241,"total":3545,"current":3512}
+{"_e":"metro:bundling:progress","_t":1790455548019,"id":"2","progress":0.9837195701660844,"total":3548,"current":3519}
+{"_e":"metro:bundling:progress","_t":1790455548125,"id":"2","progress":0.9837195701660844,"total":3552,"current":3522}
+{"_e":"metro:bundling:progress","_t":1790455548225,"id":"2","progress":0.9854139401225551,"total":3552,"current":3526}
+{"_e":"metro:bundling:progress","_t":1790455548325,"id":"2","progress":0.9865396935582503,"total":3554,"current":3530}
+{"_e":"metro:bundling:progress","_t":1790455548431,"id":"2","progress":0.9893393944069583,"total":3555,"current":3536}
+{"_e":"metro:bundling:progress","_t":1790455548579,"id":"2","progress":0.990458873122976,"total":3555,"current":3538}
+{"_e":"metro:bundling:progress","_t":1790455548680,"id":"2","progress":0.9927017787709046,"total":3556,"current":3543}
+{"_e":"metro:bundling:progress","_t":1790455548780,"id":"2","progress":0.9955056236643085,"total":3556,"current":3548}
+{"_e":"metro:bundling:progress","_t":1790455548880,"id":"2","progress":0.9960668671337343,"total":3556,"current":3549}
+{"_e":"metro:bundling:progress","_t":1790455549684,"id":"2","progress":0.9966282687667417,"total":3556,"current":3550}
+{"_e":"metro:bundling:progress","_t":1790455549790,"id":"2","progress":0.9966282687667417,"total":3566,"current":3559}
+{"_e":"metro:bundling:progress","_t":1790455549893,"id":"2","progress":0.999,"total":3570,"current":3570}
+{"_e":"metro:bundling:done","_t":1790455550639,"id":"2","total":3570,"ms":30321.503562}
+{"_e":"metro:server_log","_t":1790455626811,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"metro:bundling:started","_t":1790455748719,"id":"4","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455748720,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790455748914,"id":"4","total":1,"ms":194.15315}
+{"_e":"metro:client_log","_t":1790455752649,"level":"warn","data":["Font loading error:","[Error: FunctionCallException: Calling the 'loadAsync' function has failed (at ExpoModulesCore/AsyncFunctionDefinition.swift:123)\n→ Caused by: FontRegistrationFailedException: Registering 'Inter_400Regular' font failed with message: 'Font registration was unsuccessful.'. CTFontManagerError code: 104 (at ExpoFont/FontUtils.swift:65)]"]}
+{"_e":"metro:client_log","_t":1790455758689,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455758735,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455758764,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455758791,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455758819,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455758850,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760622,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760660,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760707,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760714,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760741,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455760777,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455763216,"level":"error","data":["Text strings must be rendered within a <Text> component."]}
+{"_e":"metro:client_log","_t":1790455777328,"level":"error","data":["The action 'REPLACE' with payload {\"name\":\"Main\"} was not handled by any navigator.\n\nDo you have a screen named 'Main'?\n\nIf you're trying to navigate to a screen in a nested navigator, see https://reactnavigation.org/docs/nesting-navigators#navigating-to-a-screen-in-a-nested-navigator.\n\nIf you're using conditional rendering, navigation will happen automatically and you shouldn't navigate manually, see.\n\nThis is a development-only warning and won't be shown in production."]}
+{"_e":"metro:bundling:started","_t":1790455806608,"id":"a","platform":"android","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790455806608,"id":"a","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790455806611,"id":"a","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790455806817,"id":"a","total":1,"ms":208.862519}
+{"_e":"metro:client_log","_t":1790455836528,"level":"warn","data":["Font loading error:","[Error: Call to function 'ExpoFontLoader.loadAsync' has been rejected.\n→ Caused by: Font file for Inter_400Regular is empty. Make sure the local file path is correctly populated.]"]}
+{"_e":"metro:client_log","_t":1790455892666,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455892819,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455892901,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455892928,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455893001,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455893041,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898179,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898231,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898231,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898242,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898292,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455898344,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902480,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902483,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902483,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902483,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902527,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455902573,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904425,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904429,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904429,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904469,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904513,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455904564,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908009,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908104,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908104,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908146,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908198,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455908248,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916463,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916509,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916510,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916632,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916636,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455916651,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790455919707,"level":"error","data":["Text strings must be rendered within a <Text> component."]}
+{"_e":"metro:server_log","_t":1790455989684,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"metro:server_log","_t":1790456566861,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","SM-A065F - 16 - API 36","60"]}
+{"_e":"root:init","_t":1790458756544,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790458756545,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790458756547,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790458756774,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790458757287,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790458757501,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790458761903,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790458788972,"id":"4","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790458788973,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458788987,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458789577,"id":"4","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1790458789677,"id":"4","progress":0.010000000000000002,"total":148,"current":9}
+{"_e":"metro:bundling:progress","_t":1790458789782,"id":"4","progress":0.038766141372922766,"total":193,"current":38}
+{"_e":"metro:bundling:progress","_t":1790458789883,"id":"4","progress":0.1160160942773784,"total":229,"current":78}
+{"_e":"metro:bundling:progress","_t":1790458789986,"id":"4","progress":0.1421265910645204,"total":313,"current":118}
+{"_e":"metro:bundling:progress","_t":1790458790100,"id":"4","progress":0.1421265910645204,"total":379,"current":129}
+{"_e":"metro:bundling:progress","_t":1790458790199,"id":"4","progress":0.1739312790672981,"total":434,"current":181}
+{"_e":"metro:bundling:progress","_t":1790458790299,"id":"4","progress":0.22309753315939945,"total":506,"current":239}
+{"_e":"metro:bundling:progress","_t":1790458790399,"id":"4","progress":0.32194062558347497,"total":638,"current":362}
+{"_e":"metro:bundling:progress","_t":1790458790499,"id":"4","progress":0.413138644470868,"total":725,"current":466}
+{"_e":"metro:bundling:progress","_t":1790458790599,"id":"4","progress":0.46446198183540754,"total":898,"current":612}
+{"_e":"metro:bundling:progress","_t":1790458790699,"id":"4","progress":0.6235082095192219,"total":1041,"current":822}
+{"_e":"metro:bundling:progress","_t":1790458790841,"id":"4","progress":0.7150630963373346,"total":1140,"current":964}
+{"_e":"metro:bundling:progress","_t":1790458791002,"id":"4","progress":0.7150630963373346,"total":2997,"current":965}
+{"_e":"metro:bundling:progress","_t":1790458791109,"id":"4","progress":0.7150630963373346,"total":3000,"current":968}
+{"_e":"metro:bundling:progress","_t":1790458791209,"id":"4","progress":0.7150630963373346,"total":3150,"current":1231}
+{"_e":"metro:bundling:progress","_t":1790458791309,"id":"4","progress":0.7150630963373346,"total":3150,"current":2342}
+{"_e":"metro:bundling:progress","_t":1790458791419,"id":"4","progress":0.9111296246648393,"total":3167,"current":3023}
+{"_e":"metro:bundling:progress","_t":1790458791520,"id":"4","progress":0.9111296246648393,"total":3368,"current":3157}
+{"_e":"metro:bundling:progress","_t":1790458791620,"id":"4","progress":0.9521573985489898,"total":3469,"current":3385}
+{"_e":"metro:bundling:failed","_t":1790458791688,"id":"4","message":"SyntaxError: /home/famzy/Desktop/Cramly/src/shared/components/ui/Input.tsx: Unexpected token, expected \"}\" (72:15)\n\n  70 |         {rightIcon && <View className=\"ml-3\">{rightIcon}</View>}\n  71 |       </Animated.View>\n> 72 |       {!!error {error && ({error && ( (\n     |                ^\n  73 |         <Text className=\"mt-1.5 text-sm font-inter-regular text-red-500\">\n  74 |           {error}\n  75 |         </Text>","importStack":null,"filename":"src/shared/components/ui/Input.tsx","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790458844771,"id":"5","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790458844771,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458844777,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458844877,"id":"5","progress":0.07099969536462888,"total":319,"current":85}
+{"_e":"metro:bundling:progress","_t":1790458844977,"id":"5","progress":0.19772963738163388,"total":497,"current":221}
+{"_e":"metro:bundling:progress","_t":1790458845077,"id":"5","progress":0.33857426216613656,"total":684,"current":398}
+{"_e":"metro:bundling:progress","_t":1790458845180,"id":"5","progress":0.43146866589773164,"total":918,"current":603}
+{"_e":"metro:bundling:progress","_t":1790458845280,"id":"5","progress":0.6633164443582914,"total":1094,"current":891}
+{"_e":"metro:bundling:progress","_t":1790458845409,"id":"5","progress":0.7184863253394512,"total":1142,"current":968}
+{"_e":"metro:bundling:progress","_t":1790458845531,"id":"5","progress":0.7184863253394512,"total":2998,"current":969}
+{"_e":"metro:bundling:progress","_t":1790458845631,"id":"5","progress":0.7184863253394512,"total":3150,"current":1171}
+{"_e":"metro:bundling:progress","_t":1790458845731,"id":"5","progress":0.7184863253394512,"total":3150,"current":2431}
+{"_e":"metro:bundling:progress","_t":1790458845831,"id":"5","progress":0.9035115544212713,"total":3194,"current":3036}
+{"_e":"metro:bundling:progress","_t":1790458845931,"id":"5","progress":0.9041497676704492,"total":3399,"current":3232}
+{"_e":"metro:bundling:started","_t":1790458845975,"id":"6","platform":"android","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790458845976,"id":"5","progress":0.9041497676704492,"total":3399,"current":3232}
+{"_e":"metro:bundling:progress","_t":1790458845976,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458846031,"id":"5","progress":0.9655052263107593,"total":3506,"current":3445}
+{"_e":"metro:bundling:progress","_t":1790458846031,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790458846131,"id":"5","progress":0.9655052263107593,"total":3506,"current":3445}
+{"_e":"metro:bundling:progress","_t":1790458846131,"id":"6","progress":0.07890417876530742,"total":178,"current":50}
+{"_e":"metro:bundling:progress","_t":1790458846231,"id":"5","progress":0.9655052263107593,"total":3506,"current":3445}
+{"_e":"metro:bundling:progress","_t":1790458846231,"id":"6","progress":0.21333628265197369,"total":446,"current":206}
+{"_e":"metro:bundling:progress","_t":1790458846334,"id":"5","progress":0.999,"total":3587,"current":3587}
+{"_e":"metro:bundling:progress","_t":1790458846334,"id":"6","progress":0.21333628265197369,"total":446,"current":206}
+{"_e":"metro:bundling:progress","_t":1790458846433,"id":"5","progress":0.999,"total":3587,"current":3587}
+{"_e":"metro:bundling:progress","_t":1790458846433,"id":"6","progress":0.38395420954261195,"total":723,"current":448}
+{"_e":"metro:bundling:progress","_t":1790458846533,"id":"5","progress":0.999,"total":3587,"current":3587}
+{"_e":"metro:bundling:progress","_t":1790458846533,"id":"6","progress":0.4823771466382689,"total":933,"current":648}
+{"_e":"metro:bundling:done","_t":1790458846704,"id":"5","total":3587,"ms":1933.159712}
+{"_e":"metro:bundling:progress","_t":1790458846704,"id":"6","progress":0.4823771466382689,"total":933,"current":648}
+{"_e":"metro:bundling:progress","_t":1790458846705,"id":"6","progress":0.4904326392254898,"total":971,"current":680}
+{"_e":"metro:bundling:progress","_t":1790458846805,"id":"6","progress":0.6865726616798488,"total":1126,"current":933}
+{"_e":"metro:bundling:progress","_t":1790458846906,"id":"6","progress":0.7191632501287162,"total":1145,"current":971}
+{"_e":"metro:bundling:progress","_t":1790458847021,"id":"6","progress":0.7191632501287162,"total":3001,"current":972}
+{"_e":"metro:bundling:progress","_t":1790458847124,"id":"6","progress":0.7191632501287162,"total":3076,"current":1056}
+{"_e":"metro:bundling:progress","_t":1790458847224,"id":"6","progress":0.7191632501287162,"total":3155,"current":1702}
+{"_e":"metro:bundling:progress","_t":1790458847324,"id":"6","progress":0.8148567036952389,"total":3155,"current":2848}
+{"_e":"metro:bundling:progress","_t":1790458847424,"id":"6","progress":0.8777905328798186,"total":3360,"current":3148}
+{"_e":"metro:bundling:progress","_t":1790458847524,"id":"6","progress":0.957445693862796,"total":3487,"current":3412}
+{"_e":"metro:bundling:done","_t":1790458847717,"id":"6","total":3487,"ms":1741.313831}
+{"_e":"metro:client_log","_t":1790458856544,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458856545,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458856545,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458856546,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458856546,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458856546,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858079,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858122,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858137,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858163,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858193,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458858220,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458860904,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458860938,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458860965,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458860993,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861020,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861047,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861827,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861830,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861832,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861859,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861885,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458861912,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862572,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862604,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862631,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862672,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862701,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458862728,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458863282,"level":"error","data":["Text strings must be rendered within a <Text> component."]}
+{"_e":"metro:client_log","_t":1790458939860,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458940207,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458940264,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458940315,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458940367,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458940417,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941017,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941075,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941140,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941178,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941228,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458941278,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790458992633,"level":"error","data":["Text strings must be rendered within a <Text> component."]}
+{"_e":"metro:server_log","_t":1790459238216,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"metro:server_log","_t":1790539149359,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","SM-A065F - 16 - API 36","60"]}
+{"_e":"metro:server_log","_t":1790539149360,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","SM-A065F - 16 - API 36","60"]}

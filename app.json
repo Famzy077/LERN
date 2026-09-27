@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Cramly",
+    "slug": "cramly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#2563EB"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cramly.app",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "YOUR_IOS_CLIENT_ID"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2563EB"
+      },
+      "package": "com.cramly.app"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-secure-store"
+    ],
+    "scheme": "cramly"
+  }
+}
