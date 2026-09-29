@@ -16,7 +16,7 @@ const HomeScreen = () => {
 
   if (isLoading) {
     return (
-      <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900 px-6">
+      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900 px-6">
         <LoadingSkeleton className="h-20 mb-6 mt-4" />
         <LoadingSkeleton className="h-32 mb-6" />
         <View className="flex-row justify-between mb-6">
@@ -29,7 +29,7 @@ const HomeScreen = () => {
 
   if (isError || !data?.data) {
     return (
-      <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900 justify-center">
+      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900 justify-center">
         <ErrorState message="Failed to load dashboard" onRetry={refetch} />
       </ScreenWrapper>
     );
@@ -38,7 +38,7 @@ const HomeScreen = () => {
   const dashboard = data.data;
 
   return (
-    <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900">
+    <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900">
       <ScrollView
         showsVerticalScrollIndicator={false}
         refreshControl={

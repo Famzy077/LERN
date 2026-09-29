@@ -14,6 +14,8 @@ export const ENDPOINTS = {
   SUMMARIES: `${API_VERSION}/summaries`,
   QUIZ: `${API_VERSION}/quizzes`,
   PROGRESS: `${API_VERSION}/progress`,
+  FLASHCARDS: (materialId: string) => `${API_VERSION}/ai/materials/${materialId}/flashcards`,
+  EXPLAIN: (materialId: string) => `${API_VERSION}/ai/materials/${materialId}/explain`,
   PROFILE: `${API_VERSION}/profile`,
   NOTIFICATIONS: `${API_VERSION}/notifications`,
   SUBSCRIPTION: `${API_VERSION}/subscriptions`,

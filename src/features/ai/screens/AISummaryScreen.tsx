@@ -38,7 +38,7 @@ export default function AISummaryScreen() {
 
   if (isLoading) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <View className="flex-1 p-4 bg-surface dark:bg-slate-900">
           <LoadingSkeleton className="h-10 w-full mb-4" />
           <LoadingSkeleton className="h-40 w-full mb-4 rounded-3xl" />
@@ -50,7 +50,7 @@ export default function AISummaryScreen() {
 
   if (isError || !response?.data) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <ErrorState
           title="Failed to load summary"
           message={error?.message || 'Unknown error occurred'}
@@ -63,7 +63,7 @@ export default function AISummaryScreen() {
   const summary = response.data;
 
   return (
-    <ScreenWrapper>
+    <ScreenWrapper padded={false}>
       <View className="flex-1 bg-surface dark:bg-slate-900">
         <View className="flex-row items-center justify-between p-4">
           <TouchableOpacity onPress={() => navigation.goBack()} className="p-2">

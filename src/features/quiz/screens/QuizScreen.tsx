@@ -95,7 +95,7 @@ export default function QuizScreen() {
 
   if (isLoading) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <View className="flex-1 p-4 bg-surface dark:bg-slate-900">
           <LoadingSkeleton className="h-6 w-full mb-8" />
           <LoadingSkeleton className="h-40 w-full mb-8 rounded-3xl" />
@@ -108,7 +108,7 @@ export default function QuizScreen() {
 
   if (isError || !quiz) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <ErrorState
           title="Failed to load quiz"
           message={error?.message || 'Unknown error occurred'}
@@ -122,9 +122,10 @@ export default function QuizScreen() {
   const progressPct = ((currentQuestionIndex + 1) / quiz.totalQuestions) * 100;
 
   return (
-    <View className="flex-1 bg-surface dark:bg-slate-900">
-      <View className="p-4 pt-12 bg-white dark:bg-slate-800 shadow-sm z-10">
-        <View className="flex-row justify-between items-center mb-4">
+    <ScreenWrapper padded={false} edges={['top']}>
+      <View className="flex-1 bg-surface dark:bg-slate-900">
+        <View className="p-4 bg-white dark:bg-slate-800 shadow-sm z-10">
+          <View className="flex-row justify-between items-center mb-4">
           <Text className="text-slate-500 font-semibold">{currentQuestionIndex + 1} of {quiz.totalQuestions}</Text>
           <Text className="text-xl font-bold text-slate-900 dark:text-slate-50">{formatDuration(timerSeconds)}</Text>
           <TouchableOpacity onPress={() => navigation.goBack()}><Text className="text-red-500 font-bold">Exit</Text></TouchableOpacity>
@@ -183,6 +184,7 @@ export default function QuizScreen() {
           />
         </View>
       )}
-    </View>
+      </View>
+    </ScreenWrapper>
   );
 }

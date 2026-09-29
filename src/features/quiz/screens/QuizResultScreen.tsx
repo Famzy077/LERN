@@ -19,7 +19,7 @@ export default function QuizResultScreen() {
 
   if (isLoading) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <View className="flex-1 p-4 bg-surface dark:bg-slate-900 items-center justify-center">
           <LoadingSkeleton className="h-48 w-48 rounded-full mb-8" />
           <LoadingSkeleton className="h-12 w-full mb-4 rounded-3xl" />
@@ -31,7 +31,7 @@ export default function QuizResultScreen() {
 
   if (isError || !response?.data) {
     return (
-      <ScreenWrapper>
+      <ScreenWrapper padded={false}>
         <ErrorState
           title="Failed to load results"
           message={error?.message || 'Unknown error occurred'}
@@ -70,9 +70,9 @@ export default function QuizResultScreen() {
   );
 
   return (
-    <ScreenWrapper>
+    <ScreenWrapper padded={false}>
       <ScrollView className="flex-1 bg-surface dark:bg-slate-900">
-        <View className="items-center p-6 pt-12">
+        <View className="items-center p-6">
           <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-8">Quiz Completed!</Text>
           
           <View className="items-center justify-center mb-8 relative">

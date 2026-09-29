@@ -74,7 +74,7 @@ export default function UploadMaterialScreen() {
   });
 
   return (
-    <ScreenWrapper>
+    <ScreenWrapper padded={false}>
       <View className="flex-1 p-4 bg-surface dark:bg-slate-900">
         <View className="flex-row items-center mb-6">
           <TouchableOpacity onPress={() => navigation.goBack()} className="p-2">
