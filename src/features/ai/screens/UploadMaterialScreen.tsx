@@ -6,7 +6,7 @@ import Animated, { useAnimatedStyle, withTiming, Easing } from 'react-native-rea
 import { Upload } from 'lucide-react-native';
 import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
 import { Button } from '@/shared/components/ui/Button';
-import { useUploadMaterial } from '../hooks/useUpload';
+import { useProcessMaterial, useUploadMaterial } from '../hooks/useUpload';
 
 export default function UploadMaterialScreen() {
   const navigation = useNavigation<any>();
@@ -19,6 +19,7 @@ export default function UploadMaterialScreen() {
   const [materialId, setMaterialId] = useState<string | null>(null);
 
   const uploadMutation = useUploadMaterial();
+  const processMutation = useProcessMaterial();
 
   const handleSelectFile = async () => {
     try {
@@ -34,6 +35,7 @@ export default function UploadMaterialScreen() {
       setProgress(0);
       setUploadComplete(false);
       setMaterialId(null);
+      processMutation.reset();
       
       uploadFile(file);
     } catch (err) {
@@ -54,9 +56,17 @@ export default function UploadMaterialScreen() {
       onProgress: (pct) => setProgress(pct),
     }, {
       onSuccess: (res) => {
-        setUploadComplete(true);
         if (res.data?.id) {
           setMaterialId(res.data.id);
+          setProgress(100);
+          processMutation.mutate(res.data.id, {
+            onSuccess: () => setUploadComplete(true),
+            onError: (error) => {
+              Alert.alert('Summary generation failed', error.message || 'Please try again.');
+            },
+          });
+        } else {
+          Alert.alert('Upload Failed', 'The server did not return an ID for the uploaded material.');
         }
       },
       onError: (error) => {
@@ -84,27 +94,45 @@ export default function UploadMaterialScreen() {
         </View>
 
         {!uploadComplete ? (
-          <TouchableOpacity
-            onPress={handleSelectFile}
-            disabled={uploadMutation.isPending}
-            className={`border-2 border-dashed rounded-3xl p-8 items-center justify-center flex-1 bg-white dark:bg-slate-800 ${
-              uploadMutation.isPending ? 'border-slate-300 dark:border-slate-600' : 'border-primary'
-            }`}
-          >
-            <Upload size={48} className="text-primary mb-4" />
-            <Text className="text-lg font-semibold text-slate-900 dark:text-slate-50 text-center mb-2">
-              Tap to select PDF, DOCX, or image
-            </Text>
-            {selectedFile && (
-              <View className="mt-6 w-full items-center">
-                <Text className="text-slate-500 mb-2 truncate">{selectedFile.name}</Text>
-                <View className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                  <Animated.View className="h-full bg-primary" style={progressStyle} />
+          <>
+            <TouchableOpacity
+              onPress={handleSelectFile}
+              disabled={uploadMutation.isPending || processMutation.isPending}
+              className={`border-2 border-dashed rounded-3xl p-8 items-center justify-center flex-1 bg-white dark:bg-slate-800 ${
+                uploadMutation.isPending || processMutation.isPending ? 'border-slate-300 dark:border-slate-600' : 'border-primary'
+              }`}
+            >
+              <Upload size={48} className="text-primary mb-4" />
+              <Text className="text-lg font-semibold text-slate-900 dark:text-slate-50 text-center mb-2">
+                Tap to select PDF, DOCX, or image
+              </Text>
+              {selectedFile && (
+                <View className="mt-6 w-full items-center">
+                  <Text className="text-slate-500 mb-2 truncate">{selectedFile.name}</Text>
+                  <View className="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                    <Animated.View className="h-full bg-primary" style={progressStyle} />
+                  </View>
+                  <Text className="text-slate-500 mt-2">{progress}%</Text>
+                  {processMutation.isPending && (
+                    <Text className="text-slate-500 mt-2">Generating your AI summary...</Text>
+                  )}
                 </View>
-                <Text className="text-slate-500 mt-2">{progress}%</Text>
-              </View>
+              )}
+            </TouchableOpacity>
+            {processMutation.isError && materialId && (
+              <Button
+                title="Retry summary generation"
+                onPress={() => processMutation.mutate(materialId, {
+                  onSuccess: () => setUploadComplete(true),
+                  onError: (error) => {
+                    Alert.alert('Summary generation failed', error.message || 'Please try again.');
+                  },
+                })}
+                loading={processMutation.isPending}
+                className="mt-4 w-full bg-primary"
+              />
             )}
-          </TouchableOpacity>
+          </>
         ) : (
           <View className="flex-1 items-center justify-center bg-white dark:bg-slate-800 rounded-3xl p-6">
             <Text className="text-2xl font-bold text-success mb-4 text-green-600">Success!</Text>

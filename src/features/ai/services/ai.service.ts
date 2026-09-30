@@ -15,7 +15,7 @@ class AIService {
       type: data.file.type,
     } as any);
 
-    const response = await apiClient.post<ApiResponse<Material>>(ENDPOINTS.UPLOAD, formData, {
+    return apiClient.post<Material>(ENDPOINTS.UPLOAD, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -26,7 +26,14 @@ class AIService {
         }
       },
     });
-    return response as any;
+  }
+
+  async processMaterial(materialId: string): Promise<ApiResponse<Material>> {
+    return apiClient.post<Material>(
+      `${ENDPOINTS.MATERIALS}/${materialId}/process`,
+      undefined,
+      { timeout: 120_000 },
+    );
   }
 
   async getMaterials(courseId?: string): Promise<ApiResponse<Material[]>> {

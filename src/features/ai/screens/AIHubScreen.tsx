@@ -74,7 +74,7 @@ export default function AIHubScreen() {
                 {summary.title}
               </Text>
               <Text className="text-sm font-inter-regular text-slate-500">
-                {summary.difficulty} • {summary.estimatedReadTime} min read
+                {summary.difficulty.toLowerCase()} • {summary.estimatedReadTime} min read
               </Text>
             </View>
             <ChevronRight size={20} color={colors.textTertiary} />

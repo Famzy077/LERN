@@ -14,6 +14,18 @@ export const useUploadMaterial = () => {
   });
 };
 
+export const useProcessMaterial = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (materialId: string) => aiService.processMaterial(materialId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['materials'] });
+      queryClient.invalidateQueries({ queryKey: ['recentSummaries'] });
+    },
+  });
+};
+
 export const useMaterials = (courseId?: string) => {
   return useQuery({
     queryKey: ['materials', courseId],

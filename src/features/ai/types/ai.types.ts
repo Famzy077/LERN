@@ -23,7 +23,7 @@ export interface AISummary {
   title: string;
   content: string;
   keyPoints: string[];
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  difficulty: 'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED';
   estimatedReadTime: number;
   createdAt: string;
 }

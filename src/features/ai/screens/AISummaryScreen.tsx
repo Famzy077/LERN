@@ -62,6 +62,7 @@ export default function AISummaryScreen() {
   }
 
   const summary = response.data;
+  const difficulty = summary.difficulty.toLowerCase();
 
   return (
     <ScreenWrapper padded={false}>
@@ -89,7 +90,7 @@ export default function AISummaryScreen() {
               </View>
 
               <View className="flex-row items-center mb-6 space-x-2">
-                <Badge label={summary.difficulty} variant={summary.difficulty === 'advanced' ? 'error' : summary.difficulty === 'intermediate' ? 'warning' : 'success'} />
+                <Badge label={difficulty} variant={difficulty === 'advanced' ? 'error' : difficulty === 'intermediate' ? 'warning' : 'success'} />
                   
                 
                 <Text className="text-slate-500 text-sm ml-2">{summary.estimatedReadTime} min read</Text>
