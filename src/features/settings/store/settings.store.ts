@@ -27,7 +27,7 @@ export const useSettingsStore = create<SettingsState>()(
       setHapticFeedback: (enabled) => set({ hapticFeedback: enabled }),
     }),
     {
-      name: 'cramly-settings',
+      name: 'slotstudy-settings',
       storage: createJSONStorage(() => AsyncStorage),
     },
   ),

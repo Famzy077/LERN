@@ -1,18 +1,20 @@
 {
   "expo": {
-    "name": "Cramly",
-    "slug": "cramly",
+    "name": "SlotStudy",
+    "slug": "slotstudy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "backgroundColor": "#2563EB"
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.cramly.app",
+      "bundleIdentifier": "com.slotstudy.app",
       "config": {
         "googleSignIn": {
           "reservedClientId": "YOUR_IOS_CLIENT_ID"
@@ -22,14 +24,19 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#2563EB"
+        "backgroundColor": "#ffffff"
       },
-      "package": "com.cramly.app"
+      "package": "com.slotstudy.app"
     },
     "plugins": [
       "expo-font",
       "expo-secure-store"
     ],
-    "scheme": "cramly"
+    "scheme": "slotstudy",
+    "extra": {
+      "eas": {
+        "projectId": "1cb9a6bd-f987-42c5-8910-a85be1e9203a"
+      }
+    }
   }
 }

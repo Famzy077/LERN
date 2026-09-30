@@ -17,6 +17,7 @@ export type AuthStackParamList = {
   Splash: undefined;
   Onboarding: undefined;
   Login: undefined;
+  Signup: undefined;
   AcademicSetup: undefined;
 };
 

@@ -1,64 +1,150 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, Image, TextInput, Alert, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
 import { useGoogleLogin } from '../hooks/useAuth';
-// import * as Google from 'expo-auth-session/providers/google'; // Assuming usage
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useAuthStore } from '../store/auth.store';
+import { apiClient } from '@/shared/services/api.client';
+import { Button } from '@/shared/components/ui/Button';
+
+// Required for web browser to close correctly after auth
+WebBrowser.maybeCompleteAuthSession();
 
 const LoginScreen = () => {
   const navigation = useNavigation<any>();
-  const { mutate: loginWithGoogle, isPending } = useGoogleLogin();
+  const { mutate: loginWithGoogle, isPending: isGooglePending } = useGoogleLogin();
+  const setAuth = useAuthStore((state) => state.setAuth);
 
-  // const [request, response, promptAsync] = Google.useAuthRequest({
-  //   clientId: 'YOUR_CLIENT_ID',
-  // });
+  const [form, setForm] = useState({ email: '', password: '' });
+  const [loading, setLoading] = useState(false);
+
+  // Load client IDs from .env with fallbacks to prevent crash if undefined
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId: process.env.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || 'missing-android-id',
+    iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || 'missing-ios-id',
+    webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || 'missing-web-id',
+  });
+
+  useEffect(() => {
+    if (response?.type === 'success' && response.authentication?.idToken) {
+      loginWithGoogle(
+        { idToken: response.authentication.idToken },
+        {
+          onSuccess: () => {
+            navigation.replace('AcademicSetup');
+          },
+        }
+      );
+    }
+  }, [response]);
 
   const handleGoogleLogin = () => {
-    // promptAsync();
-    // Simulate login for now
-    loginWithGoogle({ idToken: 'fake_token' }, {
-      onSuccess: () => {
-        navigation.replace('AcademicSetup'); // Or main depending on state
+    promptAsync();
+  };
+
+  const handleLocalLogin = async () => {
+    if (!form.email || !form.password) {
+      Alert.alert('Error', 'Please enter your email and password');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await apiClient.post('/auth/login', form);
+      if (response.data && response.data.accessToken) {
+        setAuth(response.data.user, response.data.accessToken, response.data.refreshToken);
+        navigation.replace('AcademicSetup');
       }
-    });
+    } catch (error: any) {
+      Alert.alert('Login Failed', error.message || 'Invalid credentials');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900 justify-center px-8">
-      <View className="items-center mb-12">
-        <Text className="text-primary text-4xl font-bold tracking-widest mb-6">CRAMLY</Text>
-        <Text className="text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-2">
-          Welcome back
-        </Text>
-        <Text className="text-slate-500 text-center">
-          Sign in to continue your learning journey
-        </Text>
-      </View>
+    <View className="flex-1 bg-surface dark:bg-slate-900">
+      <LinearGradient
+        colors={['rgba(37,99,235,0.1)', 'rgba(37,99,235,0)', 'transparent']}
+        style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 400 }}
+      />
+      
+      <ScreenWrapper className="flex-1 justify-center px-8" padded={false}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingVertical: 40 }} showsVerticalScrollIndicator={false}>
+          <View className="items-center mb-10 pt-10">
+            <Image 
+              source={require('../../../../assets/images/logo.png')}
+              style={{ width: 220, height: 160, resizeMode: 'contain' }}
+              className="mb-4"
+            />
+            <Text className="text-3xl font-bold text-slate-900 dark:text-white mb-2 text-center">
+              Welcome back
+            </Text>
+            <Text className="text-slate-500 dark:text-slate-400 text-center text-base px-4">
+              Sign in to continue your learning journey
+            </Text>
+          </View>
 
-      <TouchableOpacity
-        onPress={handleGoogleLogin}
-        disabled={isPending}
-        className="flex-row items-center justify-center bg-white dark:bg-slate-800 py-4 px-6 rounded-3xl shadow-sm mb-6"
-      >
-        <View className="w-6 h-6 bg-red-500 rounded-full mr-3" /> {/* Placeholder for Google Icon */}
-        <Text className="text-slate-900 dark:text-slate-50 font-medium text-lg">
-          {isPending ? 'Signing in...' : 'Continue with Google'}
-        </Text>
-      </TouchableOpacity>
+          <View className="space-y-4 mb-6">
+            <View>
+              <TextInput
+                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white"
+                placeholder="Email Address"
+                placeholderTextColor="#94a3b8"
+                keyboardType="email-address"
+                autoCapitalize="none"
+                value={form.email}
+                onChangeText={(text) => setForm({ ...form, email: text })}
+              />
+            </View>
 
-      <TouchableOpacity onPress={() => navigation.replace('Main')}>
-        <Text className="text-slate-500 text-center font-medium mb-12">
-          Continue as Guest
-        </Text>
-      </TouchableOpacity>
+            <View>
+              <TextInput
+                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white"
+                placeholder="Password"
+                placeholderTextColor="#94a3b8"
+                secureTextEntry
+                value={form.password}
+                onChangeText={(text) => setForm({ ...form, password: text })}
+              />
+            </View>
+          </View>
 
-      <View className="mt-auto">
-        <Text className="text-slate-400 text-center text-sm">
-          By continuing, you agree to our{' '}
-          <Text className="text-primary font-medium">Terms of Service</Text>
-        </Text>
-      </View>
-    </ScreenWrapper>
+          <Button title="Log In" onPress={handleLocalLogin} isLoading={loading} className="w-full mb-6" />
+
+          <View className="flex-row items-center justify-center mb-6">
+            <View className="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700" />
+            <Text className="px-4 text-slate-400 font-medium">OR</Text>
+            <View className="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700" />
+          </View>
+
+          <TouchableOpacity
+            onPress={handleGoogleLogin}
+            disabled={!request || isGooglePending}
+            activeOpacity={0.8}
+            className="flex-row items-center justify-center bg-white dark:bg-slate-800 py-3.5 px-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 mb-8"
+          >
+            <Image 
+              source={require('../../../../assets/images/google.png')}
+              style={{ width: 22, height: 22, marginRight: 12 }}
+            />
+            <Text className="text-slate-900 dark:text-white font-semibold text-base">
+              {isGooglePending ? 'Signing in...' : 'Continue with Google'}
+            </Text>
+          </TouchableOpacity>
+
+          <View className="flex-row justify-center mt-auto pb-4">
+            <Text className="text-slate-500 dark:text-slate-400">Don't have an account? </Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+              <Text className="text-primary font-semibold">Sign Up</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </ScreenWrapper>
+    </View>
   );
 };
 

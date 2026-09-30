@@ -46,10 +46,10 @@ export const asyncStorage = {
 
 // ── Storage keys ───────────────────────────────────────────────────
 export const STORAGE_KEYS = {
-  ACCESS_TOKEN: 'cramly_access_token',
-  REFRESH_TOKEN: 'cramly_refresh_token',
-  USER: 'cramly_user',
-  THEME: 'cramly_theme',
-  ONBOARDING_COMPLETED: 'cramly_onboarding_completed',
-  ACADEMIC_SETUP_COMPLETED: 'cramly_academic_setup_completed',
+  ACCESS_TOKEN: 'slotstudy_access_token',
+  REFRESH_TOKEN: 'slotstudy_refresh_token',
+  USER: 'slotstudy_user',
+  THEME: 'slotstudy_theme',
+  ONBOARDING_COMPLETED: 'slotstudy_onboarding_completed',
+  ACADEMIC_SETUP_COMPLETED: 'slotstudy_academic_setup_completed',
 } as const;

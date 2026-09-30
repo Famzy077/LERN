@@ -32,7 +32,7 @@ const SplashScreen = () => {
   return (
     <ScreenWrapper edges={[]} className="flex-1 bg-primary justify-center items-center">
       <Animated.View entering={FadeIn.duration(1000)} style={animatedStyle}>
-        <Text className="text-white text-5xl font-bold tracking-widest">CRAMLY</Text>
+        <Text className="text-white text-5xl font-bold tracking-widest"></Text>
       </Animated.View>
     </ScreenWrapper>
   );
