@@ -4,8 +4,10 @@ import { Course, CreateCourseDTO } from '../types/course.types';
 import { PaginatedResponse, ApiResponse } from '@/shared/types/api.types';
 
 export const courseService = {
-  getAll: (params?: any): Promise<PaginatedResponse<Course>> =>
-    apiClient.get(ENDPOINTS.COURSES, { params }) as any,
+  getAll: async (params?: any): Promise<PaginatedResponse<Course>> => {
+    const res = await apiClient.get<PaginatedResponse<Course>>(ENDPOINTS.COURSES, { params });
+    return res.data;
+  },
   
   getById: (id: string): Promise<ApiResponse<Course>> =>
     apiClient.get(`${ENDPOINTS.COURSES}/${id}`),

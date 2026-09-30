@@ -52,7 +52,7 @@ export default function NotificationsScreen() {
   const notifications = data?.data || [];
 
   return (
-    <View className="flex-1 bg-surface">
+    <View className="flex-1 bg-surface dark:bg-slate-900">
       <View className="flex-row items-center justify-between p-4 pt-12 bg-white dark:bg-slate-900 shadow-sm z-10">
         <View className="flex-row items-center">
           <TouchableOpacity onPress={() => navigation.goBack()} className="mr-3">

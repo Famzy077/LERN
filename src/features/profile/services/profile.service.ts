@@ -10,7 +10,7 @@ export const profileService = {
   },
 
   updateProfile: async (data: UpdateProfileDTO): Promise<ApiResponse<Profile>> => {
-    const response = await apiClient.put(ENDPOINTS.PROFILE, data);
+    const response = await apiClient.patch(ENDPOINTS.PROFILE, data);
     return response as any;
   },
 };

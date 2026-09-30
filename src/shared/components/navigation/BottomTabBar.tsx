@@ -53,19 +53,19 @@ function TabButton({ label, isFocused, onPress, onLongPress, iconKey }: TabButto
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
       activeOpacity={0.7}
-      className="flex-1 items-center justify-center py-2"
+      className="flex-1 items-center justify-center py-1"
     >
       <Animated.View style={animatedStyle} className="items-center">
         <View
           className={clsx(
             'mb-1 items-center justify-center rounded-2xl',
             isFocused
-              ? 'h-12 w-14 bg-primary-100 dark:bg-primary-900/40'
-              : 'h-12 w-14',
+              ? 'h-10 w-12 bg-primary-100 dark:bg-primary-900/40'
+              : 'h-10 w-12',
           )}
         >
           <Icon
-            size={24}
+            size={22}
             color={isFocused ? colors.primary : colors.textSecondary}
             fill={isFocused && iconKey === 'Home' ? colors.primary : 'none'}
           />

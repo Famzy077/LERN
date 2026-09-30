@@ -63,11 +63,11 @@ const CourseLibraryScreen = () => {
       </View>
 
       {isLoading ? (
-        <View className="p-6 flex-row flex-wrap justify-between">
-          <LoadingSkeleton className="w-[48%] h-48 mb-4" />
-          <LoadingSkeleton className="w-[48%] h-48 mb-4" />
-          <LoadingSkeleton className="w-[48%] h-48 mb-4" />
-          <LoadingSkeleton className="w-[48%] h-48 mb-4" />
+        <View className="px-6 flex-row flex-wrap justify-between">
+          <LoadingSkeleton className="w-[48%] h-48 mb-4 rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] h-48 mb-4 rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] h-48 mb-4 rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] h-48 mb-4 rounded-3xl" />
         </View>
       ) : (
         <FlatList

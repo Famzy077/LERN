@@ -16,12 +16,29 @@ const HomeScreen = () => {
 
   if (isLoading) {
     return (
-      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900 px-6">
-        <LoadingSkeleton className="h-20 mb-6 mt-4" />
-        <LoadingSkeleton className="h-32 mb-6" />
-        <View className="flex-row justify-between mb-6">
-          <LoadingSkeleton className="w-[48%] aspect-square" />
-          <LoadingSkeleton className="w-[48%] aspect-square" />
+      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900">
+        <View className="px-6 mt-8 mb-6 flex-row items-center justify-between">
+          <View>
+            <LoadingSkeleton className="h-6 w-32 mb-2 rounded-lg" />
+            <LoadingSkeleton className="h-8 w-48 rounded-lg" />
+          </View>
+          <LoadingSkeleton className="h-12 w-12 rounded-full" />
+        </View>
+        
+        <View className="flex-row px-6 mb-6 gap-4">
+          <LoadingSkeleton className="flex-1 h-32 rounded-3xl" />
+          <LoadingSkeleton className="flex-1 h-32 rounded-3xl" />
+        </View>
+
+        <View className="px-6 mb-8">
+          <LoadingSkeleton className="w-full h-48 rounded-3xl" />
+        </View>
+
+        <View className="px-6 mb-8 flex-row flex-wrap justify-between gap-y-4">
+          <LoadingSkeleton className="w-[48%] aspect-square rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] aspect-square rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] aspect-square rounded-3xl" />
+          <LoadingSkeleton className="w-[48%] aspect-square rounded-3xl" />
         </View>
       </ScreenWrapper>
     );
@@ -52,10 +69,10 @@ const HomeScreen = () => {
         />
         
         <View className="px-6 mb-6 flex-row gap-4">
-          <View className="flex-1">
-            <StreakWidget currentStreak={dashboard.streak.current} weeklyData={dashboard.streak.weeklyData} />
+          <View className="flex-1 justify-center">
+            <StreakWidget currentStreak={dashboard.streak.current} weeklyData={dashboard.streak.weeklyData} showWeekly={false} />
           </View>
-          <View className="flex-1">
+          <View className="flex-1 justify-center">
             <XPBadge xp={dashboard.xp.total} level={dashboard.xp.level} />
           </View>
         </View>

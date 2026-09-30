@@ -9,6 +9,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useAuthStore } from '../store/auth.store';
 import { apiClient } from '@/shared/services/api.client';
 import { Button } from '@/shared/components/ui/Button';
+import { Eye, EyeOff } from 'lucide-react-native';
 
 // Required for web browser to close correctly after auth
 WebBrowser.maybeCompleteAuthSession();
@@ -20,6 +21,7 @@ const LoginScreen = () => {
 
   const [form, setForm] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   // Load client IDs from .env with fallbacks to prevent crash if undefined
   const [request, response, promptAsync] = Google.useAuthRequest({
@@ -89,7 +91,7 @@ const LoginScreen = () => {
           </View>
 
           <View className="space-y-4 mb-6">
-            <View>
+            <View className="mb-4">
               <TextInput
                 className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white"
                 placeholder="Email Address"
@@ -101,19 +103,30 @@ const LoginScreen = () => {
               />
             </View>
 
-            <View>
+            <View className="relative justify-center">
               <TextInput
-                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white"
+                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-4 pr-12 py-3.5 text-slate-900 dark:text-white"
                 placeholder="Password"
                 placeholderTextColor="#94a3b8"
-                secureTextEntry
+                secureTextEntry={!showPassword}
                 value={form.password}
                 onChangeText={(text) => setForm({ ...form, password: text })}
               />
+              <TouchableOpacity
+                className="absolute right-4"
+                onPress={() => setShowPassword(!showPassword)}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              >
+                {showPassword ? (
+                  <EyeOff size={20} color="#94a3b8" />
+                ) : (
+                  <Eye size={20} color="#94a3b8" />
+                )}
+              </TouchableOpacity>
             </View>
           </View>
 
-          <Button title="Log In" onPress={handleLocalLogin} isLoading={loading} className="w-full mb-6" />
+          <Button title="Log In" onPress={handleLocalLogin} loading={loading} className="w-full mb-6" />
 
           <View className="flex-row items-center justify-center mb-6">
             <View className="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700" />
@@ -136,7 +149,7 @@ const LoginScreen = () => {
             </Text>
           </TouchableOpacity>
 
-          <View className="flex-row justify-center mt-auto pb-4">
+          <View className="flex-row justify-center mt-auto pb-10">
             <Text className="text-slate-500 dark:text-slate-400">Don't have an account? </Text>
             <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
               <Text className="text-primary font-semibold">Sign Up</Text>

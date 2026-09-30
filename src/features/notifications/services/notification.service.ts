@@ -5,8 +5,8 @@ import { Notification } from '../types/notification.types';
 
 export const notificationService = {
   getAll: async (): Promise<PaginatedResponse<Notification>> => {
-    const response = await apiClient.get(ENDPOINTS.NOTIFICATIONS);
-    return response as any;
+    const response = await apiClient.get<PaginatedResponse<Notification>>(ENDPOINTS.NOTIFICATIONS);
+    return response.data;
   },
 
   markAsRead: async (id: string): Promise<ApiResponse<Notification>> => {

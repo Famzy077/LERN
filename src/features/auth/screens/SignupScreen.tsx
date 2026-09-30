@@ -6,6 +6,7 @@ import { Button } from '@/shared/components/ui/Button';
 import { useAuthStore } from '../store/auth.store';
 import { apiClient } from '@/shared/services/api.client';
 import { ENDPOINTS } from '@/shared/constants/endpoints';
+import { Eye, EyeOff } from 'lucide-react-native';
 
 const SignupScreen = () => {
   const navigation = useNavigation<any>();
@@ -13,6 +14,7 @@ const SignupScreen = () => {
 
   const [form, setForm] = useState({ name: '', username: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSignup = async () => {
     if (!form.name || !form.username || !form.email || !form.password) {
@@ -81,18 +83,31 @@ const SignupScreen = () => {
 
           <View>
             <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">Password</Text>
-            <TextInput
-              className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white"
-              placeholder="••••••••"
-              placeholderTextColor="#94a3b8"
-              secureTextEntry
-              value={form.password}
-              onChangeText={(text) => setForm({ ...form, password: text })}
-            />
+            <View className="relative justify-center">
+              <TextInput
+                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-4 pr-12 py-3 text-slate-900 dark:text-white"
+                placeholder="••••••••"
+                placeholderTextColor="#94a3b8"
+                secureTextEntry={!showPassword}
+                value={form.password}
+                onChangeText={(text) => setForm({ ...form, password: text })}
+              />
+              <TouchableOpacity
+                className="absolute right-4"
+                onPress={() => setShowPassword(!showPassword)}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              >
+                {showPassword ? (
+                  <EyeOff size={20} color="#94a3b8" />
+                ) : (
+                  <Eye size={20} color="#94a3b8" />
+                )}
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
 
-        <Button title="Sign Up" onPress={handleSignup} isLoading={loading} className="w-full mb-6" />
+        <Button title="Sign Up" onPress={handleSignup} loading={loading} className="w-full mb-6" />
 
         <View className="flex-row justify-center">
           <Text className="text-slate-500 dark:text-slate-400">Already have an account? </Text>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Upload, BrainCircuit, FileText, Layers } from 'lucide-react-native';
+import { Upload, BrainCircuit, FileText, Layers, Sparkles, Copy } from 'lucide-react-native';
 
-const iconMap: any = {
-  upload: Upload,
-  quiz: BrainCircuit,
-  summary: FileText,
-  flashcards: Layers,
+const configMap: any = {
+  upload: { icon: Upload, color: '#2B66F6', bg: 'bg-blue-50 dark:bg-blue-900/30' },
+  quiz: { icon: BrainCircuit, color: '#F59E1B', bg: 'bg-orange-50 dark:bg-orange-900/30' },
+  summary: { icon: FileText, color: '#22A046', bg: 'bg-green-50 dark:bg-green-900/30' },
+  sparkles: { icon: Sparkles, color: '#22A046', bg: 'bg-green-50 dark:bg-green-900/30' },
+  cards: { icon: Copy, color: '#8B5CF6', bg: 'bg-purple-50 dark:bg-purple-900/30' },
 };
 
 interface Action {
@@ -28,15 +29,24 @@ const QuickActions = ({ actions }: Props) => {
     <View className="px-6 mb-8">
       <View className="flex-row flex-wrap justify-between gap-y-4">
         {actions.map((action) => {
-          const Icon = iconMap[action.icon] || Layers;
+          const config = configMap[action.icon] || { icon: Layers, color: '#2B66F6', bg: 'bg-blue-50 dark:bg-blue-900/30' };
+          const Icon = config.icon;
           return (
             <TouchableOpacity
               key={action.id}
-              onPress={() => navigation.navigate(action.route)}
+              onPress={() => {
+                if (action.route === 'Flashcards') {
+                  alert('Flashcards coming soon!');
+                } else if (action.route === 'Upload') {
+                  navigation.navigate('UploadMaterial'); // fallback in case old backend is active
+                } else {
+                  navigation.navigate(action.route);
+                }
+              }}
               className="w-[48%] bg-white dark:bg-slate-800 p-4 rounded-3xl shadow-sm items-center justify-center aspect-square"
             >
-              <View className="bg-primary/10 p-4 rounded-2xl mb-3">
-                <Icon size={32} className="text-primary" />
+              <View className={`${config.bg} p-4 rounded-2xl mb-3`}>
+                <Icon size={32} color={config.color} />
               </View>
               <Text className="text-slate-900 dark:text-slate-50 font-medium text-center">
                 {action.label}

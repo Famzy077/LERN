@@ -98,7 +98,7 @@ const OnboardingScreen = () => {
 
       {/* Floating Bottom Controls */}
       <View className="absolute bottom-8 left-0 right-0 px-8 z-10">
-        <View className="flex-row justify-center space-x-2 mb-8">
+        <View className="flex-row justify-center space-x-2 mb-4">
           {SLIDES.map((_, index) => (
             <View
               key={index}
@@ -111,7 +111,7 @@ const OnboardingScreen = () => {
         <Button
           title={currentIndex === SLIDES.length - 1 ? 'Get Started' : 'Next'}
           onPress={nextSlide}
-          className="w-full shadow-lg"
+          className="w-full mb-6 shadow-lg"
         />
       </View>
     </View>

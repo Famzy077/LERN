@@ -104,13 +104,14 @@ export default function SubscriptionScreen() {
               )}
               <View className="flex-row justify-between items-center">
                 <View>
-                  <Text className="text-lg font-bold text-slate-900 dark:text-slate-50 capitalize">{plan.interval}</Text>
+                  <Text className="text-lg font-bold text-slate-900 dark:text-slate-50 capitalize">{plan.name}</Text>
+                  <Text className="text-xs text-slate-500 capitalize">{plan.interval}</Text>
                 </View>
                 <View className="items-end">
                   <Text className="text-xl font-bold text-slate-900 dark:text-slate-50">
-                    {plan.currency} {plan.price}
+                    {plan.currency}{plan.price}
                   </Text>
-                  <Text className="text-xs text-slate-500">/{plan.interval === 'monthly' ? 'mo' : 'yr'}</Text>
+                  <Text className="text-xs text-slate-500">/{plan.interval === 'weekly' ? 'wk' : plan.interval === 'monthly' ? 'mo' : 'yr'}</Text>
                 </View>
               </View>
             </TouchableOpacity>

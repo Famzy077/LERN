@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Clipboard, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import * as Clipboard from 'expo-clipboard';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Share2, CheckCircle, Copy } from 'lucide-react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
@@ -18,8 +19,8 @@ export default function AISummaryScreen() {
   const { data: response, isLoading, isError, error, refetch } = useSummary(materialId);
   const generateQuizMutation = useGenerateQuiz();
 
-  const handleCopy = (text: string) => {
-    Clipboard.setString(text);
+  const handleCopy = async (text: string) => {
+    await Clipboard.setStringAsync(text);
     Alert.alert('Copied', 'Summary copied to clipboard');
   };
 

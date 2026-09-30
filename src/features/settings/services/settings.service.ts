@@ -10,7 +10,7 @@ export const settingsService = {
   },
 
   updateSettings: async (data: UpdateSettingsDTO): Promise<ApiResponse<UserSettings>> => {
-    const response = await apiClient.put(ENDPOINTS.SETTINGS, data);
+    const response = await apiClient.patch(ENDPOINTS.SETTINGS, data);
     return response as any;
   },
 

@@ -60,8 +60,8 @@ export default function ProfileScreen() {
               <Text className="text-white text-3xl font-bold">{initials}</Text>
             </View>
           )}
-          <View className="absolute bottom-0 right-0 bg-white dark:bg-slate-800 rounded-full px-2 py-1 shadow-sm">
-            <Text className={`text-xs font-bold ${profile.subscription.plan === 'pro' ? 'text-yellow-500' : 'text-slate-500'}`}>
+          <View className="absolute -bottom-2 -right-2 bg-slate-100 dark:bg-slate-800 rounded-full px-3 py-1 shadow-sm border-2 border-white dark:border-slate-900">
+            <Text className={`text-xs font-bold ${profile.subscription.plan === 'pro' ? 'text-yellow-500' : 'text-slate-500 dark:text-slate-300'}`}>
               {profile.subscription.plan.toUpperCase()}
             </Text>
           </View>
@@ -70,23 +70,23 @@ export default function ProfileScreen() {
         <Text className="text-slate-500">{profile.university}</Text>
       </View>
 
-      <View className="flex-row justify-between px-6 mb-8">
-        <View className="bg-surface items-center flex-1 py-4 mx-1 rounded-2xl">
+      <View className="flex-row justify-between px-6 mb-8 gap-2">
+        <View className="bg-white dark:bg-slate-800 items-center flex-1 py-4 rounded-3xl shadow-sm">
           <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50">{profile.stats.totalCourses}</Text>
-          <Text className="text-xs text-slate-500 mt-1">Courses</Text>
+          <Text className="text-xs text-slate-500 dark:text-slate-400 mt-1">Courses</Text>
         </View>
-        <View className="bg-surface items-center flex-1 py-4 mx-1 rounded-2xl">
+        <View className="bg-white dark:bg-slate-800 items-center flex-1 py-4 rounded-3xl shadow-sm">
           <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50">{profile.stats.totalQuizzes}</Text>
-          <Text className="text-xs text-slate-500 mt-1">Quizzes</Text>
+          <Text className="text-xs text-slate-500 dark:text-slate-400 mt-1">Quizzes</Text>
         </View>
-        <View className="bg-surface items-center flex-1 py-4 mx-1 rounded-2xl">
+        <View className="bg-white dark:bg-slate-800 items-center flex-1 py-4 rounded-3xl shadow-sm">
           <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50">{profile.stats.currentStreak}</Text>
-          <Text className="text-xs text-slate-500 mt-1">Streak</Text>
+          <Text className="text-xs text-slate-500 dark:text-slate-400 mt-1">Streak</Text>
         </View>
       </View>
 
-      <View className="bg-surface mx-4 rounded-3xl overflow-hidden mb-8">
-        {renderMenuItem(<Bell size={24} className="text-slate-700 dark:text-slate-300" />, 'Notifications', () => navigation.navigate('Notifications'))}
+      <View className="bg-white dark:bg-slate-800 mx-4 rounded-3xl overflow-hidden mb-8 shadow-sm">
+        {renderMenuItem(<Bell size={24} className="text-slate-700 dark:text-slate-300 ml-4" />, 'Notifications', () => navigation.navigate('Notifications'))}
         {renderMenuItem(<Crown size={24} className="text-yellow-500" />, 'Subscription', () => navigation.navigate('Subscription'))}
         {renderMenuItem(<Settings size={24} className="text-slate-700 dark:text-slate-300" />, 'Settings', () => navigation.navigate('Settings'))}
         {renderMenuItem(<HelpCircle size={24} className="text-slate-700 dark:text-slate-300" />, 'Help & Support', () => {})}

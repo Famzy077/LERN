@@ -7,10 +7,11 @@ import { clsx } from 'clsx';
 interface StreakWidgetProps {
   currentStreak: number;
   weeklyData: boolean[]; // last 7 days, true = studied
+  showWeekly?: boolean;
   className?: string;
 }
 
-export function StreakWidget({ currentStreak, weeklyData, className }: StreakWidgetProps) {
+export function StreakWidget({ currentStreak, weeklyData, showWeekly = true, className }: StreakWidgetProps) {
   const dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
   return (
@@ -40,32 +41,34 @@ export function StreakWidget({ currentStreak, weeklyData, className }: StreakWid
       </View>
 
       {/* Weekly dots */}
-      <View className="mt-4 flex-row justify-between">
-        {weeklyData.map((active, i) => (
-          <View key={i} className="items-center">
-            <View
-              className={clsx(
-                'mb-1.5 h-8 w-8 items-center justify-center rounded-full',
-                active
-                  ? 'bg-primary'
-                  : 'bg-slate-100 dark:bg-slate-700',
-              )}
-            >
-              {active && <Flame size={14} color="#FFFFFF" fill="#FFFFFF" />}
+      {showWeekly && (
+        <View className="mt-4 flex-row justify-between">
+          {weeklyData.map((active, i) => (
+            <View key={i} className="items-center">
+              <View
+                className={clsx(
+                  'mb-1.5 h-8 w-8 items-center justify-center rounded-full',
+                  active
+                    ? 'bg-primary'
+                    : 'bg-slate-100 dark:bg-slate-700',
+                )}
+              >
+                {active && <Flame size={14} color="#FFFFFF" fill="#FFFFFF" />}
+              </View>
+              <Text
+                className={clsx(
+                  'text-xs font-inter-medium',
+                  active
+                    ? 'text-primary dark:text-primary-400'
+                    : 'text-slate-400 dark:text-slate-500',
+                )}
+              >
+                {dayLabels[i]}
+              </Text>
             </View>
-            <Text
-              className={clsx(
-                'text-xs font-inter-medium',
-                active
-                  ? 'text-primary dark:text-primary-400'
-                  : 'text-slate-400 dark:text-slate-500',
-              )}
-            >
-              {dayLabels[i]}
-            </Text>
-          </View>
-        ))}
-      </View>
+          ))}
+        </View>
+      )}
     </Animated.View>
   );
 }

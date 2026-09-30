@@ -2,6 +2,7 @@ import React from 'react';
 import {
   TouchableOpacity,
   Text,
+  View,
   ActivityIndicator,
   type TouchableOpacityProps,
 } from 'react-native';
@@ -93,10 +94,22 @@ export function Button({
       {...rest}
     >
       {loading ? (
-        <ActivityIndicator
-          size="small"
-          color={variant === 'primary' ? '#FFFFFF' : '#2563EB'}
-        />
+        <View className="flex-row items-center justify-center space-x-2">
+          <ActivityIndicator
+            size="small"
+            color={variant === 'primary' ? '#FFFFFF' : '#2563EB'}
+            className="mr-2"
+          />
+          <Text
+            className={clsx(
+              'font-inter-semibold',
+              textStyles[variant],
+              textSizeStyles[size],
+            )}
+          >
+            {title === 'Log In' ? 'Logging in...' : title === 'Sign Up' ? 'Signing up...' : title}
+          </Text>
+        </View>
       ) : (
         <>
           {icon && iconPosition === 'left' && (
