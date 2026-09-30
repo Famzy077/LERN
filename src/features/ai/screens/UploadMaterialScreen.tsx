@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, ActivityIndicator } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as DocumentPicker from 'expo-document-picker';
 import Animated, { useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
@@ -114,7 +114,16 @@ export default function UploadMaterialScreen() {
                   </View>
                   <Text className="text-slate-500 mt-2">{progress}%</Text>
                   {processMutation.isPending && (
-                    <Text className="text-slate-500 mt-2">Generating your AI summary...</Text>
+                    <View className="mt-5 items-center">
+                      <View
+                        className="h-14 w-14 items-center justify-center rounded-full bg-primary/10"
+                        accessibilityRole="progressbar"
+                        accessibilityLabel="Generating summary"
+                      >
+                        <ActivityIndicator size="large" color="#2563EB" />
+                      </View>
+                      <Text className="text-slate-500 mt-3">Generating your AI summary...</Text>
+                    </View>
                   )}
                 </View>
               )}
