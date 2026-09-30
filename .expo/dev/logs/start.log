@@ -2551,3 +2551,47 @@
 {"_e":"metro:bundling:progress","_t":1790791367967,"id":"2","progress":0.9518413752500244,"total":3528,"current":3442}
 {"_e":"metro:bundling:progress","_t":1790791368067,"id":"2","progress":0.9972516159756789,"total":3636,"current":3631}
 {"_e":"metro:bundling:done","_t":1790791368250,"id":"2","total":3636,"ms":2185.575029}
+{"_e":"metro:bundling:failed","_t":1790791814409,"id":null,"message":"SyntaxError: /home/famzy/Desktop/Cramly/SlotStudy-Mobile/src/features/ai/screens/UploadMaterialScreen.tsx: Unexpected token, expected \",\" (120:8)\n\n  118 |             )}\n  119 |           </TouchableOpacity>\n> 120 |         {processMutation.isError && materialId && (\n      |         ^\n  121 |           <Button\n  122 |             title=\"Retry summary generation\"\n  123 |             onPress={() => processMutation.mutate(materialId, {","importStack":null,"filename":"src/features/ai/screens/UploadMaterialScreen.tsx","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1790792179396,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790792179398,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790792179404,"mode":"development","files":["../../../.env"],"env":{"EXPO_PUBLIC_API_URL":"https://slotstudy.onrender.com/api/v1","EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID":"167923842336-hjdcfdri5f6b5mu6pavb0cb1t5ijihit.apps.googleusercontent.com","EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID":"167923842336-q2mqh9e6tccttp7uqqvp8ajmc9utm1i0.apps.googleusercontent.com","EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID":"167923842336-lelbtpou0tqmdd007fc9njmjdpqs7587.apps.googleusercontent.com"}}
+{"_e":"devserver:start","_t":1790792180028,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790792180867,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790792181165,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790792186110,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790792189069,"id":"1","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790792189069,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790792189083,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790792189183,"id":"1","progress":0.04047477329225167,"total":169,"current":34}
+{"_e":"metro:bundling:progress","_t":1790792189283,"id":"1","progress":0.0746782818854891,"total":333,"current":91}
+{"_e":"metro:bundling:progress","_t":1790792189383,"id":"1","progress":0.20277392624532503,"total":493,"current":222}
+{"_e":"metro:bundling:progress","_t":1790792189483,"id":"1","progress":0.2931985649579474,"total":663,"current":359}
+{"_e":"metro:bundling:progress","_t":1790792189583,"id":"1","progress":0.37320441183019093,"total":807,"current":493}
+{"_e":"metro:bundling:progress","_t":1790792189683,"id":"1","progress":0.41507172044586127,"total":967,"current":623}
+{"_e":"metro:bundling:progress","_t":1790792189783,"id":"1","progress":0.638098540292963,"total":1009,"current":806}
+{"_e":"metro:bundling:progress","_t":1790792189885,"id":"1","progress":0.689571165149601,"total":1138,"current":945}
+{"_e":"metro:bundling:progress","_t":1790792190023,"id":"1","progress":0.7068025562369221,"total":1174,"current":987}
+{"_e":"metro:bundling:progress","_t":1790792190161,"id":"1","progress":0.7068025562369221,"total":3030,"current":987}
+{"_e":"metro:bundling:progress","_t":1790792190195,"id":"1","progress":0.7068025562369221,"total":3030,"current":988}
+{"_e":"metro:bundling:progress","_t":1790792190295,"id":"1","progress":0.7068025562369221,"total":3038,"current":1029}
+{"_e":"metro:bundling:progress","_t":1790792190395,"id":"1","progress":0.7068025562369221,"total":3179,"current":1153}
+{"_e":"metro:bundling:progress","_t":1790792190495,"id":"1","progress":0.7068025562369221,"total":3192,"current":1778}
+{"_e":"metro:bundling:progress","_t":1790792190595,"id":"1","progress":0.718670501441574,"total":3192,"current":2706}
+{"_e":"metro:bundling:progress","_t":1790792190701,"id":"1","progress":0.8981279727795363,"total":3212,"current":3044}
+{"_e":"metro:bundling:progress","_t":1790792190801,"id":"1","progress":0.8981279727795363,"total":3411,"current":3193}
+{"_e":"metro:bundling:progress","_t":1790792190901,"id":"1","progress":0.9528024609983646,"total":3517,"current":3433}
+{"_e":"metro:bundling:progress","_t":1790792191026,"id":"1","progress":0.999,"total":3636,"current":3636}
+{"_e":"metro:bundling:done","_t":1790792191163,"id":"1","total":3636,"ms":2094.212092}
+{"_e":"metro:client_log","_t":1790792201975,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790792201977,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790792201978,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790792201978,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790792201978,"level":"warn","data":["[Reanimated] Writing to `value` during component render. Please ensure that you don't access the `value` property nor use `set` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:client_log","_t":1790792201990,"level":"warn","data":["[Reanimated] Reading from `value` during component render. Please ensure that you don't access the `value` property nor use `get` method of a shared value while React is rendering a component.\n\nIf you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details."]}
+{"_e":"metro:server_log","_t":1790792592260,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"metro:bundling:started","_t":1790793096670,"id":"9","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790793096671,"id":"9","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790793096862,"id":"9","total":1,"ms":191.682618}
+{"_e":"metro:bundling:started","_t":1790793555944,"id":"f","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:progress","_t":1790793555944,"id":"f","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1790793556075,"id":"f","total":1,"ms":131.462465}

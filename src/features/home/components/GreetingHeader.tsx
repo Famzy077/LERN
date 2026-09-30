@@ -31,7 +31,7 @@ const GreetingHeader = ({ greeting, name, avatarUrl }: Props) => {
         onPress={() => navigation.navigate('Notifications')}
         className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 items-center justify-center shadow-sm"
       >
-        <Bell size={20} className="text-slate-700 dark:text-slate-300" />
+        <Bell size={20} className="text-slat e-500 dark: text-gray-300" />
       </TouchableOpacity>
     </View>
   );
