@@ -1,6 +1,7 @@
 export interface Profile {
   id: string;
   name: string;
+  username?: string | null;
   email: string;
   avatarUrl: string | null;
   university: string;
@@ -16,13 +17,14 @@ export interface Profile {
     studyHours: number;
   };
   subscription: {
-    plan: 'free' | 'pro';
+    plan: "free" | "pro";
     expiresAt: string | null;
   };
 }
 
 export interface UpdateProfileDTO {
   name?: string;
+  username?: string | null;
   university?: string;
   program?: string;
   yearOfStudy?: number;

@@ -6,6 +6,7 @@ export interface User {
   id: string;
   email: string;
   name: string;
+  username?: string | null;
   avatarUrl: string | null;
   university: string | null;
   program: string | null;
@@ -23,6 +24,12 @@ interface AuthState {
   setAuth: (user: User, token: string, refreshToken: string) => void;
   setTokens: (token: string, refreshToken: string) => void;
   setUser: (user: User) => void;
+  updateAcademicInfo: (
+    details: Pick<
+      User,
+      'university' | 'program' | 'yearOfStudy' | 'academicSetupCompleted'
+    >,
+  ) => void;
   setOnboarded: (onboarded: boolean) => void;
   logout: () => void;
 }
@@ -39,6 +46,10 @@ export const useAuthStore = create<AuthState>()(
         set({ user, token, refreshToken, isAuthenticated: true }),
       setTokens: (token, refreshToken) => set({ token, refreshToken }),
       setUser: (user) => set({ user }),
+      updateAcademicInfo: (details) =>
+        set((state) => ({
+          user: state.user ? { ...state.user, ...details } : null,
+        })),
       setOnboarded: (isOnboarded) => set({ isOnboarded }),
       logout: () =>
         set({

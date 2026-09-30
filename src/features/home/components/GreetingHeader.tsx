@@ -7,9 +7,10 @@ interface Props {
   greeting: string;
   name: string;
   avatarUrl?: string | null;
+  username: string;
 }
 
-const GreetingHeader = ({ greeting, name, avatarUrl }: Props) => {
+const GreetingHeader = ({ greeting, name, username, avatarUrl }: Props) => {
   const navigation = useNavigation<any>();
 
   return (

@@ -1,44 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, Image, TextInput, Alert, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
-import { useGoogleLogin } from '../hooks/useAuth';
-import * as WebBrowser from 'expo-web-browser';
-import * as Google from 'expo-auth-session/providers/google';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useAuthStore } from '../store/auth.store';
-import { apiClient } from '@/shared/services/api.client';
-import { Button } from '@/shared/components/ui/Button';
-import { Eye, EyeOff } from 'lucide-react-native';
+import React, { useEffect, useRef, useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  TextInput,
+  Alert,
+  ScrollView,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
+import { useGoogleLogin } from "../hooks/useAuth";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
+import { LinearGradient } from "expo-linear-gradient";
+import { useAuthStore } from "../store/auth.store";
+import { apiClient } from "@/shared/services/api.client";
+import { Button } from "@/shared/components/ui/Button";
+import { Eye, EyeOff } from "lucide-react-native";
 
 // Required for web browser to close correctly after auth
 WebBrowser.maybeCompleteAuthSession();
 
 const LoginScreen = () => {
   const navigation = useNavigation<any>();
-  const { mutate: loginWithGoogle, isPending: isGooglePending } = useGoogleLogin();
+  const { mutate: loginWithGoogle, isPending: isGooglePending } =
+    useGoogleLogin();
   const setAuth = useAuthStore((state) => state.setAuth);
 
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const passwordInputRef = useRef<TextInput>(null);
 
   // Load client IDs from .env with fallbacks to prevent crash if undefined
   const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: process.env.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || 'missing-android-id',
-    iosClientId: process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || 'missing-ios-id',
-    webClientId: process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || 'missing-web-id',
+    androidClientId:
+      process.env.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || "missing-android-id",
+    iosClientId:
+      process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || "missing-ios-id",
+    webClientId:
+      process.env.EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID || "missing-web-id",
   });
 
   useEffect(() => {
-    if (response?.type === 'success' && response.authentication?.idToken) {
+    if (response?.type === "success" && response.authentication?.idToken) {
       loginWithGoogle(
         { idToken: response.authentication.idToken },
         {
           onSuccess: () => {
-            navigation.replace('AcademicSetup');
+            navigation.replace("AcademicSetup");
           },
-        }
+        },
       );
     }
   }, [response]);
@@ -49,19 +62,23 @@ const LoginScreen = () => {
 
   const handleLocalLogin = async () => {
     if (!form.email || !form.password) {
-      Alert.alert('Error', 'Please enter your email and password');
+      Alert.alert("Error", "Please enter your email and password");
       return;
     }
 
     setLoading(true);
     try {
-      const response = await apiClient.post('/auth/login', form);
+      const response = await apiClient.post("/auth/login", form);
       if (response.data && response.data.accessToken) {
-        setAuth(response.data.user, response.data.accessToken, response.data.refreshToken);
-        navigation.replace('AcademicSetup');
+        setAuth(
+          response.data.user,
+          response.data.accessToken,
+          response.data.refreshToken,
+        );
+        navigation.replace("AcademicSetup");
       }
     } catch (error: any) {
-      Alert.alert('Login Failed', error.message || 'Invalid credentials');
+      Alert.alert("Login Failed", error.message || "Invalid credentials");
     } finally {
       setLoading(false);
     }
@@ -70,16 +87,23 @@ const LoginScreen = () => {
   return (
     <View className="flex-1 bg-surface dark:bg-slate-900">
       <LinearGradient
-        colors={['rgba(37,99,235,0.1)', 'rgba(37,99,235,0)', 'transparent']}
-        style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 400 }}
+        colors={["rgba(37,99,235,0.1)", "rgba(37,99,235,0)", "transparent"]}
+        style={{ position: "absolute", left: 0, right: 0, top: 0, height: 400 }}
       />
-      
+
       <ScreenWrapper className="flex-1 justify-center px-8" padded={false}>
-        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingVertical: 40 }} showsVerticalScrollIndicator={false}>
+        <ScrollView
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: "center",
+            paddingVertical: 40,
+          }}
+          showsVerticalScrollIndicator={false}
+        >
           <View className="items-center mb-10 pt-10">
-            <Image 
-              source={require('../../../../assets/images/logo.png')}
-              style={{ width: 220, height: 160, resizeMode: 'contain' }}
+            <Image
+              source={require("../../../../assets/images/logo.png")}
+              style={{ width: 220, height: 160, resizeMode: "contain" }}
               className="mb-4"
             />
             <Text className="text-3xl font-bold text-slate-900 dark:text-white mb-2 text-center">
@@ -98,19 +122,37 @@ const LoginScreen = () => {
                 placeholderTextColor="#94a3b8"
                 keyboardType="email-address"
                 autoCapitalize="none"
+                autoCorrect={false}
                 value={form.email}
-                onChangeText={(text) => setForm({ ...form, email: text })}
+                autoComplete="username"
+                textContentType="username"
+                importantForAutofill="yes"
+                returnKeyType="next"
+                onSubmitEditing={() => passwordInputRef.current?.focus()}
+                onChangeText={(text) =>
+                  setForm((current) => ({ ...current, email: text }))
+                }
               />
             </View>
 
             <View className="relative justify-center">
               <TextInput
+                ref={passwordInputRef}
                 className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-4 pr-12 py-3.5 text-slate-900 dark:text-white"
                 placeholder="Password"
                 placeholderTextColor="#94a3b8"
+                autoCapitalize="none"
+                autoCorrect={false}
                 secureTextEntry={!showPassword}
                 value={form.password}
-                onChangeText={(text) => setForm({ ...form, password: text })}
+                autoComplete="current-password"
+                textContentType="password"
+                importantForAutofill="yes"
+                returnKeyType="done"
+                onSubmitEditing={handleLocalLogin}
+                onChangeText={(text) =>
+                  setForm((current) => ({ ...current, password: text }))
+                }
               />
               <TouchableOpacity
                 className="absolute right-4"
@@ -126,7 +168,12 @@ const LoginScreen = () => {
             </View>
           </View>
 
-          <Button title="Log In" onPress={handleLocalLogin} loading={loading} className="w-full mb-6" />
+          <Button
+            title="Log In"
+            onPress={handleLocalLogin}
+            loading={loading}
+            className="w-full mb-6"
+          />
 
           <View className="flex-row items-center justify-center mb-6">
             <View className="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700" />
@@ -140,18 +187,20 @@ const LoginScreen = () => {
             activeOpacity={0.8}
             className="flex-row items-center justify-center bg-white dark:bg-slate-800 py-3.5 px-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 mb-8"
           >
-            <Image 
-              source={require('../../../../assets/images/google.png')}
+            <Image
+              source={require("../../../../assets/images/google.png")}
               style={{ width: 22, height: 22, marginRight: 12 }}
             />
             <Text className="text-slate-900 dark:text-white font-semibold text-base">
-              {isGooglePending ? 'Signing in...' : 'Continue with Google'}
+              {isGooglePending ? "Signing in..." : "Continue with Google"}
             </Text>
           </TouchableOpacity>
 
           <View className="flex-row justify-center mt-auto pb-10">
-            <Text className="text-slate-500 dark:text-slate-400">Don't have an account? </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+            <Text className="text-slate-500 dark:text-slate-400">
+              Don't have an account?{" "}
+            </Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
               <Text className="text-primary font-semibold">Sign Up</Text>
             </TouchableOpacity>
           </View>

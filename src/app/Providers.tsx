@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { NavigationContainer } from '@react-navigation/native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useColorScheme as useNativeWindColorScheme } from 'nativewind';
+import { useSettingsStore } from '@/features/settings/store/settings.store';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,9 +29,21 @@ export function Providers({ children }: ProvidersProps) {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <QueryClientProvider client={queryClient}>
+          <ThemeSynchronizer />
           <NavigationContainer>{children}</NavigationContainer>
         </QueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
+}
+
+function ThemeSynchronizer() {
+  const themeMode = useSettingsStore((state) => state.themeMode);
+  const { setColorScheme } = useNativeWindColorScheme();
+
+  useEffect(() => {
+    setColorScheme(themeMode);
+  }, [setColorScheme, themeMode]);
+
+  return null;
 }

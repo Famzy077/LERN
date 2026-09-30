@@ -5,7 +5,6 @@ import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
 import { Button } from '@/shared/components/ui/Button';
 import { useAuthStore } from '../store/auth.store';
 import { apiClient } from '@/shared/services/api.client';
-import { ENDPOINTS } from '@/shared/constants/endpoints';
 import { Eye, EyeOff } from 'lucide-react-native';
 
 const SignupScreen = () => {
@@ -27,7 +26,6 @@ const SignupScreen = () => {
       const response = await apiClient.post('/auth/register', form);
       if (response.data && response.data.accessToken) {
         setAuth(response.data.user, response.data.accessToken, response.data.refreshToken);
-        navigation.replace('AcademicSetup');
       }
     } catch (error: any) {
       Alert.alert('Signup Failed', error.message || 'Something went wrong');

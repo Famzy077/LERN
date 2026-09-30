@@ -30,7 +30,13 @@
     },
     "plugins": [
       "expo-font",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow SlotStudy to choose a profile picture from your photo library."
+        }
+      ]
     ],
     "scheme": "slotstudy",
     "extra": {

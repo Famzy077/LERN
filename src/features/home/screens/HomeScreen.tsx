@@ -1,5 +1,11 @@
 import React from 'react';
-import { ScrollView, RefreshControl, View } from 'react-native';
+import {
+  ScrollView,
+  RefreshControl,
+  View,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
 import GreetingHeader from '../components/GreetingHeader';
 import QuickActions from '../components/QuickActions';
@@ -10,13 +16,23 @@ import { ProgressCard } from '@/shared/components/cards/ProgressCard';
 import { SkeletonCard as LoadingSkeleton } from '@/shared/components/ui/LoadingSkeleton';
 import { ErrorState } from '@/shared/components/feedback/ErrorState';
 import { useDashboard } from '../hooks/useDashboard';
+import { useProfile } from '@/features/profile/hooks/useProfile';
+import { useAuthStore } from '@/features/auth/store/auth.store';
+import { GraduationCap, ChevronRight } from 'lucide-react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
   const { data, isLoading, isError, refetch, isRefetching } = useDashboard();
+  const { data: profileResponse } = useProfile();
+  const username = useAuthStore((state) => state.user?.username ?? '');
+  const navigation = useNavigation<any>();
 
   if (isLoading) {
     return (
-      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900">
+      <ScreenWrapper
+        padded={false}
+        className="flex-1 bg-surface dark:bg-slate-900"
+      >
         <View className="px-6 mt-8 mb-6 flex-row items-center justify-between">
           <View>
             <LoadingSkeleton className="h-6 w-32 mb-2 rounded-lg" />
@@ -24,7 +40,7 @@ const HomeScreen = () => {
           </View>
           <LoadingSkeleton className="h-12 w-12 rounded-full" />
         </View>
-        
+
         <View className="flex-row px-6 mb-6 gap-4">
           <LoadingSkeleton className="flex-1 h-32 rounded-3xl" />
           <LoadingSkeleton className="flex-1 h-32 rounded-3xl" />
@@ -46,16 +62,25 @@ const HomeScreen = () => {
 
   if (isError || !data?.data) {
     return (
-      <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900 justify-center">
+      <ScreenWrapper
+        padded={false}
+        className="flex-1 bg-surface dark:bg-slate-900 justify-center"
+      >
         <ErrorState message="Failed to load dashboard" onRetry={refetch} />
       </ScreenWrapper>
     );
   }
 
   const dashboard = data.data;
+  const missingUniversity = Boolean(
+    profileResponse?.data && !profileResponse.data.university,
+  );
 
   return (
-    <ScreenWrapper padded={false} className="flex-1 bg-surface dark:bg-slate-900">
+    <ScreenWrapper
+      padded={false}
+      className="flex-1 bg-surface dark:bg-slate-900"
+    >
       <ScrollView
         showsVerticalScrollIndicator={false}
         refreshControl={
@@ -66,11 +91,37 @@ const HomeScreen = () => {
           greeting={dashboard.greeting}
           name={dashboard.user.name}
           avatarUrl={dashboard.user.avatarUrl}
+          username={username}
         />
-        
+
+        {missingUniversity ? (
+          <TouchableOpacity
+            accessibilityRole="button"
+            onPress={() => navigation.navigate('AcademicDetails')}
+            className="mx-6 mb-6 flex-row items-center rounded-3xl bg-blue-50 p-4 dark:bg-slate-800"
+          >
+            <View className="h-11 w-11 items-center justify-center rounded-2xl bg-white dark:bg-slate-700">
+              <GraduationCap size={21} color="#2563EB" />
+            </View>
+            <View className="ml-3 flex-1">
+              <Text className="font-bold text-slate-900 dark:text-slate-50">
+                Add your university
+              </Text>
+              <Text className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+                Personalize your learning, including distance-learning schools.
+              </Text>
+            </View>
+            <ChevronRight size={20} color="#2563EB" />
+          </TouchableOpacity>
+        ) : null}
+
         <View className="px-6 mb-6 flex-row gap-4">
           <View className="flex-1 justify-center">
-            <StreakWidget currentStreak={dashboard.streak.current} weeklyData={dashboard.streak.weeklyData} showWeekly={false} />
+            <StreakWidget
+              currentStreak={dashboard.streak.current}
+              weeklyData={dashboard.streak.weeklyData}
+              showWeekly={false}
+            />
           </View>
           <View className="flex-1 justify-center">
             <XPBadge xp={dashboard.xp.total} level={dashboard.xp.level} />

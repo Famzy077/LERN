@@ -3,7 +3,7 @@ export interface SubscriptionPlan {
   name: string;
   price: number;
   currency: string;
-  interval: 'monthly' | 'yearly';
+  interval: 'weekly' | 'monthly' | 'yearly';
   features: string[];
   isPopular: boolean;
 }

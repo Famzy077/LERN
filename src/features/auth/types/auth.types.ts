@@ -7,6 +7,7 @@ export interface AuthResponse {
     id: string;
     email: string;
     name: string;
+    username?: string | null;
     avatarUrl: string | null;
     university: string | null;
     program: string | null;

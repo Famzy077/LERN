@@ -1,7 +1,7 @@
-import type { NavigatorScreenParams } from '@react-navigation/native';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-import type { CompositeScreenProps } from '@react-navigation/native';
+import type { NavigatorScreenParams } from "@react-navigation/native";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
+import type { CompositeScreenProps } from "@react-navigation/native";
 
 // ── Tab Navigator ──────────────────────────────────────────────────
 export type TabParamList = {
@@ -26,11 +26,14 @@ export type MainStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
   UploadMaterial: { courseId?: string };
   AISummary: { materialId: string };
-  Quiz: { courseId: string; quizId?: string };
+  QuizHub: undefined;
+  Quiz: { courseId?: string; quizId?: string };
   QuizResult: { quizId: string };
   Notifications: undefined;
   Subscription: undefined;
   Settings: undefined;
+  HelpSupport: undefined;
+  AcademicDetails: undefined;
 };
 
 // ── Root Stack ─────────────────────────────────────────────────────
