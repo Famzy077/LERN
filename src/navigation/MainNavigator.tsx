@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import type { MainStackParamList } from "./types";
 import { TabNavigator } from "./TabNavigator";
 
+import CourseDetailScreen from "@/features/courses/screens/CourseDetailScreen";
 import UploadMaterialScreen from "@/features/ai/screens/UploadMaterialScreen";
 import AISummaryScreen from "@/features/ai/screens/AISummaryScreen";
 import QuizHubScreen from "@/features/quiz/screens/QuizHubScreen";
@@ -25,6 +26,7 @@ export function MainNavigator() {
       }}
     >
       <Stack.Screen name="Tabs" component={TabNavigator} />
+      <Stack.Screen name="CourseDetail" component={CourseDetailScreen} />
       <Stack.Screen name="UploadMaterial" component={UploadMaterialScreen} />
       <Stack.Screen name="AISummary" component={AISummaryScreen} />
       <Stack.Screen name="QuizHub" component={QuizHubScreen} />

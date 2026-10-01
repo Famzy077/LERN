@@ -18,6 +18,7 @@ import { useAuthStore } from "../store/auth.store";
 import { apiClient } from "@/shared/services/api.client";
 import { Button } from "@/shared/components/ui/Button";
 import { Eye, EyeOff } from "lucide-react-native";
+import type { AuthResponse } from "../types/auth.types";
 
 // Required for web browser to close correctly after auth
 WebBrowser.maybeCompleteAuthSession();
@@ -68,7 +69,7 @@ const LoginScreen = () => {
 
     setLoading(true);
     try {
-      const response = await apiClient.post("/auth/login", form);
+      const response = await apiClient.post<AuthResponse>("/auth/login", form);
       if (response.data && response.data.accessToken) {
         setAuth(
           response.data.user,

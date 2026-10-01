@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Alert, TextInput } from "react-native";
 import {
   View,
   Text,
@@ -11,22 +12,32 @@ import { SearchBar } from "@/shared/components/ui/SearchBar";
 import { CourseCard } from "@/shared/components/cards/CourseCard";
 import { SkeletonCard as LoadingSkeleton } from "@/shared/components/ui/LoadingSkeleton";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
-import { useCourses } from "../hooks/useCourses";
+import { useCourses, useCreateCourse } from "../hooks/useCourses";
 import { useDebounce } from "@/shared/hooks/useDebounce"; // Assuming useDebounce exists
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "@/shared/components/ui/Button";
-import { Upload } from "lucide-react-native";
+import { Plus, Upload } from "lucide-react-native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import type { MainStackParamList } from "@/navigation/types";
 
 const FILTERS = ["All", "In Progress", "Completed"];
 
 const CourseLibraryScreen = () => {
-  const navigation = useNavigation<any>();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const [searchQuery, setSearchQuery] = useState("");
   const debouncedSearch = useDebounce(searchQuery, 500);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [showCourseForm, setShowCourseForm] = useState(false);
+  const [courseForm, setCourseForm] = useState({
+    title: "",
+    subject: "",
+    description: "",
+  });
 
   const { data, isLoading, refetch, isRefetching } =
     useCourses(debouncedSearch);
+  const createCourse = useCreateCourse();
 
   const courses = data?.data || [];
 
@@ -38,6 +49,41 @@ const CourseLibraryScreen = () => {
     return true;
   });
 
+  const handleCreateCourse = () => {
+    const title = courseForm.title.trim();
+    const subject = courseForm.subject.trim();
+    if (!title || !subject) {
+      Alert.alert("Add course details", "Enter a course name and subject.");
+      return;
+    }
+
+    createCourse.mutate(
+      {
+        title,
+        subject,
+        description: courseForm.description.trim() || undefined,
+      },
+      {
+        onSuccess: (response) => {
+          const createdCourse = response.data;
+          setCourseForm({ title: "", subject: "", description: "" });
+          setShowCourseForm(false);
+          if (createdCourse?.id) {
+            navigation.navigate("CourseDetail", {
+              courseId: createdCourse.id,
+            });
+          }
+        },
+        onError: (error) => {
+          Alert.alert(
+            "Could not create course",
+            error.message || "Please try again.",
+          );
+        },
+      },
+    );
+  };
+
   return (
     <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900">
       <View className="px-6 pt-4 pb-2">
@@ -45,14 +91,83 @@ const CourseLibraryScreen = () => {
           <Text className="text-2xl font-bold text-slate-900 dark:text-slate-50">
             My Courses
           </Text>
-          <Button
-            title="Upload"
-            size="sm"
-            icon={<Upload size={16} color="#FFFFFF" />}
-            onPress={() => navigation.navigate("UploadMaterial", {})}
-            accessibilityLabel="Upload course material"
-          />
+          <View className="flex-row">
+            <Button
+              title="New course"
+              size="sm"
+              variant="secondary"
+              icon={<Plus size={16} color="#2563EB" />}
+              onPress={() => setShowCourseForm((visible) => !visible)}
+              accessibilityLabel="Create a course"
+              className="mr-2"
+            />
+            <Button
+              title="Upload"
+              size="sm"
+              icon={<Upload size={16} color="#FFFFFF" />}
+              onPress={() => navigation.navigate("UploadMaterial", {})}
+              accessibilityLabel="Upload course material"
+            />
+          </View>
         </View>
+        {showCourseForm ? (
+          <View
+            accessibilityLabel="Create course form"
+            className="mb-4 rounded-2xl bg-white p-4 dark:bg-slate-800"
+          >
+            <Text className="mb-3 text-lg font-semibold text-slate-900 dark:text-slate-50">
+              Add a course
+            </Text>
+            <TextInput
+              accessibilityLabel="Course name"
+              value={courseForm.title}
+              onChangeText={(title) =>
+                setCourseForm((current) => ({ ...current, title }))
+              }
+              placeholder="Course name (e.g. Biology 101)"
+              placeholderTextColor="#94A3B8"
+              returnKeyType="next"
+              className="mb-3 rounded-xl border border-slate-200 px-4 py-3 text-slate-900 dark:border-slate-700 dark:text-slate-50"
+            />
+            <TextInput
+              accessibilityLabel="Course subject"
+              value={courseForm.subject}
+              onChangeText={(subject) =>
+                setCourseForm((current) => ({ ...current, subject }))
+              }
+              placeholder="Subject (e.g. Biology)"
+              placeholderTextColor="#94A3B8"
+              returnKeyType="next"
+              className="mb-3 rounded-xl border border-slate-200 px-4 py-3 text-slate-900 dark:border-slate-700 dark:text-slate-50"
+            />
+            <TextInput
+              accessibilityLabel="Course description, optional"
+              value={courseForm.description}
+              onChangeText={(description) =>
+                setCourseForm((current) => ({ ...current, description }))
+              }
+              placeholder="Description (optional)"
+              placeholderTextColor="#94A3B8"
+              className="mb-4 rounded-xl border border-slate-200 px-4 py-3 text-slate-900 dark:border-slate-700 dark:text-slate-50"
+            />
+            <View className="flex-row">
+              <Button
+                title="Cancel"
+                size="sm"
+                variant="outline"
+                onPress={() => setShowCourseForm(false)}
+                className="mr-2 flex-1"
+              />
+              <Button
+                title="Create course"
+                size="sm"
+                loading={createCourse.isPending}
+                onPress={handleCreateCourse}
+                className="flex-1"
+              />
+            </View>
+          </View>
+        ) : null}
         <SearchBar
           value={searchQuery}
           onChangeText={setSearchQuery}
@@ -63,6 +178,9 @@ const CourseLibraryScreen = () => {
           {FILTERS.map((filter) => (
             <TouchableOpacity
               key={filter}
+              accessibilityRole="button"
+              accessibilityState={{ selected: activeFilter === filter }}
+              accessibilityLabel={`Filter courses: ${filter}`}
               onPress={() => setActiveFilter(filter)}
               className={`px-4 py-2 rounded-full border ${
                 activeFilter === filter
@@ -106,11 +224,23 @@ const CourseLibraryScreen = () => {
           }
           ListEmptyComponent={
             <EmptyState
-              title="No courses found"
-              message="You haven't added any courses yet or none match your search."
+              title={courses.length ? "No courses found" : "No courses yet"}
+              message={
+                courses.length
+                  ? "Try a different search or course filter."
+                  : "Create a course to keep your materials, summaries, and quizzes together."
+              }
+              actionLabel={
+                courses.length || searchQuery
+                  ? undefined
+                  : "Create your first course"
+              }
+              onAction={() => setShowCourseForm(true)}
             />
           }
           renderItem={({ item }) => {
+            const openCourseDetail = (courseId: string) =>
+              navigation.navigate("CourseDetail", { courseId });
             const openCourseUpload = () =>
               navigation.navigate("UploadMaterial", { courseId: item.id });
 
@@ -124,7 +254,7 @@ const CourseLibraryScreen = () => {
                   totalTopics={item.totalTopics}
                   completedTopics={item.completedTopics}
                   lastAccessed={item.lastAccessed}
-                  onPress={openCourseUpload}
+                  onPress={openCourseDetail}
                 />
                 <Button
                   title="Upload material"

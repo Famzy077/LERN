@@ -24,10 +24,11 @@ export type AuthStackParamList = {
 // ── Main Stack (wraps tabs + modal screens) ────────────────────────
 export type MainStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
+  CourseDetail: { courseId: string };
   UploadMaterial: { courseId?: string };
   AISummary: { materialId: string };
   QuizHub: undefined;
-  Quiz: { courseId?: string; quizId?: string };
+  Quiz: { courseId?: string; quizId?: string; mode?: "practice" | "test" };
   QuizResult: { quizId: string };
   Notifications: undefined;
   Subscription: undefined;

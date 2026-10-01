@@ -16,6 +16,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
+import { ErrorState } from "@/shared/components/feedback/ErrorState";
 import { useTheme } from "@/shared/hooks/useTheme";
 import { useRecentSummaries } from "@/features/ai/hooks/useSummary";
 import {
@@ -28,7 +29,13 @@ import type { MainScreenProps } from "@/navigation/types";
 export default function AIHubScreen() {
   const navigation = useNavigation<MainScreenProps<"Tabs">["navigation"]>();
   const { colors } = useTheme();
-  const { data: summariesResponse, isLoading } = useRecentSummaries();
+  const {
+    data: summariesResponse,
+    isLoading,
+    isError: summariesError,
+    error: summariesErrorDetails,
+    refetch: refetchSummaries,
+  } = useRecentSummaries();
   const {
     data: materialsResponse,
     isLoading: materialsLoading,
@@ -61,7 +68,7 @@ export default function AIHubScreen() {
           AI Assistant
         </Text>
         <Text className="text-base font-inter-regular text-slate-500">
-          Upload materials and get instant summaries
+          Upload course materials to create AI-powered study summaries
         </Text>
       </View>
 
@@ -79,7 +86,7 @@ export default function AIHubScreen() {
               Upload New Material
             </Text>
             <Text className="text-sm font-inter-medium text-white/80">
-              PDF, DOCX, Images
+              PDF, JPG, PNG images
             </Text>
           </View>
           <Sparkles size={48} color="#FFFFFF" opacity={0.2} />
@@ -127,7 +134,7 @@ export default function AIHubScreen() {
                 className="mb-3 flex-row items-center rounded-2xl bg-white p-4 dark:bg-slate-800"
               >
                 <View className="mr-3 h-11 w-11 items-center justify-center rounded-xl bg-primary-50 dark:bg-primary-900/30">
-                  {processing || uploaded ? (
+                  {processing ? (
                     <ActivityIndicator color={colors.primary} />
                   ) : (
                     <FileText size={21} color="#DC2626" />
@@ -194,6 +201,15 @@ export default function AIHubScreen() {
           <SkeletonCard lines={2} className="mb-4" />
           <SkeletonCard lines={2} className="mb-4" />
         </View>
+      ) : summariesError ? (
+        <ErrorState
+          title="Could not load summaries"
+          message={
+            summariesErrorDetails?.message ||
+            "Please try again to load your study summaries."
+          }
+          onRetry={() => void refetchSummaries()}
+        />
       ) : summaries.length > 0 ? (
         summaries.map((summary) => (
           <TouchableOpacity

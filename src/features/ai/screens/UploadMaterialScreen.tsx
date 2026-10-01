@@ -34,7 +34,7 @@ export default function UploadMaterialScreen() {
   const handleSelectFile = async () => {
     try {
       const result = await DocumentPicker.getDocumentAsync({
-        type: ["application/pdf", "image/*"],
+        type: ["application/pdf", "image/jpeg", "image/png"],
         copyToCacheDirectory: true,
       });
 
@@ -109,7 +109,12 @@ export default function UploadMaterialScreen() {
     <ScreenWrapper padded={false}>
       <View className="flex-1 p-4 bg-surface dark:bg-slate-900">
         <View className="flex-row items-center mb-6">
-          <TouchableOpacity onPress={() => navigation.goBack()} className="p-2">
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Go back"
+            onPress={() => navigation.goBack()}
+            className="p-2"
+          >
             <Text className="text-primary font-bold">Back</Text>
           </TouchableOpacity>
           <Text className="text-xl font-bold text-slate-900 dark:text-slate-50 ml-4">
@@ -120,6 +125,11 @@ export default function UploadMaterialScreen() {
         {!uploadComplete ? (
           <>
             <TouchableOpacity
+              accessibilityRole="button"
+              accessibilityLabel="Choose a PDF or image to upload"
+              accessibilityState={{
+                disabled: uploadMutation.isPending || processMutation.isPending,
+              }}
               onPress={handleSelectFile}
               disabled={uploadMutation.isPending || processMutation.isPending}
               className={`border-2 border-dashed rounded-3xl p-8 items-center justify-center flex-1 bg-white dark:bg-slate-800 ${
@@ -130,7 +140,10 @@ export default function UploadMaterialScreen() {
             >
               <Upload size={48} className="text-primary mb-4" />
               <Text className="text-lg font-semibold text-slate-900 dark:text-slate-50 text-center mb-2">
-                Tap to select PDF, DOCX, or image
+                Choose a PDF or image
+              </Text>
+              <Text className="text-sm text-slate-500 dark:text-slate-400 text-center">
+                Supported formats: PDF, JPG, and PNG
               </Text>
               {selectedFile && (
                 <View className="mt-6 w-full items-center">

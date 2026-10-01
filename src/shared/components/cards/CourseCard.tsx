@@ -1,10 +1,10 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { BookOpen } from 'lucide-react-native';
-import Animated, { FadeInRight } from 'react-native-reanimated';
-import { useTheme } from '@/shared/hooks/useTheme';
-import { Badge } from '@/shared/components/ui/Badge';
-import { clsx } from 'clsx';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { BookOpen } from "lucide-react-native";
+import Animated, { FadeInRight } from "react-native-reanimated";
+import { useTheme } from "@/shared/hooks/useTheme";
+import { Badge } from "@/shared/components/ui/Badge";
+import { clsx } from "clsx";
 
 interface CourseCardProps {
   id: string;
@@ -39,7 +39,7 @@ export function CourseCard({
         onPress={() => onPress(id)}
         activeOpacity={0.7}
         className={clsx(
-          'rounded-3xl bg-white p-5 dark:bg-slate-800',
+          "rounded-3xl bg-white p-5 dark:bg-slate-800",
           className,
         )}
       >
@@ -58,7 +58,7 @@ export function CourseCard({
         </Text>
 
         <Text className="mb-3 text-xs font-inter-regular text-slate-500">
-          {completedTopics}/{totalTopics} topics
+          {completedTopics}/{totalTopics} materials processed
         </Text>
 
         {/* Progress bar */}
@@ -71,7 +71,7 @@ export function CourseCard({
 
         <View className="mt-2 flex-row items-center justify-between">
           <Text className="text-xs font-inter-medium text-primary">
-            {progress}% complete
+            {progress}% learning activity
           </Text>
           {lastAccessed && (
             <Text className="text-xs font-inter-regular text-slate-400">

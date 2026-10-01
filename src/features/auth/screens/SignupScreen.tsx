@@ -1,50 +1,86 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, Alert, ScrollView } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
-import { Button } from '@/shared/components/ui/Button';
-import { useAuthStore } from '../store/auth.store';
-import { apiClient } from '@/shared/services/api.client';
-import { Eye, EyeOff } from 'lucide-react-native';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Alert,
+  ScrollView,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
+import { Button } from "@/shared/components/ui/Button";
+import { useAuthStore } from "../store/auth.store";
+import { apiClient } from "@/shared/services/api.client";
+import { Eye, EyeOff } from "lucide-react-native";
+import type { AuthResponse } from "../types/auth.types";
 
 const SignupScreen = () => {
   const navigation = useNavigation<any>();
   const setAuth = useAuthStore((state) => state.setAuth);
 
-  const [form, setForm] = useState({ name: '', username: '', email: '', password: '' });
+  const [form, setForm] = useState({
+    name: "",
+    username: "",
+    email: "",
+    password: "",
+  });
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSignup = async () => {
     if (!form.name || !form.username || !form.email || !form.password) {
-      Alert.alert('Error', 'Please fill in all fields');
+      Alert.alert("Error", "Please fill in all fields");
       return;
     }
 
     setLoading(true);
     try {
-      const response = await apiClient.post('/auth/register', form);
+      const response = await apiClient.post<AuthResponse>(
+        "/auth/register",
+        form,
+      );
       if (response.data && response.data.accessToken) {
-        setAuth(response.data.user, response.data.accessToken, response.data.refreshToken);
+        setAuth(
+          response.data.user,
+          response.data.accessToken,
+          response.data.refreshToken,
+        );
       }
     } catch (error: any) {
-      Alert.alert('Signup Failed', error.message || 'Something went wrong');
+      Alert.alert("Signup Failed", error.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <ScreenWrapper className="flex-1 bg-surface dark:bg-slate-900 justify-center px-8" padded={false}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingVertical: 40 }} showsVerticalScrollIndicator={false}>
+    <ScreenWrapper
+      className="flex-1 bg-surface dark:bg-slate-900 justify-center px-8"
+      padded={false}
+    >
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          justifyContent: "center",
+          paddingVertical: 40,
+        }}
+        showsVerticalScrollIndicator={false}
+      >
         <View className="mb-10">
-          <Text className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Create Account</Text>
-          <Text className="text-slate-500 dark:text-slate-400 text-lg">Join SlotStudy to start your journey.</Text>
+          <Text className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+            Create Account
+          </Text>
+          <Text className="text-slate-500 dark:text-slate-400 text-lg">
+            Join SlotStudy to start your journey.
+          </Text>
         </View>
 
         <View className="space-y-4 mb-8">
           <View>
-            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">Full Name</Text>
+            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">
+              Full Name
+            </Text>
             <TextInput
               className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white"
               placeholder="John Doe"
@@ -55,19 +91,25 @@ const SignupScreen = () => {
           </View>
 
           <View>
-            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">Username</Text>
+            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">
+              Username
+            </Text>
             <TextInput
               className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white"
               placeholder="johndoe123"
               placeholderTextColor="#94a3b8"
               autoCapitalize="none"
               value={form.username}
-              onChangeText={(text) => setForm({ ...form, username: text.toLowerCase() })}
+              onChangeText={(text) =>
+                setForm({ ...form, username: text.toLowerCase() })
+              }
             />
           </View>
 
           <View>
-            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">Email Address</Text>
+            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">
+              Email Address
+            </Text>
             <TextInput
               className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white"
               placeholder="name@example.com"
@@ -80,7 +122,9 @@ const SignupScreen = () => {
           </View>
 
           <View>
-            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">Password</Text>
+            <Text className="text-slate-700 dark:text-slate-300 font-medium mb-2">
+              Password
+            </Text>
             <View className="relative justify-center">
               <TextInput
                 className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-4 pr-12 py-3 text-slate-900 dark:text-white"
@@ -105,11 +149,18 @@ const SignupScreen = () => {
           </View>
         </View>
 
-        <Button title="Sign Up" onPress={handleSignup} loading={loading} className="w-full mb-6" />
+        <Button
+          title="Sign Up"
+          onPress={handleSignup}
+          loading={loading}
+          className="w-full mb-6"
+        />
 
         <View className="flex-row justify-center">
-          <Text className="text-slate-500 dark:text-slate-400">Already have an account? </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <Text className="text-slate-500 dark:text-slate-400">
+            Already have an account?{" "}
+          </Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")}>
             <Text className="text-primary font-semibold">Log In</Text>
           </TouchableOpacity>
         </View>

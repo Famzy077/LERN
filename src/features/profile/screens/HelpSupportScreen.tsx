@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Alert,
   Linking,
@@ -6,45 +6,45 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import {
   ArrowLeft,
   ChevronDown,
   ChevronUp,
   Mail,
   MessageCircleQuestion,
-} from 'lucide-react-native';
-import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
+} from "lucide-react-native";
+import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 
 const SUPPORT_EMAIL =
-  process.env.EXPO_PUBLIC_SUPPORT_EMAIL ?? 'support@slotstudy.app';
+  process.env.EXPO_PUBLIC_SUPPORT_EMAIL ?? "support@slotstudy.app";
 
 const FAQs = [
   {
-    question: 'How do I create a summary?',
+    question: "How do I create a summary?",
     answer:
-      'Open AI Study, upload a PDF or image, and wait while SlotStudy processes it. Your summary will appear in your AI library when processing finishes.',
+      "Open AI Study and upload a PDF, JPG, or PNG image. When processing finishes, your summary will appear in your AI library.",
   },
   {
-    question: 'Why is my material still processing?',
+    question: "Why is my material still processing?",
     answer:
-      'Larger documents and temporary AI service demand can take longer. Keep the app open while processing; if it fails, return to the upload screen and try again.',
+      "Large documents or temporary AI service demand can take longer. Your upload is saved if processing fails. Open AI Study, check Material processing, and tap Retry; you do not need to upload the file again.",
   },
   {
-    question: 'How do I make a quiz?',
+    question: "How do I make a quiz?",
     answer:
-      'Open a completed summary and choose Generate Quiz. Quiz generation needs an active connection and can be retried if the AI service is temporarily unavailable.',
+      "Open a completed summary and choose Generate Quiz. Quiz generation needs an active connection and can be retried if the AI service is temporarily unavailable.",
   },
   {
-    question: 'How can I manage my subscription?',
+    question: "How can I manage my subscription?",
     answer:
-      'Open Profile, then Subscription to see available plans and your current plan. In-app checkout is not available yet; contact support with subscription questions.',
+      "Open Profile, then Subscription to see available plans and your current plan. In-app checkout is not available yet; contact support with subscription questions.",
   },
   {
-    question: 'How do I change my account settings?',
+    question: "How do I change my account settings?",
     answer:
-      'Open Profile, then Settings to adjust your theme, notification preferences, study reminders, and haptic feedback.',
+      "Open Profile, then Settings to adjust your theme, notification preferences, study reminders, and haptic feedback.",
   },
 ];
 
@@ -55,12 +55,12 @@ export default function HelpSupportScreen() {
   );
 
   const contactSupport = async () => {
-    const url = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent('SlotStudy support')}`;
+    const url = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("SlotStudy support")}`;
     try {
       const canOpen = await Linking.canOpenURL(url);
       if (!canOpen) {
         Alert.alert(
-          'No email app found',
+          "No email app found",
           `You can email us at ${SUPPORT_EMAIL}.`,
         );
         return;
@@ -68,7 +68,7 @@ export default function HelpSupportScreen() {
       await Linking.openURL(url);
     } catch {
       Alert.alert(
-        'Could not open email',
+        "Could not open email",
         `Please email us at ${SUPPORT_EMAIL}.`,
       );
     }
@@ -133,8 +133,8 @@ export default function HelpSupportScreen() {
                   key={question}
                   className={
                     index < FAQs.length - 1
-                      ? 'border-b border-slate-100 dark:border-slate-700'
-                      : ''
+                      ? "border-b border-slate-100 dark:border-slate-700"
+                      : ""
                   }
                 >
                   <TouchableOpacity

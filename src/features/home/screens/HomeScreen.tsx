@@ -1,30 +1,30 @@
-import React from 'react';
+import React from "react";
 import {
   ScrollView,
   RefreshControl,
   View,
   TouchableOpacity,
   Text,
-} from 'react-native';
-import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
-import GreetingHeader from '../components/GreetingHeader';
-import QuickActions from '../components/QuickActions';
-import ContinueStudying from '../components/ContinueStudying';
-import { StreakWidget } from '@/shared/components/cards/StreakWidget';
-import { XPBadge } from '@/shared/components/cards/XPBadge';
-import { ProgressCard } from '@/shared/components/cards/ProgressCard';
-import { SkeletonCard as LoadingSkeleton } from '@/shared/components/ui/LoadingSkeleton';
-import { ErrorState } from '@/shared/components/feedback/ErrorState';
-import { useDashboard } from '../hooks/useDashboard';
-import { useProfile } from '@/features/profile/hooks/useProfile';
-import { useAuthStore } from '@/features/auth/store/auth.store';
-import { GraduationCap, ChevronRight } from 'lucide-react-native';
-import { useNavigation } from '@react-navigation/native';
+} from "react-native";
+import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
+import GreetingHeader from "../components/GreetingHeader";
+import QuickActions from "../components/QuickActions";
+import ContinueStudying from "../components/ContinueStudying";
+import { StreakWidget } from "@/shared/components/cards/StreakWidget";
+import { XPBadge } from "@/shared/components/cards/XPBadge";
+import { ProgressCard } from "@/shared/components/cards/ProgressCard";
+import { SkeletonCard as LoadingSkeleton } from "@/shared/components/ui/LoadingSkeleton";
+import { ErrorState } from "@/shared/components/feedback/ErrorState";
+import { useDashboard } from "../hooks/useDashboard";
+import { useProfile } from "@/features/profile/hooks/useProfile";
+import { useAuthStore } from "@/features/auth/store/auth.store";
+import { GraduationCap, ChevronRight, BookOpen } from "lucide-react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
   const { data, isLoading, isError, refetch, isRefetching } = useDashboard();
   const { data: profileResponse } = useProfile();
-  const username = useAuthStore((state) => state.user?.username ?? '');
+  const username = useAuthStore((state) => state.user?.username ?? "");
   const navigation = useNavigation<any>();
 
   if (isLoading) {
@@ -99,7 +99,7 @@ const HomeScreen = () => {
         {missingUniversity ? (
           <TouchableOpacity
             accessibilityRole="button"
-            onPress={() => navigation.navigate('AcademicDetails')}
+            onPress={() => navigation.navigate("AcademicDetails")}
             className="mx-6 mb-6 flex-row items-center rounded-3xl bg-blue-50 p-4 dark:bg-slate-800"
           >
             <View className="h-11 w-11 items-center justify-center rounded-2xl bg-white dark:bg-slate-700">
@@ -114,6 +114,32 @@ const HomeScreen = () => {
               </Text>
             </View>
             <ChevronRight size={20} color="#2563EB" />
+          </TouchableOpacity>
+        ) : null}
+
+        {dashboard.recentCourses.length === 0 ? (
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Start your first study session by uploading course material"
+            onPress={() => navigation.navigate("UploadMaterial", {})}
+            className="mx-6 mb-6 rounded-3xl bg-primary p-5"
+          >
+            <View className="mb-3 h-11 w-11 items-center justify-center rounded-2xl bg-white/20">
+              <BookOpen size={22} color="#FFFFFF" />
+            </View>
+            <Text className="text-lg font-bold text-white">
+              Start your first study session
+            </Text>
+            <Text className="mt-1 text-sm leading-5 text-white/80">
+              Upload a PDF or image of your notes. We’ll create a summary you
+              can study and practise from.
+            </Text>
+            <View className="mt-4 flex-row items-center">
+              <Text className="mr-1 font-semibold text-white">
+                Upload material
+              </Text>
+              <ChevronRight size={18} color="#FFFFFF" />
+            </View>
           </TouchableOpacity>
         ) : null}
 
@@ -132,10 +158,37 @@ const HomeScreen = () => {
 
         <View className="px-6 mb-8">
           <ProgressCard
-            title="Exam Readiness"
+            title="Average quiz score"
             value={dashboard.examReadiness.overall}
-            subtitle={`${dashboard.examReadiness.overall}% ready for upcoming exams`}
+            subtitle={
+              dashboard.examReadiness.quizCount
+                ? `Based on ${dashboard.examReadiness.quizCount} completed ${
+                    dashboard.examReadiness.quizCount === 1 ? "quiz" : "quizzes"
+                  }`
+                : "Take a practice quiz to start tracking your learning."
+            }
           />
+          {dashboard.examReadiness.quizCount ? (
+            <TouchableOpacity
+              accessibilityRole="button"
+              onPress={() => navigation.navigate("QuizHub")}
+              className="mt-3 rounded-2xl bg-blue-50 p-4 dark:bg-slate-800"
+            >
+              <Text className="font-semibold text-slate-900 dark:text-slate-50">
+                {Object.entries(dashboard.examReadiness.subjects).length
+                  ? `Next focus: ${
+                      Object.entries(dashboard.examReadiness.subjects).sort(
+                        ([, scoreA], [, scoreB]) => scoreA - scoreB,
+                      )[0][0]
+                    }`
+                  : "Keep practising to build a subject-level picture"}
+              </Text>
+              <Text className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+                Your score is an average of quiz results, not a prediction of
+                exam readiness. Tap to practise.
+              </Text>
+            </TouchableOpacity>
+          ) : null}
         </View>
 
         <QuickActions actions={dashboard.quickActions} />

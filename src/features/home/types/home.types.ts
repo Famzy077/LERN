@@ -15,7 +15,8 @@ export interface DashboardData {
   };
   examReadiness: {
     overall: number;
-    subjects: { name: string; score: number }[];
+    subjects: Record<string, number>;
+    quizCount: number;
   };
   recentCourses: {
     id: string;

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Alert, Text, TouchableOpacity, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import {
   BookOpen,
   ChevronRight,
@@ -10,18 +9,28 @@ import {
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
+import { ErrorState } from "@/shared/components/feedback/ErrorState";
 import { SkeletonCard } from "@/shared/components/ui/LoadingSkeleton";
 import {
   useRecentSummaries,
   useGenerateQuiz,
 } from "@/features/ai/hooks/useSummary";
 import { useTheme } from "@/shared/hooks/useTheme";
+import type { MainScreenProps } from "@/navigation/types";
 
-export default function QuizHubScreen() {
-  const navigation = useNavigation<any>();
+export default function QuizHubScreen({
+  navigation,
+}: MainScreenProps<"QuizHub">) {
   const { colors } = useTheme();
-  const { data: summariesResponse, isLoading } = useRecentSummaries();
+  const {
+    data: summariesResponse,
+    isLoading,
+    isError: summariesError,
+    error: summariesErrorDetails,
+    refetch: refetchSummaries,
+  } = useRecentSummaries();
   const generateQuiz = useGenerateQuiz();
+  const [mode, setMode] = useState<"practice" | "test">("practice");
   const summaries = summariesResponse?.data ?? [];
 
   const handleGenerateQuiz = (summaryId: string) => {
@@ -36,7 +45,7 @@ export default function QuizHubScreen() {
             );
             return;
           }
-          navigation.navigate("Quiz", { quizId: response.data.id });
+          navigation.navigate("Quiz", { quizId: response.data.id, mode });
         },
         onError: (error) => {
           Alert.alert(
@@ -88,11 +97,53 @@ export default function QuizHubScreen() {
         </TouchableOpacity>
       </View>
 
+      <View
+        accessibilityRole="radiogroup"
+        accessibilityLabel="Choose quiz mode"
+        className="mb-5 flex-row rounded-2xl bg-slate-100 p-1 dark:bg-slate-800"
+      >
+        {(["practice", "test"] as const).map((option) => (
+          <TouchableOpacity
+            key={option}
+            accessibilityRole="radio"
+            accessibilityState={{ checked: mode === option }}
+            onPress={() => setMode(option)}
+            className={`flex-1 rounded-xl px-3 py-3 ${
+              mode === option ? "bg-white shadow-sm dark:bg-slate-700" : ""
+            }`}
+          >
+            <Text
+              className={`text-center font-inter-semibold ${
+                mode === option
+                  ? "text-primary"
+                  : "text-slate-600 dark:text-slate-300"
+              }`}
+            >
+              {option === "practice" ? "Practice" : "Test"}
+            </Text>
+            <Text className="mt-1 text-center text-xs text-slate-500 dark:text-slate-400">
+              {option === "practice"
+                ? "See explanations as you go"
+                : "Review answers after submitting"}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
       {isLoading ? (
         <View>
           <SkeletonCard lines={2} className="mb-4" />
           <SkeletonCard lines={2} className="mb-4" />
         </View>
+      ) : summariesError ? (
+        <ErrorState
+          title="Could not load summaries"
+          message={
+            summariesErrorDetails?.message ||
+            "Please retry, or open your AI library to check your materials."
+          }
+          onRetry={() => void refetchSummaries()}
+        />
       ) : summaries.length ? (
         summaries.map((summary) => (
           <View
