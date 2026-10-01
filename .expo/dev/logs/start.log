@@ -2722,3 +2722,5 @@
 {"_e":"metro:bundling:progress","_t":1790801230389,"id":"20","progress":0,"total":1,"current":0}
 {"_e":"metro:bundling:progress","_t":1790801230489,"id":"20","progress":0,"total":1,"current":0}
 {"_e":"metro:bundling:done","_t":1790801230701,"id":"20","total":1,"ms":1542.275311}
+{"_e":"metro:server_log","_t":1790801692763,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}
+{"_e":"metro:server_log","_t":1790802715221,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.Exponent","iPhone","60"]}

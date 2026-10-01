@@ -1,15 +1,20 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { aiService } from '../services/ai.service';
-import { UploadMaterialRequest } from '../types/ai.types';
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { aiService } from "../services/ai.service";
+import { UploadMaterialRequest } from "../types/ai.types";
 
 export const useUploadMaterial = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ data, onProgress }: { data: UploadMaterialRequest; onProgress?: (pct: number) => void }) =>
-      aiService.uploadMaterial(data, onProgress),
+    mutationFn: ({
+      data,
+      onProgress,
+    }: {
+      data: UploadMaterialRequest;
+      onProgress?: (pct: number) => void;
+    }) => aiService.uploadMaterial(data, onProgress),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['materials'] });
+      queryClient.invalidateQueries({ queryKey: ["materials"] });
     },
   });
 };
@@ -19,16 +24,22 @@ export const useProcessMaterial = () => {
 
   return useMutation({
     mutationFn: (materialId: string) => aiService.processMaterial(materialId),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['materials'] });
-      queryClient.invalidateQueries({ queryKey: ['recentSummaries'] });
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ["materials"] });
+      queryClient.invalidateQueries({ queryKey: ["recentSummaries"] });
     },
   });
 };
 
 export const useMaterials = (courseId?: string) => {
   return useQuery({
-    queryKey: ['materials', courseId],
+    queryKey: ["materials", courseId],
     queryFn: () => aiService.getMaterials(courseId),
+    refetchInterval: (query) =>
+      query.state.data?.data.some(
+        (material) => material.status.toUpperCase() === "PROCESSING",
+      )
+        ? 3000
+        : false,
   });
 };

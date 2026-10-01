@@ -13,7 +13,7 @@ export interface Material {
   fileType: string;
   fileSize: number;
   courseId: string | null;
-  status: 'processing' | 'completed' | 'failed';
+  status: "UPLOADED" | "PROCESSING" | "COMPLETED" | "FAILED";
   createdAt: string;
 }
 
@@ -23,7 +23,7 @@ export interface AISummary {
   title: string;
   content: string;
   keyPoints: string[];
-  difficulty: 'BEGINNER' | 'INTERMEDIATE' | 'ADVANCED';
+  difficulty: "BEGINNER" | "INTERMEDIATE" | "ADVANCED";
   estimatedReadTime: number;
   createdAt: string;
 }

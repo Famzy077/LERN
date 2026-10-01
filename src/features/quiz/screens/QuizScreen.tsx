@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Alert, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Animated, { SlideInUp, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
@@ -9,6 +9,7 @@ import { LoadingSkeleton } from '@/shared/components/ui/LoadingSkeleton';
 import { ErrorState } from '@/shared/components/feedback/ErrorState';
 import { useQuizStore } from '../store/quiz.store';
 import { useQuizData, useSubmitQuiz } from '../hooks/useQuiz';
+import * as Crypto from 'expo-crypto';
 
 export default function QuizScreen() {
   const navigation = useNavigation<any>();
@@ -17,6 +18,7 @@ export default function QuizScreen() {
 
   const { data: response, isLoading, isError, error, refetch } = useQuizData(courseId, quizId);
   const submitMutation = useSubmitQuiz();
+  const submissionKey = useRef<string | null>(null);
 
   const {
     currentQuestionIndex, selectedAnswers, isRevealed, timerSeconds, isTimerRunning,
@@ -29,6 +31,7 @@ export default function QuizScreen() {
     if (quiz) {
       resetQuiz();
       setTimer(quiz.timeLimit);
+      submissionKey.current = Crypto.randomUUID();
     }
     return () => resetQuiz();
   }, [quiz]);
@@ -69,17 +72,19 @@ export default function QuizScreen() {
   };
 
   const handleFinish = () => {
-    if (!quiz) return;
+    if (!quiz || submitMutation.isPending) return;
     stopTimer();
-    const answers = Object.entries(selectedAnswers).map(([questionId, selectedAnswer]) => ({
-      questionId,
-      selectedAnswer,
+    const answers = quiz.questions.map((question) => ({
+      questionId: question.id,
+      selectedAnswer: selectedAnswers[question.id] ?? '',
     }));
+    submissionKey.current ??= Crypto.randomUUID();
     
     submitMutation.mutate({
       quizId: quiz.id,
       data: {
         quizId: quiz.id,
+        idempotencyKey: submissionKey.current,
         answers,
         timeTaken: quiz.timeLimit - timerSeconds,
       }

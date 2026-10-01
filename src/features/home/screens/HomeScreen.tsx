@@ -90,7 +90,9 @@ const HomeScreen = () => {
         <GreetingHeader
           greeting={dashboard.greeting}
           name={dashboard.user.name}
-          avatarUrl={dashboard.user.avatarUrl}
+          avatarUrl={
+            profileResponse?.data?.avatarUrl ?? dashboard.user.avatarUrl
+          }
           username={username}
         />
 

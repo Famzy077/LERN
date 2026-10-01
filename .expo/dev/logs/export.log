@@ -266,3 +266,11 @@
 {"_e":"metro:instantiate","_t":1790801097222,"atlas":false,"workers":6,"host":null,"port":null}
 {"_e":"metro:bundling:started","_t":1790801098298,"id":"1","platform":"ios","environment":null,"entry":"App.tsx"}
 {"_e":"metro:bundling:done","_t":1790801143717,"id":"1","total":3520,"ms":45418.335912}
+{"_e":"root:init","_t":1790802124994,"format":"v0-jsonl","version":"57.0.27"}
+{"_e":"env:mode","_t":1790802125416,"nodeEnv":"production","babelEnv":"production","mode":"production"}
+{"_e":"env:load","_t":1790802125422,"mode":"production","files":["../../../.env"],"env":{"EXPO_PUBLIC_API_URL":"https://slotstudy.onrender.com/api/v1","EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID":"167923842336-hjdcfdri5f6b5mu6pavb0cb1t5ijihit.apps.googleusercontent.com","EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID":"167923842336-q2mqh9e6tccttp7uqqvp8ajmc9utm1i0.apps.googleusercontent.com","EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID":"167923842336-lelbtpou0tqmdd007fc9njmjdpqs7587.apps.googleusercontent.com"}}
+{"_e":"devserver:start","_t":1790802125605,"mode":"production","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":true}
+{"_e":"metro:config","_t":1790802126624,"serverRoot":"../../..","projectRoot":"../../..","exporting":true,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"metro:instantiate","_t":1790802126864,"atlas":false,"workers":6,"host":null,"port":null}
+{"_e":"metro:bundling:started","_t":1790802127527,"id":"1","platform":"ios","environment":null,"entry":"App.tsx"}
+{"_e":"metro:bundling:done","_t":1790802165844,"id":"1","total":3520,"ms":38315.890422}

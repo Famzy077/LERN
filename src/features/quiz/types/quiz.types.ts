@@ -20,6 +20,7 @@ export interface Quiz {
 
 export interface QuizSubmission {
   quizId: string;
+  idempotencyKey: string;
   answers: { questionId: string; selectedAnswer: string }[];
   timeTaken: number;
 }
