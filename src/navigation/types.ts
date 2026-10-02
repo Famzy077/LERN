@@ -18,6 +18,8 @@ export type AuthStackParamList = {
   Onboarding: undefined;
   Login: undefined;
   Signup: undefined;
+  VerifyOtp: { email: string };
+  ForgotPassword: undefined;
   AcademicSetup: undefined;
 };
 

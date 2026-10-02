@@ -5,6 +5,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useColorScheme as useNativeWindColorScheme } from 'nativewind';
 import { useSettingsStore } from '@/features/settings/store/settings.store';
+import { AppAlertHost } from '@/shared/components/feedback/AppAlert';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,6 +32,7 @@ export function Providers({ children }: ProvidersProps) {
         <QueryClientProvider client={queryClient}>
           <ThemeSynchronizer />
           <NavigationContainer>{children}</NavigationContainer>
+          <AppAlertHost />
         </QueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

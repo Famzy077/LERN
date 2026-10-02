@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  Alert,
   Image,
   KeyboardAvoidingView,
   Linking,
@@ -14,6 +13,7 @@ import {
 import * as ImagePicker from "expo-image-picker";
 import { Camera, ImagePlus, X } from "lucide-react-native";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { Input } from "@/shared/components/ui/Input";
 import { useUpdateProfile, useUploadAvatar } from "../hooks/useProfile";
 import type { Profile } from "../types/profile.types";

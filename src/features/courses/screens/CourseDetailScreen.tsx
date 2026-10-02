@@ -1,7 +1,6 @@
 import React from "react";
 import {
   ActivityIndicator,
-  Alert,
   ScrollView,
   Text,
   TouchableOpacity,
@@ -17,6 +16,7 @@ import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useMaterials } from "@/features/ai/hooks/useUpload";
 import {
   useGenerateQuiz,

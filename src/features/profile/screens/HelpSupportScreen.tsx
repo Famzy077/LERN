@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Alert,
   Linking,
   ScrollView,
   Text,
@@ -16,6 +15,7 @@ import {
   MessageCircleQuestion,
 } from "lucide-react-native";
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 
 const SUPPORT_EMAIL =
   process.env.EXPO_PUBLIC_SUPPORT_EMAIL ?? "support@slotstudy.app";

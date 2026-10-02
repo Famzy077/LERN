@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Alert,
   View,
   Text,
   TouchableOpacity,
@@ -17,6 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useTheme } from "@/shared/hooks/useTheme";
 import { useRecentSummaries } from "@/features/ai/hooks/useSummary";
 import {

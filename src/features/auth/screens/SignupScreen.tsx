@@ -4,12 +4,12 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
-  Alert,
   ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useAuthStore } from "../store/auth.store";
 import { apiClient } from "@/shared/services/api.client";
 import { Eye, EyeOff } from "lucide-react-native";

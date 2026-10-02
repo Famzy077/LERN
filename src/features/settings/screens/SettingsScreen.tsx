@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import {
-  Alert,
   ScrollView,
   Switch,
   Text,
@@ -28,6 +27,7 @@ import { useSettingsStore } from '../store/settings.store';
 import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
 import { LoadingSkeleton } from '@/shared/components/ui/LoadingSkeleton';
 import { ErrorState } from '@/shared/components/feedback/ErrorState';
+import { AppAlert as Alert } from '@/shared/components/feedback/AppAlert';
 
 type ThemeMode = 'light' | 'dark' | 'system';
 

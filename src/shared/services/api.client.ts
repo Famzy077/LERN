@@ -89,3 +89,19 @@ export const apiClient = {
       })
       .then((res) => res.data),
 };
+
+export function getApiErrorMessage(error: unknown, fallback: string) {
+  if (axios.isAxiosError<{ message?: unknown }>(error)) {
+    const message = error.response?.data?.message;
+    if (typeof message === 'string' && message.trim()) return message;
+    if (Array.isArray(message)) {
+      const details = message.filter(
+        (item): item is string => typeof item === 'string',
+      );
+      if (details.length) return details.join('\n');
+    }
+    return fallback;
+  }
+
+  return error instanceof Error && error.message ? error.message : fallback;
+}

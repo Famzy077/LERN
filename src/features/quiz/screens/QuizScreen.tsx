@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { View, Text, ScrollView, Alert, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import Animated, {
   SlideInUp,
   useAnimatedStyle,
@@ -11,6 +11,7 @@ import { Button } from "@/shared/components/ui/Button";
 import { QuizOption } from "@/shared/components/cards/QuizOption";
 import { LoadingSkeleton } from "@/shared/components/ui/LoadingSkeleton";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useQuizStore } from "../store/quiz.store";
 import { useQuizData, useSubmitQuiz } from "../hooks/useQuiz";
 import * as Crypto from "expo-crypto";

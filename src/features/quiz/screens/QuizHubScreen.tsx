@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import {
   BookOpen,
   ChevronRight,
@@ -10,6 +10,7 @@ import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
 import { EmptyState } from "@/shared/components/feedback/EmptyState";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { SkeletonCard } from "@/shared/components/ui/LoadingSkeleton";
 import {
   useRecentSummaries,

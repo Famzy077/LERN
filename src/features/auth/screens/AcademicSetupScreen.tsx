@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
-  Alert,
   ScrollView,
   Text,
   TextInput,
@@ -11,6 +10,7 @@ import {
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { ArrowLeft, Check, GraduationCap, Search } from 'lucide-react-native';
 import { ScreenWrapper } from '@/shared/components/layout/ScreenWrapper';
+import { AppAlert as Alert } from '@/shared/components/feedback/AppAlert';
 import { Button } from '@/shared/components/ui/Button';
 import { useProfile } from '@/features/profile/hooks/useProfile';
 import { useDebounce } from '@/shared/hooks/useDebounce';

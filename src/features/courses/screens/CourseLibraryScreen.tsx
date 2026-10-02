@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, TextInput } from "react-native";
+import { TextInput } from "react-native";
 import {
   View,
   Text,
@@ -16,6 +16,7 @@ import { useCourses, useCreateCourse } from "../hooks/useCourses";
 import { useDebounce } from "@/shared/hooks/useDebounce"; // Assuming useDebounce exists
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { Plus, Upload } from "lucide-react-native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import type { MainStackParamList } from "@/navigation/types";

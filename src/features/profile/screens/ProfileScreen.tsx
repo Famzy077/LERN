@@ -1,7 +1,6 @@
 import React from "react";
 import {
   ActivityIndicator,
-  Alert,
   Image,
   Text,
   TouchableOpacity,
@@ -28,6 +27,7 @@ import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { LoadingSkeleton } from "@/shared/components/ui/LoadingSkeleton";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
 import EditProfileModal from "../components/EditProfileModal";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 
 export default function ProfileScreen() {
   const navigation = useNavigation<any>();

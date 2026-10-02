@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { AppAlert } from "@/shared/components/feedback/AppAlert";
 import {
   Upload,
   BrainCircuit,
@@ -67,7 +68,7 @@ const QuickActions = ({ actions }: Props) => {
               key={action.id}
               onPress={() => {
                 if (action.route === "Flashcards") {
-                  alert("Flashcards coming soon!");
+                  AppAlert.alert("Coming soon", "Flashcards are coming soon!");
                 } else if (action.route === "Upload") {
                   navigation.navigate("UploadMaterial"); // fallback in case old backend is active
                 } else if (action.route === "Quiz") {

@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
-  Alert,
   ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -15,10 +14,13 @@ import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAuthStore } from "../store/auth.store";
-import { apiClient } from "@/shared/services/api.client";
+import {
+  apiClient,
+  getApiErrorMessage,
+} from "@/shared/services/api.client";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { Eye, EyeOff } from "lucide-react-native";
-import type { AuthResponse } from "../types/auth.types";
 
 // Required for web browser to close correctly after auth
 WebBrowser.maybeCompleteAuthSession();
@@ -49,9 +51,17 @@ const LoginScreen = () => {
       loginWithGoogle(
         { idToken: response.authentication.idToken },
         {
-          onSuccess: () => {
-            navigation.replace("AcademicSetup");
-          },
+          onSuccess: () =>
+            Alert.alert(
+              "Login successful",
+              "Welcome back! Your student dashboard is ready.",
+              [{ text: "Go to dashboard" }],
+            ),
+          onError: (error) =>
+            Alert.alert(
+              "Login failed",
+              getApiErrorMessage(error, "We couldn't sign you in. Please try again."),
+            ),
         },
       );
     }
@@ -69,17 +79,21 @@ const LoginScreen = () => {
 
     setLoading(true);
     try {
-      const response = await apiClient.post<AuthResponse>("/auth/login", form);
-      if (response.data && response.data.accessToken) {
-        setAuth(
-          response.data.user,
-          response.data.accessToken,
-          response.data.refreshToken,
-        );
-        navigation.replace("AcademicSetup");
+      const response = await apiClient.post<{
+        otpRequired: boolean;
+        email: string;
+      }>("/auth/login", {
+        email: form.email.trim().toLowerCase(),
+        password: form.password,
+      });
+      if (response.data?.otpRequired) {
+        navigation.navigate("VerifyOtp", { email: response.data.email });
       }
-    } catch (error: any) {
-      Alert.alert("Login Failed", error.message || "Invalid credentials");
+    } catch (error) {
+      Alert.alert(
+        "Login failed",
+        getApiErrorMessage(error, "We couldn't sign you in. Please try again."),
+      );
     } finally {
       setLoading(false);
     }
@@ -175,6 +189,13 @@ const LoginScreen = () => {
             loading={loading}
             className="w-full mb-6"
           />
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ForgotPassword")}
+            className="mb-6 self-end"
+          >
+            <Text className="font-semibold text-primary">Forgot password?</Text>
+          </TouchableOpacity>
 
           <View className="flex-row items-center justify-center mb-6">
             <View className="h-[1px] flex-1 bg-slate-200 dark:bg-slate-700" />

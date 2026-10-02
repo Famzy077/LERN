@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Share2, CheckCircle, Copy } from 'lucide-react-native';
@@ -9,6 +9,7 @@ import { Button } from '@/shared/components/ui/Button';
 import { Badge } from '@/shared/components/ui/Badge';
 import { LoadingSkeleton } from '@/shared/components/ui/LoadingSkeleton';
 import { ErrorState } from '@/shared/components/feedback/ErrorState';
+import { AppAlert as Alert } from '@/shared/components/feedback/AppAlert';
 import { useSummary, useGenerateQuiz } from '../hooks/useSummary';
 
 export default function AISummaryScreen() {

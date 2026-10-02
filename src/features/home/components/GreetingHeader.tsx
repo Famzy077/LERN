@@ -25,14 +25,16 @@ const GreetingHeader = ({ greeting, name, username, avatarUrl }: Props) => {
         )}
         <View>
           <Text className="text-slate-500 dark:text-slate-400 text-sm">{greeting}</Text>
-          <Text className="text-xl font-bold text-slate-900 dark:text-slate-50">{name} 👋</Text>
+          <Text className="text-xl font-bold text-slate-900 dark:text-slate-50">
+            {name} 👋
+          </Text>
         </View>
       </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('Notifications')}
         className="w-10 h-10 rounded-full bg-white dark:bg-slate-800 items-center justify-center shadow-sm"
       >
-        <Bell size={20} className="text-slat e-500 dark: text-gray-300" />
+        <Bell size={20} color="#64748b" />
       </TouchableOpacity>
     </View>
   );

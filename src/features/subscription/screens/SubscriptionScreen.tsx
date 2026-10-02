@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ArrowLeft, ChevronRight, Crown, Info } from "lucide-react-native";
 import {
@@ -10,6 +10,7 @@ import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { LoadingSkeleton } from "@/shared/components/ui/LoadingSkeleton";
 import { ErrorState } from "@/shared/components/feedback/ErrorState";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 
 export default function SubscriptionScreen() {
   const navigation = useNavigation<any>();

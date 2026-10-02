@@ -3,7 +3,6 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Alert,
   ActivityIndicator,
 } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -16,6 +15,7 @@ import Animated, {
 import { Upload } from "lucide-react-native";
 import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
+import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useProcessMaterial, useUploadMaterial } from "../hooks/useUpload";
 
 export default function UploadMaterialScreen() {
