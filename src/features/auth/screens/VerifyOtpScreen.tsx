@@ -37,25 +37,25 @@ export default function VerifyOtpScreen() {
     setLoading(true);
     try {
       const response = await apiClient.post<AuthResponse>(
-        "/auth/login/verify-otp",
+        "/auth/register/verify-otp",
         { email, code },
       );
       const auth = response.data;
       if (!auth?.accessToken) {
-        throw new Error("We could not verify your code. Please try again.");
+        throw new Error("We couldn't verify your email. Please try again.");
       }
       setAuth(auth.user, auth.accessToken, auth.refreshToken);
       Alert.alert(
-        "Login successful",
-        `Welcome back, ${auth.user.name}. Your student dashboard is ready.`,
+        "Email verified",
+        `Your account is ready, ${auth.user.name}. Welcome to SlotStudy!`,
         [{ text: "Go to dashboard" }],
       );
     } catch (error) {
       Alert.alert(
-        "Login failed",
+        "Verification failed",
         getApiErrorMessage(
           error,
-          "We couldn't verify your code. Please check it and try again.",
+          "We couldn't verify your email. Please check the code and try again.",
         ),
       );
     } finally {
@@ -66,10 +66,13 @@ export default function VerifyOtpScreen() {
   const resendCode = async () => {
     setResending(true);
     try {
-      await apiClient.post("/auth/login/resend-otp", { email });
+      await apiClient.post("/auth/register/resend-otp", { email });
       setCode("");
       setResendSeconds(60);
-      Alert.alert("Code sent", "A new sign-in code has been sent to your email.");
+      Alert.alert(
+        "Code sent",
+        "A new email verification code has been sent to your inbox.",
+      );
     } catch (error) {
       Alert.alert(
         "Could not resend code",
@@ -87,7 +90,7 @@ export default function VerifyOtpScreen() {
           Check your email
         </Text>
         <Text className="text-base leading-6 text-slate-500 dark:text-slate-400">
-          Enter the six-digit sign-in code we sent to {email}.
+          Enter the six-digit verification code we sent to {email}.
         </Text>
       </View>
       <TextInput

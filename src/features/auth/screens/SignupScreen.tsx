@@ -11,7 +11,10 @@ import { ScreenWrapper } from "@/shared/components/layout/ScreenWrapper";
 import { Button } from "@/shared/components/ui/Button";
 import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { useAuthStore } from "../store/auth.store";
-import { apiClient } from "@/shared/services/api.client";
+import {
+  apiClient,
+  getApiErrorMessage,
+} from "@/shared/services/api.client";
 import { Eye, EyeOff } from "lucide-react-native";
 import type { AuthResponse } from "../types/auth.types";
 
@@ -36,19 +39,35 @@ const SignupScreen = () => {
 
     setLoading(true);
     try {
-      const response = await apiClient.post<AuthResponse>(
+      const response = await apiClient.post<
+        AuthResponse | { otpRequired: true; email: string }
+      >(
         "/auth/register",
-        form,
+        {
+          ...form,
+          email: form.email.trim().toLowerCase(),
+          username: form.username.trim().toLowerCase(),
+        },
       );
-      if (response.data && response.data.accessToken) {
+      if ("otpRequired" in response.data && response.data.otpRequired) {
+        navigation.navigate("VerifyOtp", { email: response.data.email });
+      } else if ("accessToken" in response.data && response.data.accessToken) {
         setAuth(
           response.data.user,
           response.data.accessToken,
           response.data.refreshToken,
         );
+        Alert.alert(
+          "Account ready",
+          "Your verified account is ready. Welcome to SlotStudy!",
+          [{ text: "Go to dashboard" }],
+        );
       }
-    } catch (error: any) {
-      Alert.alert("Signup Failed", error.message || "Something went wrong");
+    } catch (error) {
+      Alert.alert(
+        "Signup failed",
+        getApiErrorMessage(error, "Something went wrong. Please try again."),
+      );
     } finally {
       setLoading(false);
     }

@@ -21,6 +21,7 @@ import {
 import { Button } from "@/shared/components/ui/Button";
 import { AppAlert as Alert } from "@/shared/components/feedback/AppAlert";
 import { Eye, EyeOff } from "lucide-react-native";
+import type { AuthResponse } from "../types/auth.types";
 
 // Required for web browser to close correctly after auth
 WebBrowser.maybeCompleteAuthSession();
@@ -79,16 +80,20 @@ const LoginScreen = () => {
 
     setLoading(true);
     try {
-      const response = await apiClient.post<{
-        otpRequired: boolean;
-        email: string;
-      }>("/auth/login", {
+      const response = await apiClient.post<AuthResponse>("/auth/login", {
         email: form.email.trim().toLowerCase(),
         password: form.password,
       });
-      if (response.data?.otpRequired) {
-        navigation.navigate("VerifyOtp", { email: response.data.email });
+      const auth = response.data;
+      if (!auth?.accessToken) {
+        throw new Error("We couldn't sign you in. Please try again.");
       }
+      setAuth(auth.user, auth.accessToken, auth.refreshToken);
+      Alert.alert(
+        "Login successful",
+        `Welcome back, ${auth.user.name}. Your student dashboard is ready.`,
+        [{ text: "Go to dashboard" }],
+      );
     } catch (error) {
       Alert.alert(
         "Login failed",
